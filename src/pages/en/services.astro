@@ -11,6 +11,7 @@ const lp = (p: string) => localizedPath(p, lang);
 
 const LEVELS = [
   { key: 'routine',    icon: 'home'     },
+  { key: 'respite',    icon: 'sun'      },
   { key: 'continuous', icon: 'heart'    },
   { key: 'gip',        icon: 'hospital' },
 ] as const;
@@ -101,7 +102,7 @@ const relatedLinks = [
     </div>
   </section>
 
-  <!-- Three Levels of Care -->
+  <!-- Four Levels of Care -->
   <section id="levels" aria-labelledby="levels-h" class="reveal scroll-mt-24">
     <h2 id="levels-h">{t('services.sections.levels.title')}</h2>
     <p class="mb-6">{t('services.sections.levels.intro')}</p>

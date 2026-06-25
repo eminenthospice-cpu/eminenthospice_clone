@@ -1,0 +1,43 @@
+---
+import { useTranslations, localizedPath } from '../../i18n/utils';
+import SectionContainer from '../ui/SectionContainer.astro';
+import Button from '../ui/Button.astro';
+
+export interface Props {
+  lang: 'en' | 'ko';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const lp = (p: string) => localizedPath(p, lang);
+const services = ['nursing', 'symptoms', 'equipment', 'social', 'spiritual', 'bereavement'] as const;
+---
+
+<SectionContainer bg="cream" ariaLabelledBy="services-snapshot-heading">
+  <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+    <div class="reveal">
+      <p class="eyebrow mb-3 text-primary-700">{t('home.services.eyebrow')}</p>
+      <h2 id="services-snapshot-heading" class="font-heading text-4xl leading-tight text-ink-900 md:text-5xl">
+        {t('home.services.title')}
+      </h2>
+      <p class="mt-4 text-lg leading-relaxed text-ink-700">{t('home.services.subtitle')}</p>
+      <Button href={lp('/services')} variant="primary" size="lg" class="mt-7">
+        {t('home.services.cta')}
+      </Button>
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2">
+      {services.map((service) => (
+        <article class="reveal rounded-card border border-line-hairline bg-white p-5 shadow-card">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold leading-tight text-ink-900">{t(`home.services.items.${service}.title`)}</h3>
+          <p class="mt-2 text-base leading-relaxed text-ink-700">{t(`home.services.items.${service}.body`)}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</SectionContainer>

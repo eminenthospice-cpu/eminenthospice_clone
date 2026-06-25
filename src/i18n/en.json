@@ -22,7 +22,7 @@
   },
   "footer": {
     "flourish": "A Tradition of Compassion.",
-    "tagline": "Providing compassionate, expert hospice care to patients and families in North Hollywood and across the greater Los Angeles area.",
+    "tagline": "Providing compassionate, expert hospice care to patients and families in North Hollywood, greater Los Angeles, and Orange County.",
     "footerNav": "Footer navigation",
     "quickLinksHeading": "Quick Links",
     "home": "Home",
@@ -48,120 +48,131 @@
     }
   },
   "home": {
-    "pageTitle": "Compassionate Hospice Care in Los Angeles",
-    "metaDescription": "Eminent Hospice Care delivers comfort-focused, dignified end-of-life care to patients and families in North Hollywood and across the greater Los Angeles area. Bilingual English & Korean care, available 24/7.",
+    "pageTitle": "Hospice Care at Home in Los Angeles and Orange County",
+    "metaDescription": "Eminent Hospice Care provides comfort-focused hospice care at home across North Hollywood, greater Los Angeles, and Orange County. Available 24/7 in English and Korean.",
     "hero": {
-      "heading": "Care With Dignity.\nComfort With Compassion.",
-      "subtext": "Eminent Hospice Care walks alongside patients and families in North Hollywood and across the greater Los Angeles area during life's most challenging moments — with skilled medical care, emotional support, and an unwavering commitment to dignity at home.",
-      "ctaPrimary": "Learn About Hospice",
-      "ctaSecondary": "Contact Us",
-      "caption": "Medicare-certified · North Hollywood & Greater Los Angeles"
-    },
-    "byTheNumbers": {
-      "ariaLabel": "Trust indicators",
-      "stat1": {
-        "value": "24/7",
-        "label": "Care availability"
-      },
-      "stat2": {
-        "value": "Korean / English",
-        "label": "Languages spoken"
-      },
-      "stat3": {
-        "value": "100%",
-        "label": "Medicare-certified"
-      }
-    },
-    "philosophy": {
-      "title": "Care Focused on Comfort, Dignity, and Family",
-      "paragraph1": "Hospice is comfort-focused care for individuals with a life expectancy of six months or less. Rather than pursuing a cure, our team focuses on relieving pain, managing symptoms, and preserving dignity in the place you call home.",
-      "paragraph2": "We care for the whole person — body, mind, and spirit — and surround families with the practical, emotional, and spiritual support they need so no one has to walk this journey alone.",
-      "marginalia": "Dignity is not a luxury at the end of life — it is the standard we hold ourselves to, every visit."
-    },
-    "levels": {
-      "title": "Three Levels of Care",
-      "subtitle": "We provide the hospice care levels families most often need as symptoms change, with coordinated support at home and in short-term inpatient settings.",
-      "learnMore": "Learn more",
-      "routine": {
-        "title": "Routine Home Care",
-        "desc": "Ongoing nursing visits, symptom management, and family support delivered wherever the patient calls home."
-      },
-      "continuous": {
-        "title": "Continuous Home Care",
-        "desc": "Around-the-clock nursing care during periods of acute symptom crisis, so the patient can stay home through difficult moments."
-      },
-      "inpatient": {
-        "title": "General Inpatient Care",
-        "desc": "Inpatient stays (limited days) when pain or symptoms can no longer be safely managed at home."
-      }
-    },
-    "team": {
-      "title": "Your Interdisciplinary Care Team",
-      "intro": "Every patient is supported by a team of specialists who coordinate care, anticipate needs, and walk with the family through every step.",
-      "roles": {
-        "physician": {
-          "name": "Hospice Physician",
-          "desc": "Oversees the plan of care and manages complex medical needs in partnership with your primary doctor."
+      "eyebrow": "North Hollywood, greater Los Angeles, and Orange County",
+      "heading": "Hospice care at home, available 24/7 in English and Korean.",
+      "subtext": "When comfort matters most, our team helps patients and families in Los Angeles and Orange County understand hospice, start care quickly, and stay supported at home.",
+      "ctaPrimary": "Call 24/7",
+      "ctaSecondary": "Make a Referral",
+      "captionLabel": "What families can expect",
+      "caption": "A nurse-led hospice team focused on comfort, dignity, and clear communication.",
+      "highlights": {
+        "availability": {
+          "label": "Access",
+          "value": "24/7 nurse support"
         },
-        "rn": {
-          "name": "Registered Nurse",
-          "desc": "Leads symptom management, medication oversight, and family education at each visit."
+        "language": {
+          "label": "Languages",
+          "value": "English and Korean"
         },
-        "lvn": {
-          "name": "Licensed Vocational Nurse",
-          "desc": "Provides bedside nursing care, comfort measures, and continuity between RN visits."
-        },
-        "msw": {
-          "name": "Medical Social Worker",
-          "desc": "Helps families navigate emotional, financial, and community-resource concerns."
-        },
-        "chaplain": {
-          "name": "Spiritual Care / Chaplain",
-          "desc": "Offers non-denominational spiritual support honoring the patient's faith and tradition."
-        },
-        "aide": {
-          "name": "Hospice Aide",
-          "desc": "Assists with bathing, grooming, and daily personal care with gentleness and respect."
-        },
-        "bereavement": {
-          "name": "Bereavement Coordinator",
-          "desc": "Supports the family for up to thirteen months following the loss of a loved one."
-        },
-        "volunteer": {
-          "name": "Trained Volunteer",
-          "desc": "Provides companionship, light errands, and supportive presence so caregivers can step away."
+        "coverage": {
+          "label": "Coverage",
+          "value": "Medicare certified"
         }
       }
     },
-    "whoWeServe": {
-      "title": "Who We Serve",
-      "area": {
-        "title": "Service Area",
-        "desc": "Serving North Hollywood and families across the greater Los Angeles area — from the San Fernando Valley to surrounding communities."
+    "quickActions": {
+      "ariaLabel": "Fast ways to reach Eminent Hospice Care",
+      "call": {
+        "title": "Call 24/7",
+        "body": "Speak with our care team now."
       },
-      "languages": {
-        "title": "Languages",
-        "desc": "English and 한국어 — culturally aware care for Korean-American families."
+      "referral": {
+        "title": "Make a Referral",
+        "body": "Start a callback request online."
       },
-      "coverage": {
-        "title": "Coverage",
-        "desc": "Medicare Part A, Medi-Cal, and most private insurance plans accepted."
+      "question": {
+        "title": "Ask a Question",
+        "body": "Get help understanding options."
       }
     },
-    "testimonial": {
-      "provenance": "Google Review",
-      "quote": "My father passed away from advanced Parkinson's disease and was under hospice care with Eminent for quite some time. The nurses and staff at Eminent were some of the kindest and most compassionate people I have ever met. They were also incredibly efficient, professional, and excellent communicators (I could text them even at night or on weekends and get a response right away). They also provide seamless bilingual care — speaking Korean with my father while communicating clearly with me in English. They treated my father and our family with such warmth, dignity, and respect throughout the entire process. The care we received was so exceptional that after my father's passing, I felt compelled to leave a public review for this amazing hospice service. If you or a loved one need hospice care with bilingual support, I cannot recommend Eminent highly enough.",
-      "attributionName": "Daughter of patient",
-      "attributionRelation": "Google Review"
+    "expect": {
+      "eyebrow": "What happens next",
+      "title": "Getting hospice support should feel clear.",
+      "subtitle": "We explain eligibility, coordinate with physicians, and help your family know what to expect before care begins.",
+      "steps": {
+        "call": {
+          "title": "Call or send a referral",
+          "body": "Tell us what is happening and how urgently support is needed."
+        },
+        "review": {
+          "title": "We review eligibility",
+          "body": "Our team helps verify hospice fit, coverage, physician orders, and next steps."
+        },
+        "visit": {
+          "title": "Care starts at home",
+          "body": "A nurse visits, sets the care plan, and coordinates medications, equipment, and support."
+        }
+      }
+    },
+    "services": {
+      "eyebrow": "Care at home",
+      "title": "A hospice team around the patient and family.",
+      "subtitle": "Hospice is more than visits. It is coordinated medical, emotional, practical, and spiritual support when a serious illness is no longer being cured.",
+      "cta": "View Hospice Services",
+      "items": {
+        "nursing": {
+          "title": "Nursing care",
+          "body": "RN-led symptom checks, medication guidance, and family education."
+        },
+        "symptoms": {
+          "title": "Pain and symptom relief",
+          "body": "Comfort-focused care for pain, breathing, nausea, anxiety, and more."
+        },
+        "equipment": {
+          "title": "Medication and equipment",
+          "body": "Coordination for hospice-related medications, supplies, oxygen, and equipment."
+        },
+        "social": {
+          "title": "Social work support",
+          "body": "Help with planning, resources, caregiver stress, and difficult conversations."
+        },
+        "spiritual": {
+          "title": "Spiritual care",
+          "body": "Optional support that honors the patient?s faith, culture, and values."
+        },
+        "bereavement": {
+          "title": "Bereavement care",
+          "body": "Continued family support after the loss of a loved one."
+        }
+      }
+    },
+    "trust": {
+      "eyebrow": "Why families choose Eminent",
+      "title": "Local hospice care with professional standards.",
+      "items": {
+        "medicare": {
+          "title": "Medicare certified",
+          "body": "Hospice benefit guidance and coverage support for eligible patients."
+        },
+        "joint": {
+          "title": "Joint Commission accredited",
+          "body": "A commitment to quality, safety, and accountable care."
+        },
+        "bilingual": {
+          "title": "English and Korean care",
+          "body": "Clear communication for Korean-American families and referral partners."
+        },
+        "local": {
+          "title": "Los Angeles and Orange County service area",
+          "body": "Serving North Hollywood, the San Fernando Valley, greater Los Angeles, Orange County, and nearby communities."
+        }
+      }
+    },
+    "quote": {
+      "eyebrow": "Family experience",
+      "heading": "A family review",
+      "text": "The nurses and staff were kind, professional, and excellent communicators. They treated my father and our family with warmth, dignity, and respect.",
+      "source": "Daughter of patient, Google Review"
     },
     "finalCta": {
-      "title": "Available 24/7 to Support Your Family",
-      "subtitle": "Speak with a member of our care team any hour of the day. There is no obligation — only listening, information, and care.",
-      "call": "Call Now",
-      "contact": "Contact Us",
-      "refer": "Make a Referral",
-      "phoneNumberTel": "+18188243702",
-      "phoneNumberDisplay": "(818) 824-3702"
+      "eyebrow": "Ready when you are",
+      "title": "Talk with a hospice care team today.",
+      "subtitle": "There is no obligation. We can answer questions, explain coverage, or help begin a referral.",
+      "call": "Call",
+      "refer": "Make a Referral"
     }
   },
   "common": {
@@ -430,8 +441,8 @@
         "notCovered": "Medicare hospice does not cover treatments aimed at curing the terminal illness once you elect hospice, room and board in your private home, or care from providers outside your hospice team unless arranged in advance. Room and board in a nursing facility may be covered separately by Medi-Cal."
       },
       "levels": {
-        "title": "The Three Levels of Care",
-        "intro": "Your level can change day-to-day depending on what you need. Eminent coordinates home-based care and short-term inpatient support when symptoms require it.",
+        "title": "The Four Levels of Care",
+        "intro": "Your level can change day-to-day depending on what you need. Eminent coordinates home-based care, caregiver respite, and short-term inpatient support when symptoms require it.",
         "sourceNote": "Source: CMS FY2026 Hospice Wage Index Final Rule (CMS-1835-F), effective October 1, 2025. Federal rates are updated annually each October.",
         "fy2026Note": "Federal payment rates increased 2.6% in FY2026. Specific dollar amounts below reflect the FY2026 final rule.",
         "rhc": {
@@ -453,6 +464,11 @@
           "label": "FY2026 Aggregate Cap",
           "value": "$35,361.44 per beneficiary",
           "desc": "The federal cap on average Medicare payments to a hospice per patient over a year. This is a backstop on the program, not a per-patient limit on the care you can receive."
+        },
+        "respite": {
+          "name": "Inpatient Respite Care",
+          "desc": "Short-term inpatient care that gives the family caregiver a brief rest while the patient continues receiving hospice support in an approved facility.",
+          "rateNote": "Paid at a daily respite rate and generally limited to up to five consecutive days at a time under Medicare rules."
         }
       },
       "medical": {
@@ -525,8 +541,8 @@
   },
   "about": {
     "pageTitle": "About Eminent Hospice Care",
-    "metaDescription": "Eminent Hospice Care delivers compassionate, culturally aware end-of-life care across North Hollywood and the greater Los Angeles area. Learn our mission, values, interdisciplinary team, and bilingual EN/KO commitment to Korean-American families.",
-    "introParagraph": "Eminent Hospice Care is a Medicare-certified hospice serving North Hollywood and the greater Los Angeles area with a particular commitment to bilingual care for Korean-American families. We exist for one reason: to walk alongside patients and the people who love them through life's final chapter.",
+    "metaDescription": "Eminent Hospice Care delivers compassionate, culturally aware end-of-life care across North Hollywood, the greater Los Angeles area, and Orange County. Learn our mission, values, interdisciplinary team, and bilingual EN/KO commitment to Korean-American families.",
+    "introParagraph": "Eminent Hospice Care is a Medicare-certified hospice serving North Hollywood, the greater Los Angeles area, and Orange County with a particular commitment to bilingual care for Korean-American families. We exist for one reason: to walk alongside patients and the people who love them through life's final chapter.",
     "sections": {
       "mission": {
         "title": "Our Mission",
@@ -556,18 +572,19 @@
       },
       "story": {
         "title": "A Brief Story",
-        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness — with a particular commitment to the Korean-American community of greater Los Angeles, whose families have long needed care delivered in their own language."
+        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness — with a particular commitment to the Korean-American community of greater Los Angeles and Orange County, whose families have long needed care delivered in their own language."
       },
       "serviceArea": {
         "title": "Service Area",
-        "body": "We serve North Hollywood and the greater Los Angeles area, with patients and families across the region. Our team coordinates visits, on-call coverage, and medication delivery anywhere within our service area.",
+        "body": "We serve North Hollywood, the greater Los Angeles area, and Orange County, with patients and families across the region. Our team coordinates visits, on-call coverage, and medication delivery anywhere within our service area.",
         "regionsHeading": "Where we deliver care",
         "regions": {
           "southBay": "South Bay",
           "sanFernandoValley": "San Fernando Valley",
           "sanGabrielValley": "San Gabriel Valley",
           "greaterLA": "Greater Los Angeles",
-          "northHollywood": "North Hollywood"
+          "northHollywood": "North Hollywood",
+          "orangeCounty": "Orange County"
         },
         "hoursNote": "Available 24 hours a day, 7 days a week — a registered nurse answers our on-call line at every hour."
       },
@@ -614,11 +631,11 @@
       "addressCountry": "US"
     },
     "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "areaServed": "North Hollywood and the greater Los Angeles area, CA"
+    "areaServed": "North Hollywood, the greater Los Angeles area, and Orange County, CA"
   },
   "services": {
     "pageTitle": "Hospice Services",
-    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery — throughout North Hollywood and greater Los Angeles, in English and Korean.",
+    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery — throughout North Hollywood, greater Los Angeles, and Orange County, in English and Korean.",
     "introParagraph": "Hospice is a comprehensive benefit, not a single service. This page walks through the care levels we deliver, every discipline on our team, and the supporting services that make care work day-to-day at home.",
     "sections": {
       "offer": {
@@ -627,8 +644,8 @@
         "linkToUnderstanding": "Start with our Understanding Hospice Care guide →"
       },
       "levels": {
-        "title": "The Three Levels of Care",
-        "intro": "Your level of care can change day to day depending on what you need. We coordinate care at home and short-term inpatient support when symptoms require it. For coverage and payment details, see our Insurance & Medicare page.",
+        "title": "The Four Levels of Care",
+        "intro": "Your level of care can change day to day depending on what you need. We coordinate care at home, short-term respite for caregivers, and inpatient support when symptoms require it. For coverage and payment details, see our Insurance & Medicare page.",
         "routine": {
           "title": "Routine Home Care",
           "summary": "Scheduled visits from your hospice team — nursing, aide, social worker, chaplain — to wherever you live. The most common level, used by most patients most of the time.",
@@ -647,7 +664,13 @@
           "clinical": "General Inpatient Care is short-term care at a contracted facility — hospital, freestanding hospice inpatient unit, or skilled nursing facility — used when symptoms cannot be safely managed at home. Patients return home as soon as symptoms are stable.",
           "atHome": "We coordinate the transfer, communicate with the facility's clinical team, and stay involved during the inpatient stay."
         },
-        "costFootnote": "For coverage and what families pay, see our <link>Insurance & Medicare page</link>."
+        "costFootnote": "For coverage and what families pay, see our <link>Insurance & Medicare page</link>.",
+        "respite": {
+          "title": "Inpatient Respite Care",
+          "summary": "Short-term inpatient care that gives family caregivers time to rest while the patient continues receiving hospice care.",
+          "clinical": "Respite care is used when the caregiver needs temporary relief. The patient stays briefly in a Medicare-approved inpatient setting while hospice care continues.",
+          "atHome": "Respite is generally available for up to five consecutive days at a time. After the respite stay, care usually returns to Routine Home Care wherever the patient calls home."
+        }
       },
       "team": {
         "title": "Your Interdisciplinary Team",
@@ -1203,7 +1226,7 @@
   },
   "meta": {
     "siteName": "Eminent Hospice Care Inc.",
-    "ogDescription": "Compassionate, culturally competent hospice care serving North Hollywood and the greater Los Angeles area, including the Korean-American community. Available 24/7 in English and Korean.",
+    "ogDescription": "Compassionate, culturally competent hospice care serving North Hollywood, the greater Los Angeles area, and Orange County, including the Korean-American community. Available 24/7 in English and Korean.",
     "ogImageAlt": "Eminent Hospice Care — compassionate hospice care in Los Angeles",
     "titleTemplate": "%s | Eminent Hospice Care Inc."
   },

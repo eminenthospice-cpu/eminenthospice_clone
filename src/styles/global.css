@@ -87,14 +87,14 @@
   --color-line-soft:     rgba(26,36,48,0.14);
 
   /* Color — surface */
-  --color-surface-paper:    #FAFAF8;
+  --color-surface-paper:    #FBFCFD;
   --color-surface-elevated: #FFFFFF;
   --color-surface-ink:      #122E44;
-  --color-surface-canvas:   #F4F6F4;
+  --color-surface-canvas:   #F5F8FA;
 
   /* Color — neutral */
-  --color-neutral-warm:  #F8F6F2;
-  --color-neutral-cream: #FDF9F5;
+  --color-neutral-warm:  #F7FAFC;
+  --color-neutral-cream: #F8FBFC;
   --color-neutral-100:   #F1EDE8;
   --color-neutral-200:   #E2DDD7;
   --color-neutral-300:   #C8C2BB;
@@ -135,7 +135,7 @@
   --spacing-section-x:   1.5rem;
 
   /* Border radius */
-  --radius-card:    0.75rem;
+  --radius-card:    0.5rem;
   --radius-btn:     0.375rem;
   --radius-organic: 1.25rem;
 

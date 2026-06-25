@@ -1,9 +1,4 @@
 ---
-/**
- * Header — Editorial nav with phone, locale switcher, Resources dropdown,
- * and mobile full-screen drawer. CSS transitions throughout; minimal JS
- * only for mobile toggle and scroll shrink.
- */
 import { useTranslations, localizedPath, type Locale } from '../../i18n/utils';
 import { BRAND, CONTACT, SITE } from '../../data/site-config';
 
@@ -11,34 +6,21 @@ interface Props {
   lang: Locale;
   currentPath: string;
 }
+
 const { lang, currentPath } = Astro.props;
 const t = useTranslations(lang);
+const lp = (p: string) => localizedPath(p, lang);
 
-const primaryLinks = [
-  { key: 'home',            href: localizedPath('/',        lang), label: t('nav.home') },
-  { key: 'about',           href: localizedPath('/about',   lang), label: t('nav.aboutUs') },
-  { key: 'services',        href: localizedPath('/services',lang), label: t('nav.hospiceServices') },
-];
-
-const resourceLinks = [
-  { href: localizedPath('/understanding-hospice', lang), label: t('nav.understandingHospice') },
-  { href: localizedPath('/hospice-laws',          lang), label: t('nav.hospiceLaws') },
-  { href: localizedPath('/for-families',          lang), label: t('nav.forFamilies') },
-  { href: localizedPath('/insurance',             lang), label: t('nav.insurance') },
-  { href: localizedPath('/faq',                   lang), label: t('nav.faq') },
-  { href: localizedPath('/grief-support',         lang), label: lang === 'ko' ? '슬픔 지원' : 'Grief Support' },
-];
-
-const mobileLinks = [
-  ...primaryLinks,
-  ...resourceLinks,
-  { href: localizedPath('/contact',  lang), label: t('nav.contact') },
-  { href: localizedPath('/referral', lang), label: t('nav.referral') },
-];
+const navLinks = [
+  { href: lp('/'), label: t('nav.home') },
+  { href: lp('/services'), label: t('nav.hospiceServices') },
+  { href: lp('/understanding-hospice'), label: lang === 'ko' ? '진행 과정' : 'What to Expect' },
+  { href: lp('/for-families'), label: t('nav.forFamilies') },
+  { href: lp('/faq'), label: t('nav.faq') },
+  { href: lp('/contact'), label: t('nav.contact') },
+] as const;
 
 const otherLang: Locale = lang === 'en' ? 'ko' : 'en';
-// Build the other-locale URL without a trailing slash (site is trailingSlash:'never').
-// On the home page currentPath is '/', which must map to '/ko' not '/ko/'.
 const otherLangPath = currentPath === '/404'
   ? `/${otherLang}`
   : currentPath === '/' ? `/${otherLang}` : `/${otherLang}${currentPath}`;
@@ -47,267 +29,116 @@ function isActive(href: string): boolean {
   const clean = href.replace(/^\/en|^\/ko/, '');
   return clean === '' ? currentPath === '/' : currentPath.startsWith(clean || '/');
 }
+
+const isHomePage = currentPath === '/';
 ---
 
 <header
   id="site-header"
-  class="sticky top-0 z-50 transition-shadow duration-300"
-  style="background-color: var(--color-surface-paper);"
+  data-home-page={isHomePage ? 'true' : 'false'}
+  class:list={[
+    'sticky top-0 z-50 border-b border-line-hairline bg-white/95 backdrop-blur transition-shadow duration-300',
+    { 'is-scrolled': !isHomePage },
+  ]}
 >
-  <!-- Utility bar: phone + 24/7 label -->
-  <div
-    id="utility-bar"
-    class="border-b transition-all duration-300 overflow-hidden"
-    style="border-color: var(--color-line-hairline); background-color: var(--color-surface-ink); color: var(--color-tint-ivory);"
-  >
-    <div class="container-content flex items-center justify-between py-2 text-sm">
-      <a
-        href={`tel:${CONTACT.phone.tel}`}
-        class="flex items-center gap-2 font-semibold tracking-wide hover:opacity-80 transition-opacity"
-        style="color: var(--color-tint-ivory); min-height: 44px;"
-        aria-label={`Call us: ${CONTACT.phone.display}`}
-      >
-        <!-- Phone icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.26 6.26l.85-.85a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        {CONTACT.phone.display}
-      </a>
-      <div class="flex items-center gap-4">
-        <span class="text-caption opacity-75 hidden sm:block">
-          {lang === 'ko' ? '24시간 연중무휴' : '24/7 Care Available'}
+  <div id="quiet-brand-bar" class="container-wide flex h-24 items-center justify-center transition-all duration-300">
+    <a href={lp('/')} class="group inline-flex items-center gap-4 text-center" aria-label={`${SITE.name} home`}>
+      <img src={BRAND.logo} alt="" width="56" height="56" class="h-14 w-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105" loading="eager" decoding="async" />
+      <span>
+        <span class="block font-heading text-4xl font-semibold leading-none text-ink-900 sm:text-5xl">
+          Eminent Hospice
         </span>
-        <!-- Locale switcher — high-contrast pill, always visible in the dark bar -->
-        <a
-          href={otherLangPath}
-          class="press-tap inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-3 py-1 text-caption font-semibold tracking-wide transition-colors duration-200 hover:bg-white/15"
-          style="border-color: var(--color-tint-ivory); color: var(--color-tint-ivory); min-height: 44px;"
-          hreflang={otherLang}
-          aria-label={otherLang === 'ko' ? '한국어로 번역' : 'Translate to English'}
-          title={otherLang === 'ko' ? '한국어로 보기' : 'View in English'}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          {otherLang === 'ko' ? '한국어' : 'English'}
-        </a>
-      </div>
+        <span class="mt-2 block text-base font-medium tracking-wide text-primary-700">
+          {lang === 'ko' ? 'Comfort. Dignity. Compassion.' : 'Comfort. Dignity. Compassion.'}
+        </span>
+      </span>
+    </a>
+  </div>
+
+  <div id="utility-bar" class="max-h-0 overflow-hidden bg-primary-900 text-white transition-all duration-300">
+    <div class="container-wide flex min-h-11 items-center justify-between gap-3 py-1 text-sm">
+      <a href={`tel:${CONTACT.phone.tel}`} class="inline-flex min-h-10 items-center gap-2 font-semibold text-white">
+        <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75z" />
+        </svg>
+        <span class="leading-tight">{lang === 'ko' ? '24시간' : '24/7'}: {CONTACT.phone.display}</span>
+      </a>
+      <a
+        href={otherLangPath}
+        hreflang={otherLang}
+        class="inline-flex min-h-10 shrink-0 items-center whitespace-nowrap rounded-btn border border-white/40 px-2.5 text-caption font-semibold text-white hover:bg-white/10"
+      >
+        {otherLang === 'ko' ? '한국어' : 'English'}
+      </a>
     </div>
   </div>
 
-  <!-- Main nav bar -->
   <nav
     id="main-nav"
-    class="border-b transition-all duration-300"
-    style="border-color: var(--color-line-hairline);"
-    aria-label={lang === 'ko' ? '기본 탐색' : 'Main navigation'}
+    aria-label={t('nav.mainNav')}
+    class="container-wide grid max-h-0 grid-cols-[1fr_auto] items-center gap-4 overflow-hidden opacity-0 transition-all duration-300"
   >
-    <div class="container-content flex items-center justify-between" style="height: 5rem;">
+    <a href={lp('/')} class="flex min-w-0 items-center gap-3 py-3" aria-label={`${SITE.name} home`}>
+      <img src={BRAND.logo} alt="" width="44" height="44" class="h-11 w-11 shrink-0 object-contain" loading="eager" decoding="async" />
+      <span class="min-w-0">
+        <span class="block truncate text-lg font-bold leading-tight text-ink-900">{SITE.name}</span>
+        <span class="hidden text-caption leading-tight text-ink-500 sm:block">{SITE.tagline}</span>
+      </span>
+    </a>
 
-      <!-- Logo / wordmark -->
-      <a
-        href={localizedPath('/', lang)}
-        class="flex items-center gap-3 leading-tight hover:opacity-80 transition-opacity flex-shrink-0"
-        aria-label={`${SITE.name} — Home`}
-      >
-        <img
-          src={BRAND.logo}
-          alt=""
-          width="52"
-          height="52"
-          class="h-12 w-12 shrink-0 rounded-sm object-contain"
-          loading="eager"
-          decoding="async"
-          aria-hidden="true"
-        />
-        <span class="flex flex-col">
-          <span class="font-heading font-bold text-xl" style="color: var(--color-ink-900);">{SITE.name}</span>
-          <span class="text-caption tracking-wide" style="color: var(--color-ink-500);">{SITE.tagline}</span>
-        </span>
-      </a>
-
-      <!-- Desktop links -->
-      <div class="hidden lg:flex items-center gap-1 font-body text-base" style="color: var(--color-ink-700);">
-        {primaryLinks.map(({ href, label, key }) => (
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center gap-1 lg:flex">
+        {navLinks.map(({ href, label }) => (
           <a
             href={href}
             class:list={[
-              'underline-grow inline-flex items-center min-h-11 px-3 py-3 rounded-sm hover:text-ink-900 transition-colors duration-200',
-              { 'font-semibold': isActive(href) }
+              'inline-flex min-h-11 items-center rounded-btn px-3 text-base font-medium text-ink-700 hover:bg-primary-50 hover:text-primary-800',
+              { 'bg-primary-50 text-primary-800': isActive(href) },
             ]}
-            style={isActive(href) ? `color: var(--color-ink-900);` : ''}
             aria-current={isActive(href) ? 'page' : undefined}
           >
             {label}
           </a>
         ))}
-
-        <!-- Resources dropdown -->
-        <div class="relative group" data-resources-dropdown>
-          <button
-            id="resources-menu-btn"
-            class="underline-grow flex items-center gap-1 min-h-11 px-3 py-3 rounded-sm hover:text-ink-900 transition-colors duration-200 cursor-pointer"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="resources-menu"
-            type="button"
-            data-resources-button
-          >
-            {lang === 'ko' ? '자료' : 'Resources'}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true" class="transition-transform duration-200" data-resources-chevron>
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-
-          <!-- Dropdown panel -->
-          <div
-            id="resources-menu"
-            class="absolute top-full left-0 mt-1 rounded-card border shadow-soft
-                   opacity-0 invisible transition-all duration-200 z-50 min-w-56"
-            style="background: var(--color-surface-elevated); border-color: var(--color-line-hairline);"
-            data-resources-menu
-          >
-            <div class="py-2">
-              {resourceLinks.map(({ href, label }) => (
-                <a
-                  href={href}
-                  class="flex items-center min-h-11 px-4 py-2.5 text-base hover:opacity-80 transition-opacity"
-                  style="color: var(--color-ink-700);"
-                  aria-current={isActive(href) ? 'page' : undefined}
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <a
-          href={localizedPath('/contact', lang)}
-          class="underline-grow inline-flex items-center min-h-11 px-3 py-3 hover:text-ink-900 transition-colors duration-200"
-          aria-current={isActive('/contact') ? 'page' : undefined}
-        >
-          {t('nav.contact')}
-        </a>
       </div>
 
-      <!-- CTA + Mobile toggle -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Language toggle — prominent, sticky pill (tablet/desktop).
-             On mobile the top-bar pill + drawer toggle handle this, so it's hidden
-             below sm to avoid crowding the wordmark. -->
-        <a
-          href={otherLangPath}
-          class="press-tap hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap rounded-btn border-2 border-primary-500 px-2.5 py-2 text-base font-semibold text-primary-600 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
-          style="min-height: 44px;"
-          hreflang={otherLang}
-          aria-label={otherLang === 'ko' ? '한국어로 번역' : 'Translate to English'}
-          title={otherLang === 'ko' ? '한국어로 보기' : 'View in English'}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          {otherLang === 'ko' ? '한국어' : 'English'}
-        </a>
-
-        <!-- Primary CTA — desktop -->
-        <a
-          href={localizedPath('/referral', lang)}
-          class="press-tap hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-base font-semibold rounded-btn transition-all duration-200 hover:brightness-105"
-          style="background: var(--color-accent-gold-500); color: var(--color-ink-900); min-height: 44px;"
-        >
-          {t('nav.referral')}
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </a>
-
-        <!-- Mobile hamburger -->
-        <button
-          id="mobile-menu-btn"
-          type="button"
-          aria-label={lang === 'ko' ? '메뉴 열기' : 'Open menu'}
-          aria-controls="mobile-drawer"
-          aria-expanded="false"
-          data-open-label={lang === 'ko' ? '메뉴 열기' : 'Open menu'}
-          data-close-label={lang === 'ko' ? '메뉴 닫기' : 'Close menu'}
-          class="lg:hidden flex items-center justify-center rounded-sm transition-colors"
-          style="color: var(--color-ink-700); width: 44px; height: 44px;"
-        >
-          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="hidden">
-            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-        </button>
-      </div>
+      <a
+        href={lp('/referral')}
+        class="hidden min-h-11 items-center justify-center rounded-btn bg-accent-gold-500 px-4 text-base font-semibold text-ink-900 hover:bg-accent-gold-400 sm:inline-flex"
+      >
+        {t('nav.referral')}
+      </a>
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-btn border border-line-soft text-ink-800 lg:hidden"
+        aria-label={t('nav.openMenu')}
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg id="icon-menu" aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="icon-close" aria-hidden="true" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
   </nav>
 
-  <!-- Mobile drawer -->
-  <div
-    id="mobile-drawer"
-    role="dialog"
-    aria-label={lang === 'ko' ? '사이트 탐색' : 'Site navigation'}
-    aria-modal="true"
-    class="lg:hidden fixed inset-0 z-40 hidden"
-    style="top: 0; padding-top: 9rem; background: var(--color-surface-paper);"
-  >
-    <nav class="container-content py-8 flex flex-col gap-1" style="color: var(--color-ink-700);">
-      <!-- Language toggle — full-width, top of the drawer so it's the first thing seen -->
-      <a
-        href={otherLangPath}
-        class="press-tap mb-4 flex items-center justify-center gap-2 rounded-btn border-2 border-primary-500 py-3.5 text-lg font-semibold text-primary-600 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
-        hreflang={otherLang}
-        aria-label={otherLang === 'ko' ? '한국어로 번역' : 'Translate to English'}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-        {otherLang === 'ko' ? '한국어로 보기' : 'View in English'}
-      </a>
-      {mobileLinks.map(({ href, label }) => (
-        <a
-          href={href}
-          class="block py-3 text-lg font-medium border-b hover:opacity-70 transition-opacity"
-          style="border-color: var(--color-line-hairline);"
-          aria-current={isActive(href) ? 'page' : undefined}
-        >
+  <div id="mobile-drawer" class="hidden border-t border-line-hairline bg-white lg:hidden">
+    <nav aria-label={t('nav.mobileNav')} class="container-wide grid gap-1 py-4">
+      {navLinks.map(({ href, label }) => (
+        <a href={href} class="rounded-btn px-3 py-3 text-lg font-medium text-ink-800 hover:bg-primary-50">
           {label}
         </a>
       ))}
-      <!-- Phone CTA -->
-      <div class="mt-6">
-        <a
-          href={`tel:${CONTACT.phone.tel}`}
-          class="flex items-center gap-3 py-3 text-lg font-semibold"
-          style="color: var(--color-accent-gold-700);"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.26 6.26l.85-.85a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          {CONTACT.phone.display}
+      <div class="mt-3 grid gap-2 border-t border-line-hairline pt-4">
+        <a href={`tel:${CONTACT.phone.tel}`} class="rounded-btn bg-primary-700 px-4 py-3 text-center text-lg font-semibold text-white">
+          {lang === 'ko' ? '24시간 전화' : 'Call 24/7'} {CONTACT.phone.display}
+        </a>
+        <a href={lp('/referral')} class="rounded-btn bg-accent-gold-500 px-4 py-3 text-center text-lg font-semibold text-ink-900">
+          {t('nav.referral')}
         </a>
       </div>
     </nav>
@@ -315,131 +146,98 @@ function isActive(href: string): boolean {
 </header>
 
 <style>
-  /* Collapsed utility bar — driven by the scroll handler below.
-     A fixed max-height keeps the collapse animatable (auto→0 doesn't transition)
-     and matches the bar's natural height. */
-  #utility-bar {
+  #site-header.is-scrolled {
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 0.06);
+  }
+
+  #main-nav {
+    height: 0;
+  }
+
+  #site-header.is-scrolled #quiet-brand-bar {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  #site-header.is-scrolled #utility-bar {
     max-height: 4rem;
   }
-  #utility-bar.is-collapsed {
-    max-height: 0;
-    border-width: 0;
+
+  #site-header.is-scrolled #main-nav {
+    height: 4.25rem;
+    max-height: 5.5rem;
+    opacity: 1;
+  }
+
+  @media (max-width: 420px) {
+    #quiet-brand-bar {
+      height: 5.5rem;
+    }
+
+    #quiet-brand-bar .font-heading {
+      font-size: 2.2rem;
+    }
   }
 </style>
 
 <script>
-  // Mobile menu toggle
-  const btn    = document.getElementById('mobile-menu-btn');
+  const header = document.getElementById('site-header');
+  const btn = document.getElementById('mobile-menu-btn');
   const drawer = document.getElementById('mobile-drawer');
-  const iconMenu  = document.getElementById('icon-menu');
+  const iconMenu = document.getElementById('icon-menu');
   const iconClose = document.getElementById('icon-close');
-  const menuOpenLabel = btn?.dataset.openLabel ?? 'Open menu';
-  const menuCloseLabel = btn?.dataset.closeLabel ?? 'Close menu';
 
-  const resourcesDropdown = document.querySelector('[data-resources-dropdown]');
-  const resourcesButton = document.querySelector('[data-resources-button]');
-  const resourcesMenu = document.querySelector('[data-resources-menu]');
-  const resourcesChevron = document.querySelector('[data-resources-chevron]');
+  const SCROLL_AT = 36;
+  const isHomePage = header?.dataset.homePage === 'true';
+  let introConsumed = !isHomePage;
+  let scrolled = header?.classList.contains('is-scrolled') ?? false;
+  let ticking = false;
 
-  function setResourcesMenu(open) {
-    resourcesButton?.setAttribute('aria-expanded', open ? 'true' : 'false');
-    resourcesMenu?.classList.toggle('opacity-0', !open);
-    resourcesMenu?.classList.toggle('invisible', !open);
-    resourcesMenu?.classList.toggle('opacity-100', open);
-    resourcesMenu?.classList.toggle('visible', open);
-    resourcesChevron?.classList.toggle('rotate-180', open);
-  }
-
-  resourcesButton?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setResourcesMenu(resourcesButton.getAttribute('aria-expanded') !== 'true');
-  });
-
-  resourcesMenu?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => setResourcesMenu(false));
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target instanceof Node && !resourcesDropdown?.contains(e.target)) setResourcesMenu(false);
-  });
-
-  function openMenu() {
-    drawer?.classList.remove('hidden');
-    btn?.setAttribute('aria-expanded', 'true');
-    btn?.setAttribute('aria-label', menuCloseLabel);
-    iconMenu?.classList.add('hidden');
-    iconClose?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMenu() {
-    drawer?.classList.add('hidden');
-    btn?.setAttribute('aria-expanded', 'false');
-    btn?.setAttribute('aria-label', menuOpenLabel);
-    iconMenu?.classList.remove('hidden');
-    iconClose?.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  btn?.addEventListener('click', () => {
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-    isOpen ? closeMenu() : openMenu();
-  });
-
-  // Close drawer on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeMenu();
-      setResourcesMenu(false);
-    }
-  });
-
-  // Close drawer when a nav link is clicked
-  drawer?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // Scroll: collapse the utility bar once scrolled down, expand near the top.
-  //
-  // Hysteresis matters here: collapsing the bar removes ~40px of sticky
-  // header, which shifts layout and can nudge scrollY back across a single
-  // threshold — making the bar flip-flop and stutter right around that point
-  // (most noticeable while scrolling up). Using separate collapse/expand
-  // thresholds with a dead-zone breaks that feedback loop. We also batch DOM
-  // writes into rAF and only touch the DOM when the state actually changes.
-  const utilityBar = document.getElementById('utility-bar');
-  const header     = document.getElementById('site-header');
-
-  const COLLAPSE_AT = 100; // collapse once scrolled past this
-  const EXPAND_AT   = 40;  // only re-expand once back above this
-  let collapsed = false;
-  let shadowed  = false;
-  let ticking   = false;
-
-  function applyScrollState() {
-    const y = window.scrollY;
-
-    if (!collapsed && y > COLLAPSE_AT) {
-      collapsed = true;
-      utilityBar?.classList.add('is-collapsed');
-    } else if (collapsed && y < EXPAND_AT) {
-      collapsed = false;
-      utilityBar?.classList.remove('is-collapsed');
+  function applyHeaderState() {
+    if (isHomePage && !introConsumed && window.scrollY > SCROLL_AT) {
+      introConsumed = true;
     }
 
-    const wantShadow = y > 4;
-    if (wantShadow !== shadowed) {
-      shadowed = wantShadow;
-      if (header) header.style.boxShadow = wantShadow ? '0 1px 0 0 rgb(0 0 0 / 0.06)' : 'none';
+    const next = !isHomePage || introConsumed || window.scrollY > SCROLL_AT;
+    if (next !== scrolled) {
+      scrolled = next;
+      header?.classList.toggle('is-scrolled', scrolled);
     }
-
     ticking = false;
   }
 
-  window.addEventListener('scroll', () => {
+  function requestHeaderState() {
     if (!ticking) {
       ticking = true;
-      requestAnimationFrame(applyScrollState);
+      requestAnimationFrame(applyHeaderState);
     }
-  }, { passive: true });
+  }
+
+  function setOpen(open) {
+    btn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    drawer?.classList.toggle('hidden', !open);
+    iconMenu?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    if (open) {
+      introConsumed = true;
+      applyHeaderState();
+    }
+  }
+
+  applyHeaderState();
+  window.addEventListener('scroll', requestHeaderState, { passive: true });
+
+  btn?.addEventListener('click', () => {
+    setOpen(btn.getAttribute('aria-expanded') !== 'true');
+  });
+
+  drawer?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
 </script>

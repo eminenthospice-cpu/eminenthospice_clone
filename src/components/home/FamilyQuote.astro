@@ -1,0 +1,22 @@
+---
+import { useTranslations } from '../../i18n/utils';
+import SectionContainer from '../ui/SectionContainer.astro';
+
+export interface Props {
+  lang: 'en' | 'ko';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<SectionContainer bg="white" ariaLabelledBy="quote-heading">
+  <div class="reveal mx-auto max-w-4xl rounded-card border border-line-hairline bg-surface-canvas p-7 md:p-10">
+    <p class="eyebrow mb-4 text-primary-700">{t('home.quote.eyebrow')}</p>
+    <h2 id="quote-heading" class="sr-only">{t('home.quote.heading')}</h2>
+    <blockquote class="font-heading text-3xl leading-tight text-ink-900 md:text-4xl">
+      “{t('home.quote.text')}”
+    </blockquote>
+    <p class="mt-6 text-base font-semibold text-ink-700">{t('home.quote.source')}</p>
+  </div>
+</SectionContainer>

@@ -1,6 +1,6 @@
 ---
 import { useTranslations, localizedPath } from '../../i18n/utils';
-import SectionContainer from '../ui/SectionContainer.astro';
+import { CONTACT } from '../../data/site-config';
 import Button from '../ui/Button.astro';
 
 export interface Props {
@@ -10,65 +10,27 @@ export interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const lp = (p: string) => localizedPath(p, lang);
-const eyebrow = lang === 'ko' ? '저희에게 연락하세요' : 'Reach out today';
-
-const phoneTel = t('home.finalCta.phoneNumberTel');
-const phoneDisplay = t('home.finalCta.phoneNumberDisplay');
-
-// Split title: first word italic, rest normal
-const title = t('home.finalCta.title');
-const titleWords = title.trim().split(/\s+/);
-const firstWord = titleWords[0] ?? '';
-const restTitle = titleWords.slice(1).join(' ');
 ---
 
-<SectionContainer bg="primary" ariaLabelledBy="final-cta-heading" class="relative overflow-hidden">
-  <div class="reveal relative text-center max-w-2xl mx-auto">
-    <p class="eyebrow text-accent-gold-200 mb-5">{eyebrow}</p>
-    <h2
-      id="final-cta-heading"
-      class="font-heading text-5xl md:text-6xl text-white mb-5 leading-tight"
-    >
-      <em class="not-italic italic">{firstWord}</em>{restTitle ? ` ${restTitle}` : ''}
-    </h2>
-    <p class="font-prose text-lg text-primary-100 leading-relaxed mb-10 max-w-lg mx-auto">
-      {t('home.finalCta.subtitle')}
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-stretch sm:items-center">
-      <!-- Primary call CTA -->
-      <a
-        href={`tel:${phoneTel}`}
-        class="group inline-flex items-center justify-center gap-3 px-7 py-4 rounded-btn shadow-float
-          bg-white text-primary-700 hover:bg-accent-gold-50 hover:text-primary-800
-          transition-[transform,background-color,color] duration-150
-          min-h-[52px] press-tap
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
-      >
-        <svg aria-hidden="true" class="w-5 h-5 transition-transform duration-150 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75z" />
-        </svg>
-        <span class="font-medium">{t('home.finalCta.call')}</span>
-        <span class="font-heading text-2xl tabular-nums tracking-tight leading-none">{phoneDisplay}</span>
-      </a>
-
-      <!-- Referral CTA -->
-      <Button href={lp('/referral')} variant="secondary" size="lg" class="border-white/50 text-white hover:bg-white/10 hover:text-white hover:border-white">
-        {t('home.finalCta.refer')}
-        <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-        </svg>
-      </Button>
-
-      <!-- Contact text link -->
-      <a
-        href={lp('/contact')}
-        class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium
-          text-primary-100 hover:text-white rounded-btn transition-colors duration-150 min-h-[48px]
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
-      >
-        {t('home.finalCta.contact')}
-      </a>
+<section aria-labelledby="final-cta-heading" class="bg-white">
+  <div class="container-wide pb-20">
+    <div class="reveal rounded-card bg-primary-700 px-6 py-10 text-center text-white shadow-soft md:px-12 md:py-14">
+      <p class="eyebrow mb-3 text-primary-100">{t('home.finalCta.eyebrow')}</p>
+      <h2 id="final-cta-heading" class="mx-auto max-w-3xl font-heading text-4xl leading-tight md:text-5xl">
+        {t('home.finalCta.title')}
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-primary-100">{t('home.finalCta.subtitle')}</p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="xl">
+          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75z" />
+          </svg>
+          {t('home.finalCta.call')} {CONTACT.phone.display}
+        </Button>
+        <Button href={lp('/referral')} variant="secondary" size="xl" class="border-white text-white hover:bg-white/10 hover:text-white">
+          {t('home.finalCta.refer')}
+        </Button>
+      </div>
     </div>
   </div>
-</SectionContainer>
+</section>
