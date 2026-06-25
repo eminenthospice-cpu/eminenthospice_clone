@@ -44,9 +44,9 @@ const costFootnote = costFootnoteRaw
 
 const anchors = [
   { id: 'offer',        label: t('services.sections.offer.title') },
-  { id: 'levels',       label: t('services.sections.levels.title') },
   { id: 'team',         label: t('services.sections.team.title') },
   { id: 'additional',   label: t('services.sections.additional.title') },
+  { id: 'levels',       label: t('services.sections.levels.title') },
   { id: 'how-to-start', label: t('services.sections.howToStart.title') },
 ];
 
@@ -101,33 +101,6 @@ const relatedLinks = [
     </div>
   </section>
 
-  <section id="levels" aria-labelledby="levels-h" class="reveal scroll-mt-24">
-    <h2 id="levels-h">{t('services.sections.levels.title')}</h2>
-    <p class="mb-6">{t('services.sections.levels.intro')}</p>
-    <div class="space-y-6 not-prose">
-      {LEVELS.map(({ key, icon }) => (
-        <article
-          id={`level-${key}`}
-          class="bg-white rounded-card shadow-soft p-6 scroll-mt-24"
-          aria-labelledby={`level-${key}-h`}
-        >
-          <div class="flex gap-3 items-start mb-3">
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-50 text-primary-600 flex-shrink-0">
-              <Icon name={icon} class="w-5 h-5" />
-            </span>
-            <h3 id={`level-${key}-h`} class="font-heading text-xl font-semibold text-ink-900 pt-1">
-              {t(`services.sections.levels.${key}.title`)}
-            </h3>
-          </div>
-          <p class="mb-3 leading-relaxed font-prose text-ink-800">{t(`services.sections.levels.${key}.summary`)}</p>
-          <p class="mb-3 leading-relaxed font-prose text-ink-600">{t(`services.sections.levels.${key}.clinical`)}</p>
-          <p class="text-base text-ink-500 leading-relaxed font-prose">{t(`services.sections.levels.${key}.atHome`)}</p>
-        </article>
-      ))}
-    </div>
-    <p class="mt-5 text-base text-ink-500 leading-relaxed font-prose not-prose" set:html={costFootnote} />
-  </section>
-
   <section id="team" aria-labelledby="team-h" class="reveal scroll-mt-24">
     <h2 id="team-h">{t('services.sections.team.title')}</h2>
     <p class="mb-6">{t('services.sections.team.intro')}</p>
@@ -174,6 +147,43 @@ const relatedLinks = [
     </dl>
   </section>
 
+  <section id="levels" aria-labelledby="levels-h" class="reveal scroll-mt-24">
+    <h2 id="levels-h">{t('services.sections.levels.title')}</h2>
+    <p class="mb-6">{t('services.sections.levels.intro')}</p>
+    <div class="space-y-6 not-prose">
+      {LEVELS.map(({ key, icon }) => (
+        <article
+          id={`level-${key}`}
+          class="bg-white rounded-card shadow-soft p-6 scroll-mt-24"
+          aria-labelledby={`level-${key}-h`}
+        >
+          <div class="flex gap-3 items-start mb-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-50 text-primary-600 flex-shrink-0">
+              <Icon name={icon} class="w-5 h-5" />
+            </span>
+            <h3 id={`level-${key}-h`} class="font-heading text-xl font-semibold text-ink-900 pt-1">
+              {t(`services.sections.levels.${key}.title`)}
+            </h3>
+          </div>
+          {(['summary', 'clinical', 'atHome'] as const).map((part, index) => {
+            const body = t(`services.sections.levels.${key}.${part}`);
+            if (!body) return null;
+            return (
+              <p class:list={[
+                'leading-relaxed font-prose',
+                index === 0 ? 'text-ink-800' : index === 1 ? 'text-ink-600' : 'text-base text-ink-500',
+                { 'mb-3': index < 2 },
+              ]}>
+                {body}
+              </p>
+            );
+          })}
+        </article>
+      ))}
+    </div>
+    <p class="mt-5 text-base text-ink-500 leading-relaxed font-prose not-prose" set:html={costFootnote} />
+  </section>
+
   <section id="how-to-start" aria-labelledby="how-to-start-h" class="reveal scroll-mt-24">
     <h2 id="how-to-start-h">{t('services.sections.howToStart.title')}</h2>
     <p class="mb-5">{t('services.sections.howToStart.intro')}</p>
@@ -196,9 +206,9 @@ const relatedLinks = [
       <a
         href={`tel:${CONTACT.phone.tel}`}
         class="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3
-               rounded-btn bg-primary-500 text-white font-medium hover:bg-primary-600
+               rounded-btn bg-ink-900 text-white font-medium hover:bg-ink-800
                transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2
-               focus-visible:ring-primary-500 focus-visible:ring-offset-2 w-full sm:w-auto"
+               focus-visible:ring-ink-900 focus-visible:ring-offset-2 w-full sm:w-auto"
       >
         <Icon name="phone" class="w-5 h-5" />
         {t('services.sections.howToStart.callCta')}

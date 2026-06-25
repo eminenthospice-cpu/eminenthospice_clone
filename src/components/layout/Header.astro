@@ -41,17 +41,9 @@ const isHomePage = currentPath === '/';
     { 'is-scrolled': !isHomePage },
   ]}
 >
-  <div id="quiet-brand-bar" class="container-wide flex h-24 items-center justify-center transition-all duration-300">
-    <a href={lp('/')} class="group inline-flex items-center gap-4 text-center" aria-label={`${SITE.name} home`}>
-      <img src={BRAND.logo} alt="" width="56" height="56" class="h-14 w-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105" loading="eager" decoding="async" />
-      <span>
-        <span class="block font-heading text-4xl font-semibold leading-none text-ink-900 sm:text-5xl">
-          Eminent Hospice
-        </span>
-        <span class="mt-2 block text-base font-medium tracking-wide text-primary-700">
-          {lang === 'ko' ? 'Comfort. Dignity. Compassion.' : 'Comfort. Dignity. Compassion.'}
-        </span>
-      </span>
+  <div id="quiet-brand-bar" class="container-wide flex h-48 items-center justify-center transition-all duration-300">
+    <a href={lp('/')} class="group inline-flex items-center justify-center text-center" aria-label={`${SITE.name} home`}>
+      <img src={BRAND.logo} alt="" width="544" height="194" class="h-36 w-[88vw] max-w-[34rem] shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-40 sm:w-[34rem]" loading="eager" decoding="async" />
     </a>
   </div>
 
@@ -78,12 +70,8 @@ const isHomePage = currentPath === '/';
     aria-label={t('nav.mainNav')}
     class="container-wide grid max-h-0 grid-cols-[1fr_auto] items-center gap-4 overflow-hidden opacity-0 transition-all duration-300"
   >
-    <a href={lp('/')} class="flex min-w-0 items-center gap-3 py-3" aria-label={`${SITE.name} home`}>
-      <img src={BRAND.logo} alt="" width="44" height="44" class="h-11 w-11 shrink-0 object-contain" loading="eager" decoding="async" />
-      <span class="min-w-0">
-        <span class="block truncate text-lg font-bold leading-tight text-ink-900">{SITE.name}</span>
-        <span class="hidden text-caption leading-tight text-ink-500 sm:block">{SITE.tagline}</span>
-      </span>
+    <a href={lp('/')} class="flex min-w-0 items-center justify-self-center py-1" aria-label={`${SITE.name} home`}>
+      <img src={BRAND.logo} alt="" width="288" height="102" class="h-20 w-72 shrink-0 object-contain" loading="eager" decoding="async" />
     </a>
 
     <div class="flex items-center gap-2">
@@ -166,18 +154,20 @@ const isHomePage = currentPath === '/';
   }
 
   #site-header.is-scrolled #main-nav {
-    height: 4.25rem;
-    max-height: 5.5rem;
+    height: 5.75rem;
+    max-height: 6.5rem;
     opacity: 1;
   }
 
   @media (max-width: 420px) {
     #quiet-brand-bar {
-      height: 5.5rem;
+      height: 9rem;
     }
 
-    #quiet-brand-bar .font-heading {
-      font-size: 2.2rem;
+    #quiet-brand-bar img {
+      height: 7.5rem;
+      width: 88vw;
+      max-width: 28rem;
     }
   }
 </style>

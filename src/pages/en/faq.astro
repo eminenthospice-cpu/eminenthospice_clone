@@ -3,6 +3,7 @@ import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import FaqPageJsonLd from '../../components/seo/FaqPageJsonLd.astro';
 import { localizedPath } from '../../i18n/utils';
+import { VIDEO_RESOURCES } from '../../data/videos';
 import enData from '../../i18n/en.json';
 
 const lang = 'en' as const;
@@ -19,10 +20,13 @@ const catAnchors: Record<string, string> = {
   rights:         'rights',
 };
 
-const anchors = catOrder.map(key => ({
-  id: catAnchors[key],
-  label: d.categories[key].title,
-}));
+const anchors = [
+  { id: 'video-library', label: 'Video Library' },
+  ...catOrder.map(key => ({
+    id: catAnchors[key],
+    label: d.categories[key].title,
+  })),
+];
 
 const relatedLinks = [
   { href: '/understanding-hospice', label: common.relatedPages.links.understandingHospice },
@@ -51,6 +55,37 @@ const faqJsonLdItems = catOrder.flatMap(catKey =>
   <FaqPageJsonLd slot="head" items={faqJsonLdItems} />
 
   <PageSidebar slot="sidebar" {anchors} {relatedLinks} {lang} />
+
+  <section id="video-library" class="scroll-mt-24">
+    <h2>Video Library</h2>
+    <p>
+      All videos from across the site are gathered here for families who prefer to watch and listen.
+    </p>
+    <div class="not-prose mt-5 grid gap-5">
+      {VIDEO_RESOURCES.map(video => (
+        <article class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)]">
+          <video
+            class="block w-full aspect-video bg-ink-950"
+            controls
+            preload="metadata"
+            playsinline
+            aria-label={video.title.en}
+          >
+            <source src={video.videoSrc} type="video/mp4" />
+            <track kind="subtitles" src={video.captionSrc} srclang="en" label="English" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="flex flex-col justify-center px-5 py-4">
+            <h3 class="font-heading text-lg font-semibold leading-snug text-ink-900">{video.title.en}</h3>
+            <p class="mt-2 text-base leading-relaxed text-ink-600">{video.description.en}</p>
+            <a href={lp(video.sourcePath)} class="mt-4 inline-flex text-base font-medium text-primary-700 hover:text-primary-800 hover:underline">
+              View related page
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 
   {catOrder.map(catKey => {
     const cat = d.categories[catKey];

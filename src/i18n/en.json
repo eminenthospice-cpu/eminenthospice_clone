@@ -51,13 +51,13 @@
     "pageTitle": "Hospice Care at Home in Los Angeles and Orange County",
     "metaDescription": "Eminent Hospice Care provides comfort-focused hospice care at home across North Hollywood, greater Los Angeles, and Orange County. Available 24/7 in English and Korean.",
     "hero": {
-      "eyebrow": "North Hollywood, greater Los Angeles, and Orange County",
-      "heading": "Hospice care at home, available 24/7 in English and Korean.",
+      "eyebrow": "Los Angeles and Orange County",
+      "heading": "Hospice care, available 24/7 in English and Korean.",
       "subtext": "When comfort matters most, our team helps patients and families in Los Angeles and Orange County understand hospice, start care quickly, and stay supported at home.",
       "ctaPrimary": "Call 24/7",
       "ctaSecondary": "Make a Referral",
       "captionLabel": "What families can expect",
-      "caption": "A nurse-led hospice team focused on comfort, dignity, and clear communication.",
+      "caption": "A skilled hospice team focused on comfort, dignity, and clear communication.",
       "highlights": {
         "availability": {
           "label": "Access",
@@ -667,9 +667,9 @@
         "costFootnote": "For coverage and what families pay, see our <link>Insurance & Medicare page</link>.",
         "respite": {
           "title": "Inpatient Respite Care",
-          "summary": "Short-term inpatient care that gives family caregivers time to rest while the patient continues receiving hospice care.",
-          "clinical": "Respite care is used when the caregiver needs temporary relief. The patient stays briefly in a Medicare-approved inpatient setting while hospice care continues.",
-          "atHome": "Respite is generally available for up to five consecutive days at a time. After the respite stay, care usually returns to Routine Home Care wherever the patient calls home."
+          "summary": "Short-term inpatient care gives family caregivers time to rest while the patient continues receiving hospice care in an approved setting.",
+          "clinical": "It is generally available for up to five consecutive days at a time, after which care usually returns to Routine Home Care.",
+          "atHome": ""
         }
       },
       "team": {
