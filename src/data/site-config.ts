@@ -1,5 +1,5 @@
 /**
- * Eminent Hospice — Centralized Site Configuration
+ * Eminent Hospice - Centralized Site Configuration
  *
  * All org-specific placeholders live here.
  * Update these values before going live.

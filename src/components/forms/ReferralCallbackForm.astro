@@ -1,8 +1,8 @@
 ---
 /**
- * ReferralCallbackForm.astro — No-PHI callback request form.
+ * ReferralCallbackForm.astro - No-PHI callback request form.
  * Collects: name, phone, email (optional), best time, referrer type.
- * NO patient health information collected here — referral taken by phone.
+ * NO patient health information collected here - referral taken by phone.
  * Posts to /api/submit (Pages Function), which verifies the Turnstile token
  * server-side and forwards to Formspree.
  */
@@ -39,6 +39,8 @@ const referrerTypeKeys = ['physician', 'familyMember', 'caseManager', 'other'] a
     method="POST"
     novalidate
     class="space-y-5"
+    data-lang={lang}
+    data-phone={CONTACT.phone.display}
   >
     <header>
       <h2 class="font-heading text-2xl text-ink-900 mb-1">{t('referral.modeA.callbackForm.title')}</h2>
@@ -55,7 +57,7 @@ const referrerTypeKeys = ['physician', 'familyMember', 'caseManager', 'other'] a
       tabindex="-1"
       autocomplete="off"
       aria-hidden="true"
-      style="display:none !important; position:absolute; left:-9999px;"
+      class="hp-field"
     />
 
     <!-- Caller name -->
@@ -186,8 +188,11 @@ const referrerTypeKeys = ['physician', 'familyMember', 'caseManager', 'other'] a
 
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<script define:vars={{ endpoint: '/api/submit', phoneDisplay: CONTACT.phone.display, lang }}>
+<script>
+  const endpoint = '/api/submit';
   const form = document.getElementById('referral-form');
+  const lang = form?.dataset.lang ?? 'en';
+  const phoneDisplay = form?.dataset.phone ?? '';
   const successEl = document.getElementById('referral-success');
   const successBodyEl = document.getElementById('referral-success-body');
   const submitBtn = document.getElementById('rf-submit');
@@ -232,7 +237,7 @@ const referrerTypeKeys = ['physician', 'familyMember', 'caseManager', 'other'] a
     : 'Please complete the security check.';
   const turnstileFailed = lang === 'ko'
     ? `보안 확인에 실패했습니다. 새로고침 후 다시 시도하시거나 ${phoneDisplay}으로 전화해 주세요.`
-    : `The security check failed. Please reload and try again — or call us at ${phoneDisplay}.`;
+    : `The security check failed. Please reload and try again - or call us at ${phoneDisplay}.`;
 
   function showServerError(msg) {
     if (!serverErrEl) return;

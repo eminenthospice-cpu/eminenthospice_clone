@@ -1,5 +1,5 @@
 /**
- * Cloudflare Pages Function — form submission proxy.
+ * Cloudflare Pages Function - form submission proxy.
  *
  * Verifies the Cloudflare Turnstile token server-side, then forwards the
  * submission to the correct Formspree endpoint. The Turnstile secret never

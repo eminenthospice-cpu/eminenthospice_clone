@@ -10,6 +10,7 @@ import ServicesSnapshot from '../../components/home/ServicesSnapshot.astro';
 import TrustBand from '../../components/home/TrustBand.astro';
 import FamilyQuote from '../../components/home/FamilyQuote.astro';
 import FinalCta from '../../components/home/FinalCta.astro';
+import { imageSlots } from '../../data/images';
 
 const lang = 'ko' as const;
 const t = useTranslations(lang);
@@ -20,6 +21,7 @@ const t = useTranslations(lang);
   description={t('home.metaDescription')}
   lang={lang}
   path="/"
+  preloadImage={imageSlots.homeHero.src}
 >
   <LocalBusinessJsonLd lang={lang} />
   <OrganizationJsonLd />

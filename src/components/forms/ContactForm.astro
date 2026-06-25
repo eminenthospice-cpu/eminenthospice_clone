@@ -1,6 +1,6 @@
 ---
 /**
- * ContactForm.astro — contact form with Cloudflare Turnstile.
+ * ContactForm.astro - contact form with Cloudflare Turnstile.
  * Progressive enhancement: AJAX submit, honeypot, success/error states.
  * Posts to /api/submit (Pages Function), which verifies the Turnstile token
  * server-side and forwards to Formspree.
@@ -37,20 +37,22 @@ const subjectKeys = ['general', 'insurance', 'volunteer', 'other'] as const;
     method="POST"
     novalidate
     class="space-y-5"
+    data-lang={lang}
+    data-phone={CONTACT.phone.display}
   >
     <h2 class="font-heading text-2xl text-ink-900">{t('contact.form.heading')}</h2>
 
     <!-- Routes the submission to the contact Formspree endpoint server-side -->
     <input type="hidden" name="form" value="contact" />
 
-    <!-- Honeypot — bots fill this; server ignores the submission -->
+    <!-- Honeypot - bots fill this; server ignores the submission -->
     <input
       type="text"
       name="_gotcha"
       tabindex="-1"
       autocomplete="off"
       aria-hidden="true"
-      style="display:none !important; position:absolute; left:-9999px;"
+      class="hp-field"
     />
 
     <!-- Name -->
@@ -185,8 +187,11 @@ const subjectKeys = ['general', 'insurance', 'volunteer', 'other'] as const;
 
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<script define:vars={{ endpoint: '/api/submit', phoneDisplay: CONTACT.phone.display, lang }}>
+<script>
+  const endpoint = '/api/submit';
   const form = document.getElementById('contact-form');
+  const lang = form?.dataset.lang ?? 'en';
+  const phoneDisplay = form?.dataset.phone ?? '';
   const wrapper = document.getElementById('contact-form-wrapper');
   const successEl = document.getElementById('contact-success');
   const successBodyEl = document.getElementById('contact-success-body');
@@ -236,7 +241,7 @@ const subjectKeys = ['general', 'insurance', 'volunteer', 'other'] as const;
     : 'Please complete the security check.';
   const turnstileFailed = lang === 'ko'
     ? `보안 확인에 실패했습니다. 새로고침 후 다시 시도하시거나 ${phoneDisplay}으로 전화해 주세요.`
-    : `The security check failed. Please reload and try again — or call us at ${phoneDisplay}.`;
+    : `The security check failed. Please reload and try again - or call us at ${phoneDisplay}.`;
 
   function showServerError(msg) {
     if (!serverErrEl) return;

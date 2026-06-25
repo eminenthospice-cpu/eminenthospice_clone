@@ -101,13 +101,13 @@ const relatedLinks = [
       {s.myths.items.map(item => (
         <div class="rounded-card border border-primary-100 bg-white p-5 shadow-soft">
           <div class="flex items-start gap-3 mb-3">
-            <span class="inline-block rounded-full bg-accent-gold-100 text-accent-gold-800 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
+            <span class="inline-block rounded-full bg-error px-2.5 py-0.5 text-caption font-semibold text-white flex-shrink-0 mt-0.5">
               {s.myths.mythLabel}
             </span>
             <p class="font-medium text-ink-800 italic leading-snug">{item.myth}</p>
           </div>
           <div class="flex items-start gap-3">
-            <span class="inline-block rounded-full bg-primary-100 text-primary-800 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
+            <span class="inline-block rounded-full bg-success px-2.5 py-0.5 text-caption font-semibold text-white flex-shrink-0 mt-0.5">
               {s.myths.factLabel}
             </span>
             <p class="text-ink-700 text-base leading-relaxed">{item.fact}</p>
@@ -147,15 +147,15 @@ const relatedLinks = [
     <p>{s.stoppingHospice.p1}</p>
   </section>
 
-  <div class="not-prose mt-12 rounded-card bg-primary-700 text-white p-6 md:p-8">
-    <h2 class="font-heading text-xl mb-2">{common.pageBottomCta.title}</h2>
-    <p class="font-prose text-primary-100 mb-5 leading-relaxed">{common.pageBottomCta.subtitle}</p>
+  <div class="not-prose mt-10 rounded-card border border-primary-100 bg-primary-50 p-5 text-ink-900 shadow-soft md:p-6">
+    <h2 class="font-heading text-xl mb-1 text-ink-900">{common.pageBottomCta.title}</h2>
+    <p class="font-prose text-ink-700 mb-4 leading-relaxed">{common.pageBottomCta.subtitle}</p>
     <div class="flex flex-col sm:flex-row gap-3">
       <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="md">
         <Icon name="phone" class="w-4 h-4" />
         {common.pageBottomCta.call}
       </Button>
-      <Button href={lp('/referral')} variant="secondary" size="md" class="border-white bg-white/5 text-white hover:bg-white/10 hover:text-white">
+      <Button href={lp('/referral')} variant="secondary" size="md" class="border-primary-500 bg-white text-primary-700 hover:bg-primary-100 hover:text-primary-800">
         {common.pageBottomCta.refer}
       </Button>
     </div>

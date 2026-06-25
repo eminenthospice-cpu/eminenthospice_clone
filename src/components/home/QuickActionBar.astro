@@ -68,7 +68,7 @@ const actions = [
         </span>
         <span>
           <span class="block text-lg font-semibold leading-tight">{action.title}</span>
-          <span class:list(['mt-1 block text-base leading-snug', action.primary ? 'text-ink-800' : 'text-ink-600'])}>{action.body}</span>
+          <span class:list={['mt-1 block text-base leading-snug', action.primary ? 'text-ink-800' : 'text-ink-600']}>{action.body}</span>
         </span>
       </a>
     ))}

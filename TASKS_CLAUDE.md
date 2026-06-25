@@ -1,7 +1,7 @@
-# Production Tasks — Track A: Assets & Media (Claude)
+# Production Tasks - Track A: Assets & Media (Claude)
 
 Working dir: `eminent-astro/` · Branch: `astro-rewrite`
-Run alongside Track B (Codex) — see `TASKS_CODEX.md`.
+Run alongside Track B (Codex) - see `TASKS_CODEX.md`.
 
 ## File ownership (avoid merge conflicts)
 
@@ -14,7 +14,7 @@ Run alongside Track B (Codex) — see `TASKS_CODEX.md`.
 
 ---
 
-## Task 1 — Self-host the photography (HIGH PRIORITY)
+## Task 1 - Self-host the photography (HIGH PRIORITY)
 
 All 11 image slots in `src/data/images.ts` currently hotlink
 `images.unsplash.com`. Download each, commit it under `public/images/photos/`,
@@ -50,13 +50,13 @@ Steps:
    separate later task and noted in PLACEHOLDERS.md).
 
 > NOTE: these are still stock images, just self-hosted. If the client provides
-> real photos later, drop them in at the same paths/dimensions — no code change.
+> real photos later, drop them in at the same paths/dimensions - no code change.
 
-## Task 2 — Optimize the logo (MEDIUM)
+## Task 2 - Optimize the logo (MEDIUM)
 
 `public/images/logo.svg` is **1.5 MB** and loads in the header on every page.
 Investigate why it's so large (likely an embedded raster or un-minified paths).
-- If it embeds a bitmap, that's the bug — extract/recompress or replace with a
+- If it embeds a bitmap, that's the bug - extract/recompress or replace with a
   true vector.
 - Otherwise minify (e.g. `npx svgo public/images/logo.svg`).
 Target: well under 100 KB. Confirm it still renders identically in the header.

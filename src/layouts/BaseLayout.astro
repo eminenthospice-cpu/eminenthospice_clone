@@ -1,6 +1,6 @@
 ---
 /**
- * BaseLayout.astro — The master layout for every page.
+ * BaseLayout.astro - The master layout for every page.
  * Handles <head> (SEO, OG, hreflang), fonts, global CSS,
  * scroll reveal, Header, and Footer.
  */
@@ -17,6 +17,7 @@ export interface Props {
   path: string;                // canonical path, e.g. '/about'
   ogImage?: string;
   noIndex?: boolean;
+  preloadImage?: string;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   path,
   ogImage = BRAND.ogImageDefault,
   noIndex = false,
+  preloadImage,
 } = Astro.props;
 
 // Normalize: /en + / → /en, /en + /about → /en/about
@@ -43,6 +45,9 @@ const ogImageAbs   = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImag
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={BRAND.favicon} />
+
+    <!-- LCP image: preload the hero photo so the browser fetches it before parsing reaches it -->
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
     <!-- SEO -->
     <title>{title} | {SITE.name}</title>
@@ -74,7 +79,7 @@ const ogImageAbs   = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImag
   </head>
 
   <body>
-    <!-- Skip to main content — accessibility -->
+    <!-- Skip to main content - accessibility -->
     <a href="#main-content" class="skip-link">
       {lang === 'ko' ? '본문으로 바로 가기' : 'Skip to main content'}
     </a>
@@ -87,7 +92,7 @@ const ogImageAbs   = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImag
 
     <Footer lang={lang} />
 
-    <!-- Scroll reveal — runs after paint -->
+    <!-- Scroll reveal - runs after paint -->
     <script>
       import '../components/motion/reveal.ts';
     </script>

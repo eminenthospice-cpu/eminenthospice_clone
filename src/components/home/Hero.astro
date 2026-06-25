@@ -18,11 +18,17 @@ const highlights = ['availability', 'language', 'coverage'] as const;
 
 <section aria-labelledby="hero-heading" class="bg-white">
   <div class="relative isolate min-h-[calc(100vh-12rem)] overflow-hidden bg-ink-900 text-white">
-    <div
-      class="hero-fixed-bg absolute inset-0 -z-20"
-      style={`background-image: linear-gradient(90deg, rgb(26 36 48 / 0.85), rgb(26 36 48 / 0.58) 48%, rgb(26 36 48 / 0.2)), url('${heroImage.src}');`}
-      aria-hidden="true"
-    ></div>
+    <img
+      src={heroImage.src}
+      alt=""
+      width={heroImage.width}
+      height={heroImage.height}
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 -z-20 h-full w-full object-cover"
+    />
+    <div class="hero-gradient-overlay absolute inset-0 -z-10" aria-hidden="true"></div>
     <div class="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-ink-900/50 to-transparent"></div>
 
     <div class="container-wide flex min-h-[calc(100vh-12rem)] items-center py-16 md:py-20">
@@ -34,8 +40,7 @@ const highlights = ['availability', 'language', 'coverage'] as const;
 
         <h1
           id="hero-heading"
-          class="font-heading text-5xl font-black leading-[1.03] text-white sm:text-6xl lg:text-7xl"
-          style="text-shadow: 0 2px 3px rgb(0 0 0 / 0.42), 0 12px 28px rgb(0 0 0 / 0.32);"
+          class="hero-heading font-heading text-[2.7rem] font-semibold leading-[1.05] text-white sm:text-[3.375rem] lg:text-[4.05rem]"
         >
           {t('home.hero.heading')}
         </h1>
@@ -83,10 +88,18 @@ const highlights = ['availability', 'language', 'coverage'] as const;
 </section>
 
 <style>
-  .hero-fixed-bg {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  /*
+   * No dynamic values here on purpose: Astro's CSP (astro.config.mjs
+   * security.csp) only auto-hashes <style> block content, not inline
+   * style="" attributes (even define:vars-generated ones, since it has no
+   * 'unsafe-hashes' for attributes) - so the hero photo is a plain <img>
+   * (governed by img-src, not style-src) and this gradient stays static CSS.
+   */
+  .hero-gradient-overlay {
+    background-image: linear-gradient(90deg, rgb(26 36 48 / 0.85), rgb(26 36 48 / 0.58) 48%, rgb(26 36 48 / 0.2));
+  }
+
+  .hero-heading {
+    text-shadow: 0 2px 3px rgb(0 0 0 / 0.42), 0 12px 28px rgb(0 0 0 / 0.32);
   }
 </style>

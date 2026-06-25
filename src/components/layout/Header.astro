@@ -50,13 +50,13 @@ const isHomePage = currentPath === '/';
     { 'is-scrolled': !isHomePage },
   ]}
 >
-  <div id="quiet-brand-bar" class="container-wide flex h-[10.8rem] items-center justify-center transition-all duration-300">
+  <div id="quiet-brand-bar" class="container-wide flex h-[10.8rem] items-center justify-center transition-[height,opacity] duration-300">
     <a href={lp('/')} class="group inline-flex items-center justify-center text-center" aria-label={`${SITE.name} home`}>
       <img src={BRAND.logo} alt="" width="544" height="194" class="h-[8.1rem] w-[88vw] max-w-[30.6rem] shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-36 sm:w-[30.6rem]" loading="eager" decoding="async" />
     </a>
   </div>
 
-  <div id="utility-bar" class="max-h-0 overflow-hidden bg-primary-900 text-white transition-all duration-300">
+  <div id="utility-bar" class="max-h-0 overflow-hidden bg-primary-900 text-white transition-[max-height] duration-300">
     <div class="container-wide flex min-h-11 items-center justify-between gap-3 py-1 text-sm">
       <a href={`tel:${CONTACT.phone.tel}`} class="inline-flex min-h-10 items-center gap-2 font-semibold text-white">
         <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const isHomePage = currentPath === '/';
   <nav
     id="main-nav"
     aria-label={t('nav.mainNav')}
-    class="container-wide grid max-h-0 grid-cols-[1fr_auto] items-center gap-4 overflow-hidden opacity-0 transition-all duration-300"
+    class="container-wide grid max-h-0 grid-cols-[1fr_auto] items-center gap-4 overflow-hidden opacity-0 transition-[height,max-height,opacity] duration-300"
   >
     <a href={lp('/')} class="flex min-w-0 items-center justify-self-center py-1" aria-label={`${SITE.name} home`}>
       <img src={BRAND.logo} alt="" width="288" height="102" class="h-20 w-72 shrink-0 object-contain" loading="eager" decoding="async" />
@@ -98,9 +98,10 @@ const isHomePage = currentPath === '/';
           </a>
         ))}
 
-        <div class="group relative">
+        <div class="group relative" id="resources-menu">
           <button
             type="button"
+            id="resources-menu-btn"
             class:list={[
               'inline-flex min-h-11 items-center gap-1 rounded-btn px-3 text-base font-medium text-ink-700 hover:bg-primary-50 hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
               { 'bg-primary-50 text-primary-800': resourcesActive },
@@ -281,4 +282,16 @@ const isHomePage = currentPath === '/';
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setOpen(false);
   });
+
+  const resourcesMenu = document.getElementById('resources-menu');
+  const resourcesBtn = document.getElementById('resources-menu-btn');
+  if (resourcesMenu && resourcesBtn) {
+    const setResourcesExpanded = (open) => resourcesBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    resourcesMenu.addEventListener('mouseenter', () => setResourcesExpanded(true));
+    resourcesMenu.addEventListener('mouseleave', () => setResourcesExpanded(false));
+    resourcesMenu.addEventListener('focusin', () => setResourcesExpanded(true));
+    resourcesMenu.addEventListener('focusout', (event) => {
+      if (!resourcesMenu.contains(event.relatedTarget)) setResourcesExpanded(false);
+    });
+  }
 </script>

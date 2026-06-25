@@ -1,4 +1,4 @@
-# Eminent Hospice Care — Website Business Information
+# Eminent Hospice Care - Website Business Information
 
 ## 1. 대표 전화 번호
 **1 (818) 824-3702**
@@ -36,7 +36,7 @@
 
 > "My father passed away from advanced Parkinson's disease and was under hospice care with Eminent for quite some time. The nurses and staff at Eminent were some of the kindest and most compassionate people I have ever met. They were also incredibly efficient, professional, and excellent communicators (I could text them even at night or on weekends and get a response right away).
 >
-> They also provide seamless bilingual care — speaking Korean with my father while communicating clearly with me in English. They treated my father and our family with such warmth, dignity, and respect throughout the entire process.
+> They also provide seamless bilingual care - speaking Korean with my father while communicating clearly with me in English. They treated my father and our family with such warmth, dignity, and respect throughout the entire process.
 >
 > The care we received was so exceptional that after my father's passing, I felt compelled to leave a public review for this amazing hospice service. If you or a loved one need hospice care with bilingual support, I cannot recommend Eminent highly enough."
 

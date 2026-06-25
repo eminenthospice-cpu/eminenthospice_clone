@@ -17,7 +17,7 @@
     "skipToMain": "Skip to main content",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
-    "homeLinkAriaLabel": "Eminent Hospice Care — go to homepage",
+    "homeLinkAriaLabel": "Eminent Hospice Care - go to homepage",
     "switchLanguage": "Switch to {lang}"
   },
   "footer": {
@@ -131,7 +131,7 @@
         },
         "spiritual": {
           "title": "Spiritual care",
-          "body": "Optional support that honors the patient?s faith, culture, and values."
+          "body": "Optional support that honors the patient's faith, culture, and values."
         },
         "bereavement": {
           "title": "Bereavement care",
@@ -157,7 +157,7 @@
         },
         "local": {
           "title": "Los Angeles and Orange County service area",
-          "body": "Serving North Hollywood, the San Fernando Valley, greater Los Angeles, Orange County, and nearby communities."
+          "body": "Serving Greater Los Angeles and Orange County, including North Hollywood, the San Fernando Valley, and nearby communities."
         }
       }
     },
@@ -177,7 +177,7 @@
   },
   "common": {
     "educationalDisclaimer": "This information is general education, not legal or insurance advice. Coverage decisions are made by Medicare, Medi-Cal, and your physician. For your specific situation, please contact us or your insurance provider.",
-    "medicalDisclaimer": "This information is general education and is not a substitute for medical advice from your hospice team. For questions about your loved one's symptoms, medications, or care, call your hospice nurse anytime — day or night.",
+    "medicalDisclaimer": "This information is general education and is not a substitute for medical advice from your hospice team. For questions about your loved one's symptoms, medications, or care, call your hospice nurse anytime - day or night.",
     "lastReviewedLabel": "Last reviewed:",
     "onThisPage": "On this page",
     "relatedPages": {
@@ -201,11 +201,11 @@
       }
     },
     "sidebarContactTitle": "Speak with our team",
-    "sidebarContactBody": "We answer questions, verify coverage, and start referrals — no obligation.",
+    "sidebarContactBody": "We answer questions, verify coverage, and start referrals - no obligation.",
     "sidebarContactLinkLabel": "Contact Us",
     "pageBottomCta": {
       "title": "Have Questions About Hospice?",
-      "subtitle": "Our care team can answer your questions, verify your coverage, or help you start a referral. There's no obligation — only listening and information.",
+      "subtitle": "Our care team can answer your questions, verify your coverage, or help you start a referral. There's no obligation - only listening and information.",
       "call": "Call Now",
       "contact": "Contact Us",
       "refer": "Make a Referral"
@@ -231,7 +231,7 @@
       "invalidDate": "Please enter a date in YYYY-MM-DD format.",
       "invalidNpi": "NPI must be 10 digits.",
       "turnstileMissing": "Please complete the security check.",
-      "turnstileFailed": "The security check failed. Please reload and try again — or call us at {phone}.",
+      "turnstileFailed": "The security check failed. Please reload and try again - or call us at {phone}.",
       "rateLimited": "You have submitted several requests already. Please call us at {phone} or try again later.",
       "serverError": "Something went wrong. Please call us at {phone}."
     },
@@ -253,11 +253,11 @@
       "whatIsHospice": {
         "title": "What Is Hospice?",
         "p1": "Hospice is comfort-focused care for patients facing a serious, life-limiting illness when curative treatments are no longer effective or no longer wanted. Rather than trying to cure the illness, hospice focuses on relieving pain, managing symptoms, and supporting the patient's emotional, spiritual, and family well-being.",
-        "p2": "Hospice is a benefit you elect — you choose comfort care as your goal, and an interdisciplinary team comes to wherever you call home to deliver it. Most patients receive hospice at home (some in a skilled nursing facility or assisted-living community); care can also happen in an assisted living community, skilled nursing facility, or a hospice inpatient setting."
+        "p2": "Hospice is a benefit you elect - you choose comfort care as your goal, and an interdisciplinary team comes to wherever you call home to deliver it. Most patients receive hospice at home (some in a skilled nursing facility or assisted-living community); care can also happen in an assisted living community, skilled nursing facility, or a hospice inpatient setting."
       },
       "whoQualifies": {
         "title": "Who Qualifies?",
-        "intro": "To enroll in hospice under Medicare or Medi-Cal, two physicians — typically your attending physician and the hospice medical director — must certify that your illness is terminal, meaning a life expectancy of six months or less if the illness runs its normal course. You sign a statement choosing the hospice benefit, and you can revoke that choice at any time.",
+        "intro": "To enroll in hospice under Medicare or Medi-Cal, two physicians - typically your attending physician and the hospice medical director - must certify that your illness is terminal, meaning a life expectancy of six months or less if the illness runs its normal course. You sign a statement choosing the hospice benefit, and you can revoke that choice at any time.",
         "conditionsHeading": "Conditions that commonly qualify",
         "conditions": {
           "cancer": {
@@ -295,7 +295,7 @@
         "items": [
           {
             "myth": "Hospice means giving up.",
-            "fact": "No — hospice is not giving up; it is finding quality of life for the days that remain. Hospice is choosing comfort and dignity, not death. Many patients feel relief, regain their appetite, and find time for what matters most once aggressive treatments are set aside."
+            "fact": "No - hospice is not giving up; it is finding quality of life for the days that remain. Hospice is choosing comfort and dignity, not death. Many patients feel relief, regain their appetite, and find time for what matters most once aggressive treatments are set aside."
           },
           {
             "myth": "Hospice hastens death.",
@@ -303,23 +303,23 @@
           },
           {
             "myth": "You have to stop all your medications.",
-            "fact": "No. Hospice continues medications that relieve symptoms — pain, nausea, anxiety, shortness of breath. Only treatments aimed at curing the terminal illness are paused; comfort medications are not. Patients often continue medications that maintain quality of life — for example for high blood pressure or diabetes — when medically safe."
+            "fact": "No. Hospice continues medications that relieve symptoms - pain, nausea, anxiety, shortness of breath. Only treatments aimed at curing the terminal illness are paused; comfort medications are not. Patients often continue medications that maintain quality of life - for example for high blood pressure or diabetes - when medically safe."
           },
           {
             "myth": "Hospice is only for cancer patients.",
-            "fact": "No. Any terminal illness with a six-month prognosis qualifies — including heart disease, lung disease, dementia, kidney failure, ALS, and many others."
+            "fact": "No. Any terminal illness with a six-month prognosis qualifies - including heart disease, lung disease, dementia, kidney failure, ALS, and many others."
           },
           {
             "myth": "Hospice is only for the very last days.",
-            "fact": "No. Hospice is most beneficial when started early — weeks or months before the end of life, not days. Earlier enrollment means more time for symptom control, family preparation, and meaningful moments together."
+            "fact": "No. Hospice is most beneficial when started early - weeks or months before the end of life, not days. Earlier enrollment means more time for symptom control, family preparation, and meaningful moments together."
           }
         ]
       },
       "whatToExpect": {
         "title": "What to Expect After You Enroll",
-        "p1": "An RN case manager visits to complete an initial assessment, set up the care plan with you, and arrange any medications or equipment you need. Most equipment — hospital beds, oxygen, wheelchairs, commodes — is delivered to your home at no cost.",
-        "p2": "Your interdisciplinary team — physician, nurses, hospice aide, medical social worker, chaplain, and bereavement coordinator — meets every two weeks to review your care plan. RN visits are typically one to three times per two weeks, with aide and other team members on a schedule that fits your needs. A nurse is on call 24 hours a day, 7 days a week.",
-        "p3": "The plan of care is yours. If something isn't working, tell us — we adjust. If a symptom gets worse, call the on-call nurse."
+        "p1": "An RN case manager visits to complete an initial assessment, set up the care plan with you, and arrange any medications or equipment you need. Most equipment - hospital beds, oxygen, wheelchairs, commodes - is delivered to your home at no cost.",
+        "p2": "Your interdisciplinary team - physician, nurses, hospice aide, medical social worker, chaplain, and bereavement coordinator - meets every two weeks to review your care plan. RN visits are typically one to three times per two weeks, with aide and other team members on a schedule that fits your needs. A nurse is on call 24 hours a day, 7 days a week.",
+        "p3": "The plan of care is yours. If something isn't working, tell us - we adjust. If a symptom gets worse, call the on-call nurse."
       },
       "whereCareHappens": {
         "title": "Where Hospice Happens",
@@ -327,7 +327,7 @@
         "options": {
           "home": {
             "name": "At Home",
-            "desc": "Most hospice care happens in the patient's home — house, apartment, or family member's home — wherever feels familiar and safe."
+            "desc": "Most hospice care happens in the patient's home - house, apartment, or family member's home - wherever feels familiar and safe."
           },
           "assistedLiving": {
             "name": "Assisted Living",
@@ -353,7 +353,7 @@
     "pageTitle": "Hospice Laws & Patient Rights",
     "metaDescription": "Federal Conditions of Participation, your rights as a hospice patient, California advance directives, and how to file a complaint. A plain-language guide.",
     "lastReviewed": "2026-05-01",
-    "introParagraph": "Hospice is one of the most heavily regulated parts of American healthcare — and that's a good thing. The standards below exist to protect you. This page explains them in plain language.",
+    "introParagraph": "Hospice is one of the most heavily regulated parts of American healthcare - and that's a good thing. The standards below exist to protect you. This page explains them in plain language.",
     "sections": {
       "cops": {
         "title": "Federal Standards: Conditions of Participation",
@@ -363,7 +363,7 @@
       },
       "patientRights": {
         "title": "Your Rights as a Hospice Patient",
-        "intro": "The following rights are paraphrased from 42 CFR §418.52 — the federal Patient Rights condition of participation. They apply to every patient of every Medicare-certified hospice.",
+        "intro": "The following rights are paraphrased from 42 CFR §418.52 - the federal Patient Rights condition of participation. They apply to every patient of every Medicare-certified hospice.",
         "items": [
           "To receive effective pain management and symptom relief.",
           "To be treated with dignity and respect, no matter who you are.",
@@ -384,16 +384,16 @@
         "intro": "An advance directive is a way to make your wishes known ahead of time, in case you cannot speak for yourself. In California, there are three main forms to know about.",
         "livingWill": {
           "title": "Living Will",
-          "body": "A living will is a written record of the kinds of medical treatment you want — or don't want — if you are unable to communicate. In California, any adult can complete an Advance Health Care Directive that combines a living will with a healthcare power of attorney.",
+          "body": "A living will is a written record of the kinds of medical treatment you want - or don't want - if you are unable to communicate. In California, any adult can complete an Advance Health Care Directive that combines a living will with a healthcare power of attorney.",
           "caLawNote": "California Probate Code §4670 et seq. governs Advance Health Care Directives. Free forms are available from the California Hospital Association and the California Department of Justice."
         },
         "dpoa": {
           "title": "Durable Power of Attorney for Healthcare (DPOA-HC)",
-          "body": "A DPOA-HC names someone you trust — a spouse, adult child, friend — to make medical decisions for you when you cannot. In California, this is part of the same Advance Health Care Directive form. You can change or revoke the appointment at any time while you are able to do so."
+          "body": "A DPOA-HC names someone you trust - a spouse, adult child, friend - to make medical decisions for you when you cannot. In California, this is part of the same Advance Health Care Directive form. You can change or revoke the appointment at any time while you are able to do so."
         },
         "polst": {
-          "title": "POLST — Physician Orders for Life-Sustaining Treatment",
-          "body": "POLST is different from a living will: it is an actual medical order, signed by a physician (or nurse practitioner or physician assistant), that travels with the patient across care settings. It is intended for people who are seriously ill or have a life-limiting condition. POLST records specific decisions — such as whether to attempt resuscitation, whether to transfer to a hospital, and what level of medical intervention to use.",
+          "title": "POLST - Physician Orders for Life-Sustaining Treatment",
+          "body": "POLST is different from a living will: it is an actual medical order, signed by a physician (or nurse practitioner or physician assistant), that travels with the patient across care settings. It is intended for people who are seriously ill or have a life-limiting condition. POLST records specific decisions - such as whether to attempt resuscitation, whether to transfer to a hospital, and what level of medical intervention to use.",
           "paperColorNote": "In California, the POLST form is recommended to be printed on bright pink (Ultra Pink) paper so emergency responders can locate it quickly. The form is legally valid on any color paper or in electronic form."
         }
       },
@@ -407,11 +407,11 @@
           },
           "cdph": {
             "name": "California Department of Public Health (CDPH), Licensing & Certification",
-            "contact": "(800) 228-1019 — open Monday through Friday, 8:00 AM to 5:00 PM Pacific."
+            "contact": "(800) 228-1019 - open Monday through Friday, 8:00 AM to 5:00 PM Pacific."
           },
           "medicare": {
             "name": "Medicare Beneficiary Ombudsman",
-            "contact": "1-800-MEDICARE (1-800-633-4227) — available 24 hours a day, 7 days a week."
+            "contact": "1-800-MEDICARE (1-800-633-4227) - available 24 hours a day, 7 days a week."
           }
         },
         "retaliationProtection": "Federal law protects you: filing a complaint in good faith cannot result in retaliation, reduction of services, or discharge from hospice care."
@@ -436,7 +436,7 @@
       },
       "medicare": {
         "title": "Medicare Part A Hospice Benefit",
-        "eligibility": "To qualify, you must be entitled to Medicare Part A. Two physicians — your attending physician and the hospice medical director — must certify that your illness is terminal, with a life expectancy of six months or less if the illness runs its normal course.",
+        "eligibility": "To qualify, you must be entitled to Medicare Part A. Two physicians - your attending physician and the hospice medical director - must certify that your illness is terminal, with a life expectancy of six months or less if the illness runs its normal course.",
         "covered": "Medicare covers hospice services delivered by your hospice team: nursing visits, physician oversight, hospice aide care, social worker, chaplain, bereavement support, medications related to your terminal illness, durable medical equipment, and the care levels described below.",
         "notCovered": "Medicare hospice does not cover treatments aimed at curing the terminal illness once you elect hospice, room and board in your private home, or care from providers outside your hospice team unless arranged in advance. Room and board in a nursing facility may be covered separately by Medi-Cal."
       },
@@ -452,7 +452,7 @@
         },
         "chc": {
           "name": "Continuous Home Care (CHC)",
-          "desc": "Eight or more hours of mostly nursing care in a 24-hour period, during a short crisis of pain or symptoms — delivered in your home so you do not have to go to a hospital.",
+          "desc": "Eight or more hours of mostly nursing care in a 24-hour period, during a short crisis of pain or symptoms - delivered in your home so you do not have to go to a hospital.",
           "rateNote": "Paid at an hourly rate. Used for brief, intensive periods, not for sustained nursing."
         },
         "gip": {
@@ -474,7 +474,7 @@
       "medical": {
         "title": "Medi-Cal Hospice Coverage",
         "body": "Medi-Cal covers hospice services for California residents who qualify for Medi-Cal benefits. Coverage parallels Medicare's hospice benefit and is delivered by the same Medicare-certified hospices.",
-        "roomAndBoardNote": "Important: for patients living in a skilled nursing facility, Medi-Cal pays a room-and-board amount of at least 95% of the facility's Medi-Cal nursing-facility rate. This is the meaningful difference between Medi-Cal and Medicare hospice — Medicare alone does not pay for room and board."
+        "roomAndBoardNote": "Important: for patients living in a skilled nursing facility, Medi-Cal pays a room-and-board amount of at least 95% of the facility's Medi-Cal nursing-facility rate. This is the meaningful difference between Medi-Cal and Medicare hospice - Medicare alone does not pay for room and board."
       },
       "comparison": {
         "title": "Medicare vs. Medi-Cal vs. Private Insurance",
@@ -520,7 +520,7 @@
         }
       },
       "election": {
-        "title": "The Election Process — Step by Step",
+        "title": "The Election Process - Step by Step",
         "intro": "Electing hospice takes one signed form. Here is how it usually goes.",
         "steps": [
           "Your attending physician and the hospice medical director both certify that your illness is terminal, with a life expectancy of six months or less.",
@@ -530,7 +530,7 @@
           "You have two 90-day benefit periods, then unlimited 60-day periods. Each requires a recertification that your illness is still terminal.",
           "You can revoke the hospice benefit at any time and return to standard insurance. You can also re-elect later. There is no penalty and no waiting period."
         ],
-        "revocationNote": "Revoking is your right. Many patients do not — but the option is always there."
+        "revocationNote": "Revoking is your right. Many patients do not - but the option is always there."
       },
       "help": {
         "title": "Need Help Verifying Coverage?",
@@ -546,7 +546,7 @@
     "sections": {
       "mission": {
         "title": "Our Mission",
-        "body": "Our mission is to walk alongside patients and families through life's final chapter — with skilled medical care, gentle presence, and respect for the language, traditions, and choices that make each family who they are. We deliver every level of hospice care defined by Medicare, in the place each person calls home, twenty-four hours a day, seven days a week."
+        "body": "Our mission is to walk alongside patients and families through life's final chapter - with skilled medical care, gentle presence, and respect for the language, traditions, and choices that make each family who they are. We deliver every level of hospice care defined by Medicare, in the place each person calls home, twenty-four hours a day, seven days a week."
       },
       "values": {
         "title": "Our Values",
@@ -558,7 +558,7 @@
           },
           "dignity": {
             "title": "Dignity",
-            "body": "We protect each person's right to be seen, heard, and treated with respect — at every visit, in every decision."
+            "body": "We protect each person's right to be seen, heard, and treated with respect - at every visit, in every decision."
           },
           "culturalHumility": {
             "title": "Cultural Humility",
@@ -566,13 +566,13 @@
           },
           "clinicalExcellence": {
             "title": "Clinical Excellence",
-            "body": "We hold ourselves to the federal Conditions of Participation — and to the higher bar of what families would want for their own."
+            "body": "We hold ourselves to the federal Conditions of Participation - and to the higher bar of what families would want for their own."
           }
         }
       },
       "story": {
         "title": "A Brief Story",
-        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness — with a particular commitment to the Korean-American community of greater Los Angeles and Orange County, whose families have long needed care delivered in their own language."
+        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness - with a particular commitment to the Korean-American community of greater Los Angeles and Orange County, whose families have long needed care delivered in their own language."
       },
       "serviceArea": {
         "title": "Service Area",
@@ -586,7 +586,7 @@
           "northHollywood": "North Hollywood",
           "orangeCounty": "Orange County"
         },
-        "hoursNote": "Available 24 hours a day, 7 days a week — a registered nurse answers our on-call line at every hour."
+        "hoursNote": "Available 24 hours a day, 7 days a week - a registered nurse answers our on-call line at every hour."
       },
       "culturalCompetence": {
         "title": "Care for Korean-American Families",
@@ -595,15 +595,15 @@
         "koreanIntro": "에미넌트 호스피스 케어는 한국어로 진행되는 입원 상담, 한국어를 구사하는 케어 팀, 그리고 한인 가족의 전통과 신앙을 존중하는 케어를 제공합니다.",
         "bullets": {
           "bilingual": "Intake, care-plan conversations, and on-call support available in English and Korean.",
-          "koreanStaff": "Nearly all of our team members speak Korean — clinical, admissions, and on-call support — so families can have every conversation in their preferred language.",
-          "traditions": "We learn each family's traditions around illness, end of life, and remembrance — and let those guide care.",
+          "koreanStaff": "Nearly all of our team members speak Korean - clinical, admissions, and on-call support - so families can have every conversation in their preferred language.",
+          "traditions": "We learn each family's traditions around illness, end of life, and remembrance - and let those guide care.",
           "chaplainCoord": "Our chaplain coordinates with the family's own faith tradition; we do not impose one."
         },
-        "note": "If you would like your first conversation to be in Korean, just say so when you call — we will route you to a Korean-speaking team member."
+        "note": "If you would like your first conversation to be in Korean, just say so when you call - we will route you to a Korean-speaking team member."
       },
       "team": {
         "title": "Your Care Team",
-        "intro": "Every patient is supported by an interdisciplinary team — a physician, registered nurse, licensed vocational nurse, medical social worker, chaplain, hospice aide, bereavement coordinator, and trained volunteers. Each role is described in detail on our Services page.",
+        "intro": "Every patient is supported by an interdisciplinary team - a physician, registered nurse, licensed vocational nurse, medical social worker, chaplain, hospice aide, bereavement coordinator, and trained volunteers. Each role is described in detail on our Services page.",
         "viewServicesLink": "See how each team member supports your care →"
       },
       "distinctives": {
@@ -611,8 +611,8 @@
         "intro": "Specifics, not slogans.",
         "items": {
           "certified": "Medicare-certified and surveyed against the federal Conditions of Participation.",
-          "sameDay": "Same-day admission when clinically appropriate — calls placed in the morning often have an RN at the home by evening.",
-          "pharmacy": "Pharmacy and durable medical equipment (DME) coordinated by our team — comfort medications and equipment arrive at the home, not at the family's errand list.",
+          "sameDay": "Same-day admission when clinically appropriate - calls placed in the morning often have an RN at the home by evening.",
+          "pharmacy": "Pharmacy and durable medical equipment (DME) coordinated by our team - comfort medications and equipment arrive at the home, not at the family's errand list.",
           "oncall": "A registered nurse answers our 24/7 on-call line at every hour.",
           "bilingual": "English and Korean intake, with cultural awareness woven into the care plan, not bolted on at the end."
         }
@@ -635,7 +635,7 @@
   },
   "services": {
     "pageTitle": "Hospice Services",
-    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery — throughout North Hollywood, greater Los Angeles, and Orange County, in English and Korean.",
+    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery - throughout North Hollywood, greater Los Angeles, and Orange County, in English and Korean.",
     "introParagraph": "Hospice is a comprehensive benefit, not a single service. This page walks through the care levels we deliver, every discipline on our team, and the supporting services that make care work day-to-day at home.",
     "sections": {
       "offer": {
@@ -648,20 +648,20 @@
         "intro": "Your level of care can change day to day depending on what you need. We coordinate care at home, short-term respite for caregivers, and inpatient support when symptoms require it. For coverage and payment details, see our Insurance & Medicare page.",
         "routine": {
           "title": "Routine Home Care",
-          "summary": "Scheduled visits from your hospice team — nursing, aide, social worker, chaplain — to wherever you live. The most common level, used by most patients most of the time.",
+          "summary": "Scheduled visits from your hospice team - nursing, aide, social worker, chaplain - to wherever you live. The most common level, used by most patients most of the time.",
           "clinical": "Routine Home Care is appropriate when symptoms are stable and the patient and family can manage day-to-day at home with scheduled team support. This is the level most hospice patients use most of the time.",
           "atHome": "Visit frequencies are individualized: typically a skilled nursing visit one to three times per week, an aide several times per week, and the social worker and chaplain on a schedule that fits the family's needs. Visits change as the patient changes."
         },
         "continuous": {
           "title": "Continuous Home Care",
           "summary": "Nursing presence at home during an acute symptom crisis, so the patient can stay home through a difficult stretch instead of going to the hospital.",
-          "clinical": "Continuous Home Care provides nursing presence for stretches of eight or more hours within a twenty-four-hour period during an acute symptom crisis — pain that is not yet controlled, severe shortness of breath, or another situation that would otherwise lead to a hospital visit. The goal is to manage the crisis at home.",
+          "clinical": "Continuous Home Care provides nursing presence for stretches of eight or more hours within a twenty-four-hour period during an acute symptom crisis - pain that is not yet controlled, severe shortness of breath, or another situation that would otherwise lead to a hospital visit. The goal is to manage the crisis at home.",
           "atHome": "An RN (and often an LVN or other staff) stays at the home until the symptom is brought under control. Hours and staffing vary depending on symptoms and the patient's needs. Once the crisis is resolved, care returns to the Routine Home Care level."
         },
         "gip": {
           "title": "General Inpatient Care",
           "summary": "Short-term inpatient care for symptoms that cannot be safely managed at home. Patients return home as soon as symptoms are stable.",
-          "clinical": "General Inpatient Care is short-term care at a contracted facility — hospital, freestanding hospice inpatient unit, or skilled nursing facility — used when symptoms cannot be safely managed at home. Patients return home as soon as symptoms are stable.",
+          "clinical": "General Inpatient Care is short-term care at a contracted facility - hospital, freestanding hospice inpatient unit, or skilled nursing facility - used when symptoms cannot be safely managed at home. Patients return home as soon as symptoms are stable.",
           "atHome": "We coordinate the transfer, communicate with the facility's clinical team, and stay involved during the inpatient stay."
         },
         "costFootnote": "For coverage and what families pay, see our <link>Insurance & Medicare page</link>.",
@@ -677,11 +677,11 @@
         "intro": "Every patient is supported by a team of specialists who coordinate, anticipate, and walk with the family through every step. Each discipline below has a clear, specific role.",
         "physician": {
           "role": "Hospice Physician",
-          "body": "Oversees the plan of care in partnership with the patient's attending physician. Manages complex medical needs — uncontrolled symptoms, medication adjustments, decisions that require physician sign-off. Available to the team around the clock."
+          "body": "Oversees the plan of care in partnership with the patient's attending physician. Manages complex medical needs - uncontrolled symptoms, medication adjustments, decisions that require physician sign-off. Available to the team around the clock."
         },
         "rn": {
           "role": "Registered Nurse (RN)",
-          "body": "The clinical lead. Conducts the initial assessment, sets up the care plan with the patient and family, and leads symptom management at every subsequent visit. Typical visit frequency is one to three times per week, with more visits during periods of change. The on-call line (English and Korean) is answered by an RN twenty-four hours a day — by direct call or text."
+          "body": "The clinical lead. Conducts the initial assessment, sets up the care plan with the patient and family, and leads symptom management at every subsequent visit. Typical visit frequency is one to three times per week, with more visits during periods of change. The on-call line (English and Korean) is answered by an RN twenty-four hours a day - by direct call or text."
         },
         "lvn": {
           "role": "Licensed Vocational Nurse (LVN)",
@@ -689,23 +689,23 @@
         },
         "msw": {
           "role": "Medical Social Worker (MSW)",
-          "body": "Helps families navigate the parts of hospice that are not strictly medical — emotional support, family meetings, advance-directive paperwork, community-resource referrals (transportation, meal services, financial, insurance, and social-services (IHSS) assistance), and care coordination with skilled nursing facilities. Visits on a schedule that fits the family's needs."
+          "body": "Helps families navigate the parts of hospice that are not strictly medical - emotional support, family meetings, advance-directive paperwork, community-resource referrals (transportation, meal services, financial, insurance, and social-services (IHSS) assistance), and care coordination with skilled nursing facilities. Visits on a schedule that fits the family's needs."
         },
         "chaplain": {
           "role": "Spiritual Care / Chaplain",
-          "body": "Offers non-denominational spiritual support honoring the patient's faith and tradition. Coordinates with the family's own clergy when that is preferred. The chaplain is available for ritual, conversation, or simply presence — whichever the family wants. Generally, chaplains visit the patient about once a month."
+          "body": "Offers non-denominational spiritual support honoring the patient's faith and tradition. Coordinates with the family's own clergy when that is preferred. The chaplain is available for ritual, conversation, or simply presence - whichever the family wants. Generally, chaplains visit the patient about once a month."
         },
         "aide": {
           "role": "Hospice Aide",
-          "body": "Assists with bathing, grooming, light meal preparation, and daily personal care — the day-to-day tasks that become harder as illness progresses. Visit frequency is set by the RN and tailored to the family's needs. Generally, hospice aides visit the patient about twice a week."
+          "body": "Assists with bathing, grooming, light meal preparation, and daily personal care - the day-to-day tasks that become harder as illness progresses. Visit frequency is set by the RN and tailored to the family's needs. Generally, hospice aides visit the patient about twice a week."
         },
         "bereavement": {
           "role": "Bereavement Coordinator",
-          "body": "Our bereavement coordinator stays in touch with surviving family for thirteen months after the loss — calls, support-group resources, anniversary check-ins. Grief support is not an add-on to hospice; it is hospice."
+          "body": "Our bereavement coordinator stays in touch with surviving family for thirteen months after the loss - calls, support-group resources, anniversary check-ins. Grief support is not an add-on to hospice; it is hospice."
         },
         "volunteer": {
           "role": "Trained Volunteer",
-          "body": "Provides companionship, light errands, and supportive presence so caregivers can step away briefly. Our volunteers complete a structured training program and are background-checked — the role is meaningful, not casual."
+          "body": "Provides companionship, light errands, and supportive presence so caregivers can step away briefly. Our volunteers complete a structured training program and are background-checked - the role is meaningful, not casual."
         }
       },
       "additional": {
@@ -725,11 +725,11 @@
         },
         "bereavement": {
           "title": "Bereavement Support",
-          "body": "Thirteen months of follow-up for surviving family — calls, support-group resources, anniversary check-ins. Available to spouses, adult children, and any family member who participated in the patient's care."
+          "body": "Thirteen months of follow-up for surviving family - calls, support-group resources, anniversary check-ins. Available to spouses, adult children, and any family member who participated in the patient's care."
         },
         "volunteer": {
           "title": "Volunteer Program",
-          "body": "Companionship, light errands, and supportive presence — trained and background-checked. Families can request a volunteer through our social worker."
+          "body": "Companionship, light errands, and supportive presence - trained and background-checked. Families can request a volunteer through our social worker."
         }
       },
       "howToStart": {
@@ -737,7 +737,7 @@
         "intro": "Three steps. Usually a same-day or next-day start.",
         "steps": {
           "1": "Call our 24/7 line or use the Contact form. A team member answers.",
-          "2": "We coordinate with the patient's physician to certify eligibility — most patients can be certified within hours (or up to a few days, depending on the physician's availability).",
+          "2": "We coordinate with the patient's physician to certify eligibility - most patients can be certified within hours (or up to a few days, depending on the physician's availability).",
           "3": "An RN visits within 48 hours (often same-day) to evaluate for hospice eligibility and set up the care plan and arrange medications and equipment."
         },
         "callCta": "Call Now",
@@ -747,13 +747,13 @@
   },
   "forFamilies": {
     "pageTitle": "For Families & Caregivers",
-    "metaDescription": "Practical guidance for families caring for a loved one on hospice — what to expect, home-care basics, the dying process, caregiver wellness, and bereavement support.",
+    "metaDescription": "Practical guidance for families caring for a loved one on hospice - what to expect, home-care basics, the dying process, caregiver wellness, and bereavement support.",
     "lastReviewed": "2026-05-21",
-    "introParagraph": "Caring for a loved one on hospice is one of the most meaningful and most demanding things a family can do. This page is orientation — what to expect, the practical basics, and how to take care of yourself along the way. Your hospice nurse is always your first call for anything specific to your loved one.",
+    "introParagraph": "Caring for a loved one on hospice is one of the most meaningful and most demanding things a family can do. This page is orientation - what to expect, the practical basics, and how to take care of yourself along the way. Your hospice nurse is always your first call for anything specific to your loved one.",
     "sections": {
       "expect": {
         "title": "What to Expect When Your Loved One Begins Hospice",
-        "body1": "In the first few days — admission scheduled with the family and/or patient — a hospice nurse visits to review the plan of care with you, set up medications and equipment, and explain how to reach us 24/7. The pace is intentionally unhurried — we want you to feel oriented, not rushed.",
+        "body1": "In the first few days - admission scheduled with the family and/or patient - a hospice nurse visits to review the plan of care with you, set up medications and equipment, and explain how to reach us 24/7. The pace is intentionally unhurried - we want you to feel oriented, not rushed.",
         "body2": "Visits then settle into a rhythm tailored to your loved one's needs. Most families will see the nurse twice a week, the aide more often for hygiene help, and the social worker and chaplain on a regular basis, as scheduled. As needs change, the team adjusts.",
         "firstHours": {
           "title": "The first hours and days",
@@ -762,32 +762,32 @@
             "carePlan": "A written plan of care reflecting your loved one's goals, the family's preferences, and the team's clinical assessment.",
             "medsDme": "Comfort medications and any needed equipment (hospital bed, oxygen, wheelchair) and supplies (incontinence supplies, or extra nourishment such as Ensure or Glucerna) coordinated and delivered to the home.",
             "oncallLine": "A 24/7 nurse line activated for any question, day or night.",
-            "idgCadence": "The interdisciplinary team — nurse, aide, social worker, chaplain — introduced and visit schedules set."
+            "idgCadence": "The interdisciplinary team - nurse, aide, social worker, chaplain - introduced and visit schedules set."
           }
         }
       },
       "basics": {
-        "title": "Caring at Home — The Practical Basics",
+        "title": "Caring at Home - The Practical Basics",
         "intro": "Your hospice nurse will teach you what you need to know at the bedside, and the team is on call 24/7 for anything that comes up. The notes below are orientation, not a substitute for that teaching.",
         "medications": {
           "title": "Medications",
           "body": "Comfort medications are organized in a kit and delivered to the home. The nurse walks you through what each medication is for, when to give it, and how to record what you give. Keep medications in a cool, dry place out of reach of children.",
-          "neverGiveNote": "Never give a medication you have not been instructed to give. When you're unsure, call the on-call nurse first — that's what the line is for."
+          "neverGiveNote": "Never give a medication you have not been instructed to give. When you're unsure, call the on-call nurse first - that's what the line is for."
         },
         "oxygen": {
           "title": "Oxygen Concentrator",
           "body": "If your loved one needs oxygen, a concentrator is delivered with tubing and a nasal cannula. The nurse will set the flow rate; you do not need to adjust it.",
           "safetyNote": "Keep flames, smoking, and flammables at least 5 feet away from the concentrator and tubing. Do not use petroleum-based products (Vaseline, oil-based lotions) around the cannula.",
           "powerOutageNote": "Power outage: small portable tanks are typically provided as a backup. Confirm the backup plan with the nurse at admission and call the on-call line if you are unsure.",
-          "bedsideTeachingNote": "Detailed device handling is taught at the bedside by the nurse — this page is orientation only."
+          "bedsideTeachingNote": "Detailed device handling is taught at the bedside by the nurse - this page is orientation only."
         },
         "equipment": {
           "title": "Equipment (Hospital Bed, Commode, Wheelchair)",
-          "body": "Equipment is delivered, set up, and serviced by the hospice's medical-supply partner. If something breaks or stops working, call our office — we will arrange replacement or repair."
+          "body": "Equipment is delivered, set up, and serviced by the hospice's medical-supply partner. If something breaks or stops working, call our office - we will arrange replacement or repair."
         },
         "hygiene": {
           "title": "Hygiene & Skin Care",
-          "body": "Hospice aides assist with bathing, dressing, and personal care on a regular schedule. Between visits, gentle skin care and repositioning your loved one about every two hours helps prevent pressure injuries. Mouth care — moistening the lips and inside of the mouth — becomes especially important as drinking decreases."
+          "body": "Hospice aides assist with bathing, dressing, and personal care on a regular schedule. Between visits, gentle skin care and repositioning your loved one about every two hours helps prevent pressure injuries. Mouth care - moistening the lips and inside of the mouth - becomes especially important as drinking decreases."
         },
         "eating": {
           "title": "Eating & Drinking Changes",
@@ -797,7 +797,7 @@
       },
       "dyingProcess": {
         "title": "Understanding the Dying Process",
-        "intro": "This is the hardest section to read. Many families come back to it days or weeks later. Skip ahead if you need to — the sidebar lets you jump past it.",
+        "intro": "This is the hardest section to read. Many families come back to it days or weeks later. Skip ahead if you need to - the sidebar lets you jump past it.",
         "gentleNote": "The order and timing of these changes vary. Not every person experiences every sign, and some signs come and go. This is general guidance, not a prediction. Your hospice nurse can talk through what you are observing.",
         "weeks": {
           "title": "In the weeks ahead",
@@ -813,7 +813,7 @@
           "signs": {
             "1": "Eating and drinking very little or stopping altogether.",
             "2": "Sleeping most of the time and being harder to wake.",
-            "3": "Changes in breathing pattern — sometimes faster, sometimes slower, with pauses.",
+            "3": "Changes in breathing pattern - sometimes faster, sometimes slower, with pauses.",
             "4": "Less consistent response to voice and touch.",
             "5": "Hands and feet may feel cool; skin color may begin to change."
           }
@@ -822,17 +822,17 @@
           "title": "In the final hours",
           "signs": {
             "1": "Irregular breathing with longer pauses between breaths.",
-            "2": "Audible congestion in the chest or throat — the family often hears it more than the patient feels it.",
+            "2": "Audible congestion in the chest or throat - the family often hears it more than the patient feels it.",
             "3": "Color changes in the skin, particularly around the lips, hands, and feet.",
             "4": "Eyes may remain partly open; response may cease.",
             "5": "A period of quiet stillness."
           },
           "hearingNote": "Hearing is widely believed to remain longest. Speaking softly and saying what you want to say is always appropriate."
         },
-        "variabilityNote": "If you see something new or worrying — a sudden change in breathing, distress, a fall, anything that feels urgent — call the on-call nurse. We can talk through it, visit if needed, and stay on the line."
+        "variabilityNote": "If you see something new or worrying - a sudden change in breathing, distress, a fall, anything that feels urgent - call the on-call nurse. We can talk through it, visit if needed, and stay on the line."
       },
       "symptoms": {
-        "title": "Managing Pain & Symptoms — When to Call",
+        "title": "Managing Pain & Symptoms - When to Call",
         "body": "When in doubt, call the on-call nurse. It is always the right call. We can talk you through what you're seeing, adjust the care plan, or come out for an in-person visit.",
         "whenToCall": {
           "title": "Call the on-call nurse for",
@@ -846,11 +846,11 @@
             "7": "Any sudden change in condition that worries you."
           }
         },
-        "do_not_911_note": "Please do not call 911 unless you intend to revoke the hospice election. A 911 transport often leads to a hospital admission and curative treatment, which conflicts with the hospice benefit. For symptoms, our 24/7 nurse line is the right first call — we will help."
+        "do_not_911_note": "Please do not call 911 unless you intend to revoke the hospice election. A 911 transport often leads to a hospital admission and curative treatment, which conflicts with the hospice benefit. For symptoms, our 24/7 nurse line is the right first call - we will help."
       },
       "wellness": {
-        "title": "Caring for Yourself — Caregiver Wellness",
-        "body": "Caregiving is exhausting work. Recognizing the signs of burnout — without judgment — and asking for help early is the most important thing you can do, both for yourself and for your loved one.",
+        "title": "Caring for Yourself - Caregiver Wellness",
+        "body": "Caregiving is exhausting work. Recognizing the signs of burnout - without judgment - and asking for help early is the most important thing you can do, both for yourself and for your loved one.",
         "burnoutSigns": {
           "title": "Signs of caregiver burnout",
           "items": {
@@ -865,13 +865,13 @@
         "askForHelp": {
           "title": "Ask for help",
           "body": "Help is built into hospice. Some specific options to ask the team about:",
-          "volunteerLinkLabel": "Trained volunteers — companionship, short errands, a presence in the home",
+          "volunteerLinkLabel": "Trained volunteers - companionship, short errands, a presence in the home",
           "socialWorkerNote": "Our social worker offers caregiver counseling and can help connect you with community support and faith-based resources."
         }
       },
       "bereavement": {
-        "title": "After the Loss — Bereavement Support",
-        "body": "Bereavement support is not an add-on to hospice — it is part of hospice. Surviving family members receive support for thirteen months after the death, at no cost.",
+        "title": "After the Loss - Bereavement Support",
+        "body": "Bereavement support is not an add-on to hospice - it is part of hospice. Surviving family members receive support for thirteen months after the death, at no cost.",
         "programNote": "Our bereavement program continues for thirteen months and may include phone check-ins, support-group information, mailings about coping with grief, and a contact around the anniversary of the death.",
         "griefIs": {
           "title": "Grief looks different for everyone",
@@ -879,9 +879,9 @@
         },
         "whenToSeekHelp": {
           "title": "When to seek additional help",
-          "body": "Reach out to a counselor or a primary care doctor — and let our bereavement coordinator know — if you experience prolonged inability to function, hopelessness that does not lift, persistent insomnia, or any thoughts of harming yourself.",
+          "body": "Reach out to a counselor or a primary care doctor - and let our bereavement coordinator know - if you experience prolonged inability to function, hopelessness that does not lift, persistent insomnia, or any thoughts of harming yourself.",
           "lifelineLabel": "If you or someone you know is in crisis, call or text:",
-          "lifelineNumber": "988 — Suicide & Crisis Lifeline (call or text, free, 24/7)"
+          "lifelineNumber": "988 - Suicide & Crisis Lifeline (call or text, free, 24/7)"
         }
       },
       "quickRef": {
@@ -903,11 +903,11 @@
               "value": "For spiritual care, end-of-life meaning, prayer or ritual, in any tradition."
             },
             "lifeline": {
-              "label": "988 — Suicide & Crisis Lifeline",
+              "label": "988 - Suicide & Crisis Lifeline",
               "value": "Call or text, free, 24/7. For mental-health emergencies for the caregiver or any family member."
             },
             "nineEleven": {
-              "label": "911 — only if revoking hospice",
+              "label": "911 - only if revoking hospice",
               "value": "A 911 transport typically leads to hospital admission and curative treatment, which conflicts with the hospice election. For symptoms, call the hospice nurse line first."
             }
           }
@@ -917,7 +917,7 @@
           "items": {
             "1": "Current medication list and the medication record (when each dose was given).",
             "2": "A short diary of new or changed symptoms since the last visit.",
-            "3": "Questions for the nurse — written down so they are not forgotten.",
+            "3": "Questions for the nurse - written down so they are not forgotten.",
             "4": "Family contact list and any change in primary caregiver since the last visit."
           }
         },
@@ -927,17 +927,17 @@
   },
   "faq": {
     "pageTitle": "Frequently Asked Questions",
-    "metaDescription": "Answers to the most common questions families ask about hospice — getting started, what hospice includes, insurance, family caregiving, and patient rights.",
+    "metaDescription": "Answers to the most common questions families ask about hospice - getting started, what hospice includes, insurance, family caregiving, and patient rights.",
     "lastReviewed": "2026-05-21",
     "introParagraph": "These are the questions we hear most often. Each answer is short by design; follow the links for the full picture, and call us any time if you'd like to talk through your situation.",
-    "jsonLdName": "Eminent Hospice Care — Frequently Asked Questions",
+    "jsonLdName": "Eminent Hospice Care - Frequently Asked Questions",
     "categories": {
       "gettingStarted": {
         "title": "Getting Started",
         "items": {
           "whenConsider": {
             "q": "When should we consider hospice?",
-            "a": "Any time a doctor has indicated the illness is likely to progress in the next six months. Earlier referral usually means better symptom control and more time with the team — hospice is not only for the last few days. See What to Expect for fuller detail."
+            "a": "Any time a doctor has indicated the illness is likely to progress in the next six months. Earlier referral usually means better symptom control and more time with the team - hospice is not only for the last few days. See What to Expect for fuller detail."
           },
           "howStart": {
             "q": "How do we start hospice care?",
@@ -953,7 +953,7 @@
           },
           "ifImprove": {
             "q": "What if our loved one improves and no longer needs hospice?",
-            "a": "Patients can revoke the hospice election at any time and resume curative care. They can re-elect hospice later if needed — there is no penalty. See Insurance & Medicare → Election Process."
+            "a": "Patients can revoke the hospice election at any time and resume curative care. They can re-elect hospice later if needed - there is no penalty. See Insurance & Medicare → Election Process."
           }
         }
       },
@@ -966,7 +966,7 @@
           },
           "whereCare": {
             "q": "Where does hospice care happen?",
-            "a": "Wherever the patient calls home — house, apartment, assisted living, skilled nursing facility — or, when symptoms cannot be managed at home, in a contracted inpatient setting."
+            "a": "Wherever the patient calls home - house, apartment, assisted living, skilled nursing facility - or, when symptoms cannot be managed at home, in a contracted inpatient setting."
           },
           "twentyFourSeven": {
             "q": "Does hospice provide 24/7 care?",
@@ -991,7 +991,7 @@
           },
           "medicare": {
             "q": "Does Medicare cover hospice?",
-            "a": "Yes — Medicare Part A covers the full hospice benefit when the patient is certified terminally ill and elects hospice. See Insurance & Medicare → Medicare Part A."
+            "a": "Yes - Medicare Part A covers the full hospice benefit when the patient is certified terminally ill and elects hospice. See Insurance & Medicare → Medicare Part A."
           },
           "medical": {
             "q": "Does Medi-Cal cover hospice?",
@@ -1020,7 +1020,7 @@
           },
           "bereavement": {
             "q": "Is bereavement support included?",
-            "a": "Yes — for thirteen months after the death, at no cost. It may include phone check-ins, support-group information, and a contact around the anniversary. See For Families → Bereavement."
+            "a": "Yes - for thirteen months after the death, at no cost. It may include phone check-ins, support-group information, and a contact around the anniversary. See For Families → Bereavement."
           },
           "cultural": {
             "q": "Will cultural or religious traditions be respected?",
@@ -1053,7 +1053,7 @@
           },
           "advanceDirective": {
             "q": "What is an advance directive?",
-            "a": "A written document — typically a Living Will and/or Durable Power of Attorney for Healthcare — that tells your care team what you want if you cannot speak for yourself. California uses the Advance Health Care Directive form. See Hospice Laws → Advance Directives."
+            "a": "A written document - typically a Living Will and/or Durable Power of Attorney for Healthcare - that tells your care team what you want if you cannot speak for yourself. California uses the Advance Health Care Directive form. See Hospice Laws → Advance Directives."
           }
         }
       }
@@ -1061,8 +1061,8 @@
   },
   "contact": {
     "pageTitle": "Contact Us",
-    "metaDescription": "Speak with our care team — available 24/7. Call, email, or send us a message and we will reply within one business day.",
-    "introParagraph": "Have a question or want to speak with our care team? Call us 24/7 at {phone}, or send a message below — we typically reply within one business day.",
+    "metaDescription": "Speak with our care team - available 24/7. Call, email, or send us a message and we will reply within one business day.",
+    "introParagraph": "Have a question or want to speak with our care team? Call us 24/7 at {phone}, or send a message below - we typically reply within one business day.",
     "form": {
       "heading": "Send us a message",
       "nameLabel": "Full name",
@@ -1104,13 +1104,13 @@
     "introParagraph": "Referring a patient to hospice should be the easiest part of a hard day. Call our admissions line 24/7, or share a callback time below and we will reach out.",
     "modeA": {
       "phoneCta": {
-        "title": "Call to refer a patient — 24/7",
+        "title": "Call to refer a patient - 24/7",
         "subtitle": "An admissions nurse answers every call.",
         "callLabel": "Call {phone}"
       },
       "whyPhone": {
         "title": "Why phone, not a web form?",
-        "body": "Sharing patient health information online requires extra protections we are currently finalizing. In the meantime, please call us so we can take the referral directly — it is the fastest path."
+        "body": "Sharing patient health information online requires extra protections we are currently finalizing. In the meantime, please call us so we can take the referral directly - it is the fastest path."
       },
       "callbackForm": {
         "title": "Or schedule a callback",
@@ -1174,9 +1174,9 @@
           "diagnosisLabel": "Primary diagnosis",
           "urgencyLabel": "Urgency",
           "urgencyOptions": {
-            "routine": "Routine — within a week",
-            "soon": "Soon — within 2–3 days",
-            "urgent": "Urgent — within 24 hours",
+            "routine": "Routine - within a week",
+            "soon": "Soon - within 2–3 days",
+            "urgent": "Urgent - within 24 hours",
             "today": "Today"
           },
           "locationLabel": "Current location",
@@ -1220,27 +1220,27 @@
       },
       "modeB": {
         "title": "Referral received",
-        "body": "The referral has been securely transmitted to our admissions team. A coordinator will follow up within 24 hours. We have not sent a copy of this submission to your email — for your privacy, please retain your own records."
+        "body": "The referral has been securely transmitted to our admissions team. A coordinator will follow up within 24 hours. We have not sent a copy of this submission to your email - for your privacy, please retain your own records."
       }
     }
   },
   "meta": {
     "siteName": "Eminent Hospice Care Inc.",
     "ogDescription": "Compassionate, culturally competent hospice care serving North Hollywood, the greater Los Angeles area, and Orange County, including the Korean-American community. Available 24/7 in English and Korean.",
-    "ogImageAlt": "Eminent Hospice Care — compassionate hospice care in Los Angeles",
+    "ogImageAlt": "Eminent Hospice Care - compassionate hospice care in Los Angeles",
     "titleTemplate": "%s | Eminent Hospice Care Inc."
   },
   "notFound": {
     "pageTitle": "Page not found",
     "metaDescription": "The page you were looking for does not exist.",
     "heading": "We can't find that page",
-    "body": "The page you tried to reach may have moved or no longer exists. Return to our homepage, browse the navigation above, or call us at {phone} — we're available 24/7.",
+    "body": "The page you tried to reach may have moved or no longer exists. Return to our homepage, browse the navigation above, or call us at {phone} - we're available 24/7.",
     "ctaHome": "Go to homepage",
     "ctaContact": "Contact us"
   },
   "error": {
     "heading": "Something went wrong",
-    "body": "An unexpected error occurred while loading this page. Please try again. If this persists, please call us at {phone} — we are available 24 hours a day.",
+    "body": "An unexpected error occurred while loading this page. Please try again. If this persists, please call us at {phone} - we are available 24 hours a day.",
     "ctaReload": "Try again",
     "ctaHome": "Go to homepage",
     "ctaPhone": "Call {phone}"
@@ -1266,11 +1266,11 @@
           "body": "When you submit our Contact form, we collect your name, email address, phone number (optional), the subject category you selected, and the message you wrote."
         },
         "referralFormModeA": {
-          "title": "Referral form — callback request",
+          "title": "Referral form - callback request",
           "body": "When you request a callback through our Referral page (the default mode), we collect only the referrer's name, phone number, optional email, preferred callback time, and referrer type (physician, family member, case manager, or other). We do not collect any patient health information through this form. Patient information is taken by phone."
         },
         "referralFormModeB": {
-          "title": "Referral form — full intake (when enabled)",
+          "title": "Referral form - full intake (when enabled)",
           "body": "When the full Referral intake is enabled, we collect patient identifiers (legal name, date of birth, primary diagnosis, current location, preferred language), insurance type and member ID, urgency, the referring physician's name and NPI, and any notes. This information is Protected Health Information (PHI) under HIPAA and is transmitted only over encrypted channels through a vendor with whom we have a signed Business Associate Agreement (BAA)."
         },
         "serverLogs": {
@@ -1301,7 +1301,7 @@
       },
       "security": {
         "title": "How we protect your information",
-        "body": "All form submissions are transmitted over TLS 1.2 or higher. Our HIPAA-eligible email vendor encrypts submissions at rest. We restrict access to your information on a need-to-know basis. We do not store form submissions in any application database, and we never log the contents of a submission — only request metadata."
+        "body": "All form submissions are transmitted over TLS 1.2 or higher. Our HIPAA-eligible email vendor encrypts submissions at rest. We restrict access to your information on a need-to-know basis. We do not store form submissions in any application database, and we never log the contents of a submission - only request metadata."
       },
       "rights": {
         "title": "Your rights",
@@ -1312,7 +1312,7 @@
         },
         "hipaa": {
           "title": "HIPAA",
-          "body": "If you are a patient or the personal representative of a patient, you have additional rights under HIPAA — including the right to access, amend, and receive an accounting of disclosures of your protected health information. Those rights are described in our HIPAA Notice of Privacy Practices."
+          "body": "If you are a patient or the personal representative of a patient, you have additional rights under HIPAA - including the right to access, amend, and receive an accounting of disclosures of your protected health information. Those rights are described in our HIPAA Notice of Privacy Practices."
         }
       },
       "children": {
@@ -1362,20 +1362,20 @@
       "conformance": {
         "title": "Conformance status",
         "body": "This website aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. We currently consider this website to be partially conformant, meaning that some content does not yet fully meet the accessibility standard.",
-        "level": "WCAG 2.1 AA — partially conformant"
+        "level": "WCAG 2.1 AA - partially conformant"
       },
       "features": {
         "title": "Accessibility features in place",
         "intro": "This site implements:",
         "items": [
           "A \"skip to main content\" link at the top of every page.",
-          "Full keyboard navigation — every interactive element is reachable by Tab and operable by Enter or Space.",
+          "Full keyboard navigation - every interactive element is reachable by Tab and operable by Enter or Space.",
           "Visible focus indicators on every interactive element.",
           "Form labels associated with every input; errors announced to screen readers.",
           "Bilingual content (English and Korean) with a clearly labeled language toggle.",
           "Color contrast ratios meeting WCAG AA: at least 4.5:1 for body text and 3:1 for large text and UI components.",
           "Touch targets of at least 44 by 44 pixels on interactive elements.",
-          "Semantic HTML — proper headings, landmarks, lists, tables, and labels."
+          "Semantic HTML - proper headings, landmarks, lists, tables, and labels."
         ]
       },
       "knownIssues": {
@@ -1425,7 +1425,7 @@
       },
       "intellectualProperty": {
         "title": "Intellectual property",
-        "body": "The content on this site — text, images, design, and code — is owned by Eminent Hospice Care Inc. or its licensors and is protected by copyright and other laws. You may not reproduce or republish substantial portions without our written permission. Educational and personal use is permitted."
+        "body": "The content on this site - text, images, design, and code - is owned by Eminent Hospice Care Inc. or its licensors and is protected by copyright and other laws. You may not reproduce or republish substantial portions without our written permission. Educational and personal use is permitted."
       },
       "externalLinks": {
         "title": "Links to other websites",
@@ -1433,7 +1433,7 @@
       },
       "disclaimers": {
         "title": "Disclaimers",
-        "body": "This website is provided \"as is\" and \"as available.\" To the fullest extent permitted by California law, we disclaim all warranties — express or implied — including warranties of accuracy, fitness for a particular purpose, and non-infringement. We do not warrant that the site will be uninterrupted or error-free."
+        "body": "This website is provided \"as is\" and \"as available.\" To the fullest extent permitted by California law, we disclaim all warranties - express or implied - including warranties of accuracy, fitness for a particular purpose, and non-infringement. We do not warrant that the site will be uninterrupted or error-free."
       },
       "limitationOfLiability": {
         "title": "Limitation of liability",
@@ -1458,17 +1458,17 @@
   },
   "griefSupport": {
     "pageTitle": "Grief & Bereavement Support",
-    "metaDescription": "Eminent Hospice provides thirteen months of bereavement support to surviving family members at no cost — phone check-ins, support-group resources, anniversary contacts, and crisis guidance.",
+    "metaDescription": "Eminent Hospice provides thirteen months of bereavement support to surviving family members at no cost - phone check-ins, support-group resources, anniversary contacts, and crisis guidance.",
     "eyebrow": "For surviving family",
-    "introParagraph": "When someone you love dies, the work of hospice does not end. Our bereavement program supports surviving family members for thirteen months after the loss — at no cost, and with no referral needed.",
+    "introParagraph": "When someone you love dies, the work of hospice does not end. Our bereavement program supports surviving family members for thirteen months after the loss - at no cost, and with no referral needed.",
     "sections": {
       "program": {
         "title": "Our 13-Month Bereavement Program",
-        "intro": "Bereavement support is not an add-on to hospice — it is part of hospice. Every family we serve is automatically enrolled."
+        "intro": "Bereavement support is not an add-on to hospice - it is part of hospice. Every family we serve is automatically enrolled."
       },
       "coordinator": {
         "title": "Your Bereavement Coordinator",
-        "body": "Our bereavement coordinator stays in touch with surviving family for thirteen months after the loss — phone calls, support-group resources, and a contact around the anniversary of the death. You do not need to reach out first; we will call you."
+        "body": "Our bereavement coordinator stays in touch with surviving family for thirteen months after the loss - phone calls, support-group resources, and a contact around the anniversary of the death. You do not need to reach out first; we will call you."
       },
       "cta": {
         "title": "We are here for you",

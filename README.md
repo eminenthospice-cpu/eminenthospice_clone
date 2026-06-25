@@ -1,7 +1,7 @@
-# Eminent Hospice Care — Website (Astro rebuild)
+# Eminent Hospice Care - Website (Astro rebuild)
 
 Static, bilingual (EN / KO) marketing site for Eminent Hospice Care, built with
-**Astro 6 + Tailwind CSS v4**. No server runtime required — output is a folder of
+**Astro 6 + Tailwind CSS v4**. No server runtime required - output is a folder of
 plain HTML/CSS files that can be hosted anywhere.
 
 ---
@@ -34,7 +34,7 @@ npm run preview
 ```
 
 The dev server address is always `http://localhost:4321`.
-All pages are prefixed by locale — e.g. `/en/` and `/ko/`.
+All pages are prefixed by locale - e.g. `/en/` and `/ko/`.
 Visiting `/` redirects to `/en/`.
 
 ---
@@ -74,7 +74,7 @@ eminent-astro/
 │   └── styles/
 │       └── global.css        # Tailwind v4 @theme tokens + base styles
 │
-├── astro.config.mjs          # Astro config — site URL, i18n, sitemap
+├── astro.config.mjs          # Astro config - site URL, i18n, sitemap
 ├── PLACEHOLDERS.md           # Pre-launch content checklist
 └── package.json
 ```
@@ -101,7 +101,7 @@ eminent-astro/
 | `/en/hipaa-notice` | `/ko/hipaa-notice` | noIndex: true |
 | `/en/terms` | `/ko/terms` | noIndex: true |
 | `/en/accessibility` | `/ko/accessibility` | |
-| `/` | — | Redirects → `/en/` |
+| `/` | - | Redirects → `/en/` |
 
 ---
 
@@ -109,7 +109,7 @@ eminent-astro/
 
 ### 1. Org-wide data (phone, address, Formspree)
 
-Open **`src/data/site-config.ts`** — this is the single source of truth for all
+Open **`src/data/site-config.ts`** - this is the single source of truth for all
 operational values that appear across multiple pages.
 
 ```ts
@@ -132,7 +132,7 @@ export const FORMS = {
 ### 2. Page copy (bilingual)
 
 All copy lives in **`src/i18n/en.json`** and **`src/i18n/ko.json`**.
-The two files must have identical key structures — every key in `en.json` must
+The two files must have identical key structures - every key in `en.json` must
 exist in `ko.json`.
 
 Leaf strings that contain `{phone}` are interpolated at build time in the
@@ -156,7 +156,7 @@ Update **two** places before deploying:
 
 ## Forms (Formspree)
 
-The site uses [Formspree](https://formspree.io) for form submissions — no server
+The site uses [Formspree](https://formspree.io) for form submissions - no server
 required. Each form POSTs via `fetch()` to its endpoint URL.
 
 **Setup:**

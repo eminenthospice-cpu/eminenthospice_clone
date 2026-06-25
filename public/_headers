@@ -1,15 +1,34 @@
-# Cloudflare Pages — caching rules. More specific paths win.
+# Cloudflare Pages - caching rules. More specific paths win.
 #
 # NOTE: we deliberately do NOT define a catch-all `/*` Cache-Control rule.
 # Cloudflare Pages already serves HTML with `public, max-age=0, must-revalidate`
 # by default (and purges the edge cache on every deploy), so a `/*` rule is
-# redundant for HTML — and worse, Pages MERGES matching rules, so a `/*` rule
+# redundant for HTML - and worse, Pages MERGES matching rules, so a `/*` rule
 # would concatenate into `/videos/*` producing a malformed double Cache-Control
 # (two max-age values). That stops the edge from caching the video, which forces
 # a permanent cache MISS where Cloudflare returns the whole file as 200 and never
-# serves HTTP range (206) requests — breaking in-video seeking. Keeping the
+# serves HTTP range (206) requests - breaking in-video seeking. Keeping the
 # video header single + cacheable lets the edge serve 206 so users can seek
 # (travel) to any point in the video instantly.
+
+# Security headers on every response. Deliberately a separate block from the
+# Cache-Control rules above (and using different header names) so it can't hit
+# the Cache-Control merge bug described above - these never collide with the
+# /videos/* or /images/* Cache-Control values.
+#
+# Content-Security-Policy here intentionally carries ONLY frame-ancestors:
+# the CSP spec ignores frame-ancestors when delivered via <meta>, so it can't
+# live in astro.config.mjs's `security.csp` like the rest of the policy does.
+# script-src/style-src/base-uri/form-action/etc. are set per-page by Astro's
+# auto-hashed <meta> CSP (see astro.config.mjs) - duplicating them here with
+# a non-hashed 'self' would make this header's script-src the operative
+# (more restrictive, hash-less) one and break every inline script Astro emits.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Content-Security-Policy: frame-ancestors 'none'
 
 # Astro's build output is content-hashed → safe to cache forever.
 /_astro/*

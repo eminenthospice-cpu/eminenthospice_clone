@@ -1,5 +1,5 @@
 /**
- * Reveal on scroll — IntersectionObserver-driven entrance animations.
+ * Reveal on scroll - IntersectionObserver-driven entrance animations.
  * Drives `.reveal` and `.scale-in` classes defined in global.css.
  * Respects prefers-reduced-motion (does nothing if set).
  *

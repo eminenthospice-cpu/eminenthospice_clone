@@ -1,14 +1,14 @@
-# QA Report — Eminent Hospice (Astro site)
+# QA Report - Eminent Hospice (Astro site)
 
 **Date:** 2026-06-14
-**Scope:** All 16 page types × EN/KO (32 pages) + shared nav/footer/forms. Verification only — no code changes made.
+**Scope:** All 16 page types × EN/KO (32 pages) + shared nav/footer/forms. Verification only - no code changes made.
 **Method:** Production build, static HTML analysis of all 32 built pages, runtime checks in the browser, interactive feature testing, responsive + accessibility checks.
 
 ---
 
 ## Summary
 
-The site is **functionally healthy** — it builds, every page loads, navigation / language-switching / forms / mobile menu all work, and EN/KO parity is perfect. **No crashes, broken routes, or console-breaking errors were found.**
+The site is **functionally healthy** - it builds, every page loads, navigation / language-switching / forms / mobile menu all work, and EN/KO parity is perfect. **No crashes, broken routes, or console-breaking errors were found.**
 
 The real defects are concentrated in: two launch blockers (form delivery, OG image), a couple of visible data bugs (`{retentionDays}` token, inconsistent email), and structured-data / ARIA gaps (about & FAQ JSON-LD, Resources dropdown). Fixing items 1–9 would get this launch-ready from a UI/UX-correctness standpoint.
 
@@ -16,15 +16,15 @@ The real defects are concentrated in: two launch blockers (form delivery, OG ima
 
 ## ✅ What's working (verified)
 
-- **Build is clean** — 33 pages compile, sitemap generates, no errors/warnings.
+- **Build is clean** - 33 pages compile, sitemap generates, no errors/warnings.
 - **All 32 routes return 200**, each with exactly **one `<h1>`** and a populated `<title>`.
-- **EN/KO translation parity is perfect** — 0 missing keys in either direction (no blank text from missing translations).
-- **Language switcher preserves the page** — e.g. `/en/privacy` → `/ko/privacy`, not just home. Verified on subpages.
-- **Contact form client validation works** — empty submit produces proper `role="alert"` errors and blocks submission.
-- **Mobile drawer works** — opens/closes, `aria-expanded` toggles, body scroll-locks, closes on Escape & link click.
+- **EN/KO translation parity is perfect** - 0 missing keys in either direction (no blank text from missing translations).
+- **Language switcher preserves the page** - e.g. `/en/privacy` → `/ko/privacy`, not just home. Verified on subpages.
+- **Contact form client validation works** - empty submit produces proper `role="alert"` errors and blocks submission.
+- **Mobile drawer works** - opens/closes, `aria-expanded` toggles, body scroll-locks, closes on Escape & link click.
 - **Responsive: no horizontal overflow at 375px**; hamburger correctly replaces desktop nav.
 - **All 20 `<img>` have alt text.** Home images load (10/10).
-- **SEO basics solid** — every page has title, description, canonical, OG tags; `hreflang` (en/ko/x-default) correct; `noindex` correctly limited to privacy/hipaa/terms.
+- **SEO basics solid** - every page has title, description, canonical, OG tags; `hreflang` (en/ko/x-default) correct; `noindex` correctly limited to privacy/hipaa/terms.
 - Astro's own dev audit reported no a11y/perf issues on the pages checked.
 
 ---
@@ -33,7 +33,7 @@ The real defects are concentrated in: two launch blockers (form delivery, OG ima
 
 | # | Issue | Where | Detail |
 |---|-------|-------|--------|
-| 1 | **Forms don't deliver** | Contact, Referral, Careers | All 3 endpoints are `https://formspree.io/f/REPLACE_ME_*`. Client-side validation works, but every submission goes nowhere. *(Known client task — needs real Formspree IDs or another backend.)* |
+| 1 | **Forms don't deliver** | Contact, Referral, Careers | All 3 endpoints are `https://formspree.io/f/REPLACE_ME_*`. Client-side validation works, but every submission goes nowhere. *(Known client task - needs real Formspree IDs or another backend.)* |
 | 2 | **OG image 404s on every page** | all 32 pages | `og-default.png` is referenced in `<meta og:image>` site-wide but the file doesn't exist in `public/` or `dist/`. Social/link previews will be broken. |
 
 ---
@@ -43,8 +43,8 @@ The real defects are concentrated in: two launch blockers (form delivery, OG ima
 | # | Issue | Where | Detail |
 |---|-------|-------|--------|
 | 3 | **Literal `{retentionDays}` shown to users** | `/en/privacy`, `/ko/privacy` | The retention paragraph renders "…retained… for approximately **{retentionDays} days**…". The token is never substituted (`privacy.astro` outputs `s.retention.body` with no `.replace()`). Visually confirmed. |
-| 4 | **Inconsistent contact email** | Contact, Careers, Privacy pages | These show **`info@eminenthospice.com`** while the footer and business info use **`eminenthospice@gmail.com`**. On the Contact page this is especially risky — it may point users at a non-existent inbox. |
-| 5 | **About pages emit no structured data** | `/en/about`, `/ko/about` | `about.astro` uses `<OrganizationJsonLd slot="head" />`, but `BaseLayout` has **no `name="head"` slot** — so Astro silently drops it. About pages ship zero JSON-LD. |
+| 4 | **Inconsistent contact email** | Contact, Careers, Privacy pages | These show **`info@eminenthospice.com`** while the footer and business info use **`eminenthospice@gmail.com`**. On the Contact page this is especially risky - it may point users at a non-existent inbox. |
+| 5 | **About pages emit no structured data** | `/en/about`, `/ko/about` | `about.astro` uses `<OrganizationJsonLd slot="head" />`, but `BaseLayout` has **no `name="head"` slot** - so Astro silently drops it. About pages ship zero JSON-LD. |
 | 6 | **FAQ pages missing FAQ structured data** | `/en/faq`, `/ko/faq` | A `FaqPageJsonLd.astro` component exists but is **never imported/used**. Missed rich-result SEO on a key page. |
 | 7 | **Resources dropdown `aria-expanded` always "false"** | header (all pages) | Hardcoded; never updates when the menu opens. Screen readers always announce it collapsed. |
 | 8 | **Resources dropdown is hover/focus-only** | header (desktop ≥1024px) | No click handler (`cursor-default`). Touch users on large screens (e.g. iPad landscape) can't open it. Mitigation: those 6 links also exist in the footer and are keyboard-reachable. |

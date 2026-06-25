@@ -7,6 +7,13 @@
       "runtimeArgs": ["run", "dev"],
       "autoPort": true,
       "port": 4321
+    },
+    {
+      "name": "eminent-astro-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "preview"],
+      "autoPort": true,
+      "port": 4322
     }
   ]
 }

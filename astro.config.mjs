@@ -9,7 +9,7 @@ export default defineConfig({
   trailingSlash: 'never',
 
   // Emit `en.html` instead of `en/index.html` so Cloudflare Pages serves
-  // no-slash URLs (/en, /en/services) at 200 — matching trailingSlash:'never'
+  // no-slash URLs (/en, /en/services) at 200 - matching trailingSlash:'never'
   // and the no-slash canonical tags, avoiding 308 redirect hops.
   build: {
     format: 'file',
@@ -25,6 +25,27 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  // Auto-hashes every inline script/style Astro emits and injects a per-page
+  // <meta> CSP for script-src/style-src - avoids hand-maintained hashes that
+  // would silently go stale (and break the page) on the next content edit.
+  // frame-ancestors is intentionally NOT set here: the CSP spec ignores it
+  // when delivered via <meta>, so it lives in public/_headers instead.
+  security: {
+    csp: {
+      scriptDirective: {
+        resources: ["'self'", 'https://challenges.cloudflare.com'],
+      },
+      directives: [
+        "base-uri 'self'",
+        "form-action 'self'",
+        "img-src 'self' data: https:",
+        "media-src 'self'",
+        "connect-src 'self' https://challenges.cloudflare.com",
+        "frame-src https://challenges.cloudflare.com",
+      ],
+    },
   },
 
   integrations: [

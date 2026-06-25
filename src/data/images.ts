@@ -1,5 +1,5 @@
 /**
- * Eminent Hospice — Image slot registry
+ * Eminent Hospice - Image slot registry
  * Ported from EminentHospiceWebsite/src/lib/imageSlots.ts
  *
  * Photos are self-hosted under /public/images/photos/<key>.webp.

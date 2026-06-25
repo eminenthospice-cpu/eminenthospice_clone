@@ -53,14 +53,14 @@ export const VIDEO_RESOURCES: VideoResource[] = [
     sourcePath: '/about',
   },
   {
-    slug: 'social-work-bereavement',
+    slug: 'spiritual-care-chaplain',
     title: {
-      en: 'Social work and bereavement interview',
-      ko: '사회복지 및 사별 지원 인터뷰',
+      en: 'Spiritual care / chaplain interview',
+      ko: '영적 돌봄 / 채플린 인터뷰',
     },
     description: {
-      en: 'Peter Park shares how social work and bereavement support help families before and after a loss.',
-      ko: '박피터 님이 임종 전후 가족을 돕는 사회복지 및 사별 지원을 소개합니다.',
+      en: 'Peter Park shares how spiritual care and chaplain support help patients and families during hospice.',
+      ko: '박피터 님이 호스피스에서 영적 돌봄과 채플린 지원이 환자와 가족을 어떻게 돕는지 소개합니다.',
     },
     videoSrc: '/videos/hospice-social-work-bereavement-interview-peter-park-korean-english-subtitles.mp4',
     captionSrc: '/captions/hospice-social-work-bereavement-interview-peter-park-korean-english-subtitles.en.vtt',

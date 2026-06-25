@@ -83,11 +83,11 @@ Seekability result: Pass. Browser automation checked all 18 embedded video insta
 Caption timing result: Pass for cue coverage. The QA script checked 1,062 detected speech intervals and 3,181 timestamped frame samples. The editable VTT timing covered all detected speech intervals with 0 timing gaps.
 
 Burned-caption visual/wording result: Needs human review before treating the captions as final. The generated sheets show captions are generally visible and not cut off, but 199 sampled frames were flagged for low caption-region contrast or very short rolling fragments during continuous speech. The most affected videos were:
-- `after-death-hospice-korean-english-subtitles.mp4` — 53 visibility/continuity flags.
-- `after-death-non-hospice-polst-korean-english-subtitles.mp4` — 99 visibility/continuity flags.
-- `end-of-life-timing-korean-english-subtitles.mp4` — 19 visibility/continuity flags.
-- `hospice-core-services-korean-english-subtitles.mp4` — 4 visibility/continuity flags.
-- `hospice-myths-korean-english-subtitles.mp4` — 24 visibility/continuity flags.
+- `after-death-hospice-korean-english-subtitles.mp4` - 53 visibility/continuity flags.
+- `after-death-non-hospice-polst-korean-english-subtitles.mp4` - 99 visibility/continuity flags.
+- `end-of-life-timing-korean-english-subtitles.mp4` - 19 visibility/continuity flags.
+- `hospice-core-services-korean-english-subtitles.mp4` - 4 visibility/continuity flags.
+- `hospice-myths-korean-english-subtitles.mp4` - 24 visibility/continuity flags.
 
 Manual visual inspection of the generated flagged sheets found captions present in the reviewed frames, but several moments show only one-word or very short English fragments while the speaker is visibly still talking. These should be reviewed for caption continuity and translation quality by a Korean-English reviewer familiar with hospice/medical terminology.
 
