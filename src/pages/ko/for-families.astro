@@ -111,6 +111,57 @@ const relatedLinks = [
         </div>
       ))}
     </div>
+
+    <!-- 간병 실습 동영상 -->
+    <h3 class="font-heading font-semibold text-lg text-ink-900 mt-8 mb-4 not-prose">
+      간병 실습 동영상
+    </h3>
+    <div class="grid gap-6 sm:grid-cols-2 not-prose">
+      {[
+        {
+          src: '/videos/oxygen-concentrator-korean.mp4',
+          title: '산소호흡기(산소발생기) 사용법',
+          desc: '호스피스에서 제공하는 가정용 산소호흡기의 사용 방법과 안전 수칙을 소개합니다.',
+          aria: '호스피스 산소호흡기 사용법 안내 동영상',
+        },
+        {
+          src: '/videos/nebulizer-korean.mp4',
+          title: '네뷸라이저(Nebulizer) 사용법',
+          desc: '가정에서 호흡 치료 약물을 투여하는 네뷸라이저의 설치와 사용 방법을 안내합니다.',
+          aria: '네뷸라이저 사용법 안내 동영상',
+        },
+        {
+          src: '/videos/suction-machine-korean.mp4',
+          title: '흡입기(Suction) 사용법',
+          desc: '분비물을 제거하고 환자를 편안하게 돕는 흡입기의 안전한 사용법을 안내합니다.',
+          aria: '흡입기(석션) 사용법 안내 동영상',
+        },
+        {
+          src: '/videos/emergency-medications-korean.mp4',
+          title: '응급·증상 완화 약물 소개',
+          desc: '호스피스에서 제공하는 응급(증상 완화) 약물의 종류와 사용 시점을 소개합니다.',
+          aria: '호스피스 응급약 소개 동영상',
+        },
+      ].map((v) => (
+        <div class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
+          <video
+            class="block w-full aspect-video bg-ink-950"
+            controls
+            preload="metadata"
+            playsinline
+            aria-label={v.aria}
+          >
+            <source src={v.src} type="video/mp4" />
+            브라우저가 동영상 재생을 지원하지 않습니다.
+          </video>
+          <div class="px-5 py-4">
+            <p class="font-heading text-base font-semibold text-ink-900">{v.title}</p>
+            <p class="mt-1 text-base leading-relaxed text-ink-600 font-prose">{v.desc}</p>
+            <p class="mt-2 text-sm text-ink-500 italic font-prose">Eminent Hospice 제공 한국어 동영상입니다.</p>
+          </div>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section id="dying-process" aria-labelledby="dying-process-h" class="reveal scroll-mt-24">

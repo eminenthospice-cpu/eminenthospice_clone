@@ -115,6 +115,57 @@ const relatedLinks = [
         </div>
       ))}
     </div>
+
+    <!-- Caregiver how-to videos -->
+    <h3 class="font-heading font-semibold text-lg text-ink-900 mt-8 mb-4 not-prose">
+      Caregiver how-to videos
+    </h3>
+    <div class="grid gap-6 sm:grid-cols-2 not-prose">
+      {[
+        {
+          src: '/videos/oxygen-concentrator-korean.mp4',
+          title: 'Using the home oxygen concentrator',
+          desc: 'How to operate the home oxygen concentrator provided by hospice, with safety tips for everyday use.',
+          aria: 'Korean instructional video on using the home oxygen concentrator',
+        },
+        {
+          src: '/videos/nebulizer-korean.mp4',
+          title: 'Using a nebulizer',
+          desc: 'How to set up and use a nebulizer to deliver breathing medication at home.',
+          aria: 'Korean instructional video on using a nebulizer',
+        },
+        {
+          src: '/videos/suction-machine-korean.mp4',
+          title: 'Using a suction machine',
+          desc: 'How to safely use a suction machine to clear secretions and keep your loved one comfortable.',
+          aria: 'Korean instructional video on using a suction machine',
+        },
+        {
+          src: '/videos/emergency-medications-korean.mp4',
+          title: 'Comfort & emergency medications',
+          desc: 'An overview of the comfort and emergency medications hospice provides, and when to use them.',
+          aria: 'Korean instructional video introducing comfort and emergency medications used in hospice',
+        },
+      ].map((v) => (
+        <div class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
+          <video
+            class="block w-full aspect-video bg-ink-950"
+            controls
+            preload="metadata"
+            playsinline
+            aria-label={v.aria}
+          >
+            <source src={v.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="px-5 py-4">
+            <p class="font-heading text-base font-semibold text-ink-900">{v.title}</p>
+            <p class="mt-1 text-base leading-relaxed text-ink-600 font-prose">{v.desc}</p>
+            <p class="mt-2 text-sm text-ink-500 italic font-prose">Korean-language video from Eminent Hospice.</p>
+          </div>
+        </div>
+      ))}
+    </div>
   </section>
 
   <!-- Dying Process Timeline -->
