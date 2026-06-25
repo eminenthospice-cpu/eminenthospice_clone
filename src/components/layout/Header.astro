@@ -14,10 +14,18 @@ const lp = (p: string) => localizedPath(p, lang);
 const navLinks = [
   { href: lp('/'), label: t('nav.home') },
   { href: lp('/services'), label: t('nav.hospiceServices') },
-  { href: lp('/understanding-hospice'), label: lang === 'ko' ? '진행 과정' : 'What to Expect' },
+  { href: lp('/understanding-hospice'), label: t('nav.understandingHospice') },
   { href: lp('/for-families'), label: t('nav.forFamilies') },
   { href: lp('/faq'), label: t('nav.faq') },
   { href: lp('/contact'), label: t('nav.contact') },
+] as const;
+
+const resourceLinks = [
+  { href: lp('/insurance'), label: t('nav.insurance') },
+  { href: lp('/hospice-laws'), label: t('nav.hospiceLaws') },
+  { href: lp('/hipaa-notice'), label: t('footer.legalLinks.hipaaNotice') },
+  { href: lp('/privacy'), label: t('footer.legalLinks.privacy') },
+  { href: lp('/terms'), label: t('footer.legalLinks.terms') },
 ] as const;
 
 const otherLang: Locale = lang === 'en' ? 'ko' : 'en';
@@ -30,6 +38,7 @@ function isActive(href: string): boolean {
   return clean === '' ? currentPath === '/' : currentPath.startsWith(clean || '/');
 }
 
+const resourcesActive = resourceLinks.some(({ href }) => isActive(href));
 const isHomePage = currentPath === '/';
 ---
 
@@ -88,11 +97,43 @@ const isHomePage = currentPath === '/';
             {label}
           </a>
         ))}
+
+        <div class="group relative">
+          <button
+            type="button"
+            class:list={[
+              'inline-flex min-h-11 items-center gap-1 rounded-btn px-3 text-base font-medium text-ink-700 hover:bg-primary-50 hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
+              { 'bg-primary-50 text-primary-800': resourcesActive },
+            ]}
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {t('nav.resources')}
+            <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="invisible absolute right-0 top-full z-50 w-72 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div class="rounded-card border border-line-soft bg-white p-2 shadow-float">
+              {resourceLinks.map(({ href, label }) => (
+                <a
+                  href={href}
+                  class:list={[
+                    'block rounded-btn px-3 py-2.5 text-base font-medium leading-snug text-ink-700 hover:bg-primary-50 hover:text-primary-800',
+                    { 'bg-primary-50 text-primary-800': isActive(href) },
+                  ]}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <a
         href={lp('/referral')}
-        class="hidden min-h-11 items-center justify-center rounded-btn bg-accent-gold-500 px-4 text-base font-semibold text-ink-900 hover:bg-accent-gold-400 sm:inline-flex"
+        class="hidden min-h-11 items-center justify-center rounded-btn border-2 border-primary-500 bg-transparent px-4 text-base font-semibold text-primary-600 hover:bg-primary-50 sm:inline-flex"
       >
         {t('nav.referral')}
       </a>
@@ -121,11 +162,21 @@ const isHomePage = currentPath === '/';
           {label}
         </a>
       ))}
+      <div class="mt-2 border-t border-line-hairline pt-3">
+        <p class="px-3 pb-1 text-sm font-semibold uppercase text-ink-500">{t('nav.resources')}</p>
+        <div class="grid gap-1">
+          {resourceLinks.map(({ href, label }) => (
+            <a href={href} class="rounded-btn px-3 py-2.5 text-base font-medium text-ink-700 hover:bg-primary-50">
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
       <div class="mt-3 grid gap-2 border-t border-line-hairline pt-4">
-        <a href={`tel:${CONTACT.phone.tel}`} class="rounded-btn bg-primary-700 px-4 py-3 text-center text-lg font-semibold text-white">
+        <a href={`tel:${CONTACT.phone.tel}`} class="rounded-btn bg-accent-gold-500 px-4 py-3 text-center text-lg font-semibold text-ink-900">
           {lang === 'ko' ? '24시간 전화' : 'Call 24/7'} {CONTACT.phone.display}
         </a>
-        <a href={lp('/referral')} class="rounded-btn bg-accent-gold-500 px-4 py-3 text-center text-lg font-semibold text-ink-900">
+        <a href={lp('/referral')} class="rounded-btn border-2 border-primary-500 px-4 py-3 text-center text-lg font-semibold text-primary-600 hover:bg-primary-50">
           {t('nav.referral')}
         </a>
       </div>

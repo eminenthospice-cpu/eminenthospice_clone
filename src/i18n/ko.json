@@ -3,7 +3,7 @@
     "home": "홈",
     "aboutUs": "소개",
     "hospiceServices": "호스피스 서비스",
-    "understandingHospice": "호스피스 케어 이해하기",
+    "understandingHospice": "진행 과정",
     "hospiceLaws": "호스피스 법률 및 환자 권리",
     "forFamilies": "가족 및 보호자를 위한 정보",
     "insurance": "보험 및 메디케어",
@@ -186,7 +186,7 @@
         "home": "홈",
         "about": "회사 소개",
         "services": "호스피스 서비스",
-        "understandingHospice": "호스피스 케어 이해하기",
+        "understandingHospice": "진행 과정",
         "hospiceLaws": "호스피스 법률 및 환자 권리",
         "insurance": "보험 및 메디케어",
         "forFamilies": "가족 및 보호자를 위한 안내",
@@ -245,7 +245,7 @@
     }
   },
   "understandingHospice": {
-    "pageTitle": "호스피스 케어 이해하기",
+    "pageTitle": "진행 과정",
     "metaDescription": "호스피스 케어가 무엇인지, 누가 자격이 되는지, 흔한 오해와 등록 후 과정을 설명하는 노스할리우드 및 광역 로스앤젤레스 지역 환자와 가족을 위한 쉬운 안내입니다.",
     "lastReviewed": "2026-05-01",
     "introParagraph": "호스피스는 현대 의료에서 가장 오해받기 쉬운 분야 중 하나입니다. 본 페이지는 호스피스가 실제로 무엇이며, 누가 자격이 되는지, 가입 후 어떤 일이 일어나는지를 쉬운 한국어로 설명합니다.",
@@ -641,7 +641,7 @@
       "offer": {
         "title": "제공 서비스",
         "body": "하루 24시간 주 7일, 노스할리우드와 광역 로스앤젤레스 지역에서 환자가 집이라고 부르는 곳 어디든 다학제 팀이 호스피스 케어를 제공합니다. 호스피스가 처음이신가요?",
-        "linkToUnderstanding": "호스피스 케어 이해하기 안내부터 보세요 →"
+        "linkToUnderstanding": "진행 과정 안내부터 보세요 →"
       },
       "levels": {
         "title": "호스피스 케어의 4단계",

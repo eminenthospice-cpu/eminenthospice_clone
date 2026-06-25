@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
+import Button from '../../components/ui/Button.astro';
 import { localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 import koData from '../../i18n/ko.json';
@@ -40,7 +41,7 @@ const relatedLinks = [
   description={d.metaDescription}
   lang={lang}
   path="/understanding-hospice"
-  eyebrow="호스피스 케어 이해하기"
+  eyebrow={koData.nav.understandingHospice}
   introParagraph={d.introParagraph}
   lastReviewed={d.lastReviewed}
 >
@@ -92,21 +93,21 @@ const relatedLinks = [
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Hospice myths video</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Kim Jeong Ah, Nurse Practitioner.
+          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
         </p>
       </div>
     </div>
     <div class="not-prose mt-4 space-y-4">
       {s.myths.items.map(item => (
-        <div class="rounded-card border border-line-soft bg-white p-5 shadow-soft">
+        <div class="rounded-card border border-primary-100 bg-white p-5 shadow-soft">
           <div class="flex items-start gap-3 mb-3">
-            <span class="inline-block rounded-full bg-red-100 text-red-700 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
+            <span class="inline-block rounded-full bg-accent-gold-100 text-accent-gold-800 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
               {s.myths.mythLabel}
             </span>
             <p class="font-medium text-ink-800 italic leading-snug">{item.myth}</p>
           </div>
           <div class="flex items-start gap-3">
-            <span class="inline-block rounded-full bg-green-100 text-green-700 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
+            <span class="inline-block rounded-full bg-primary-100 text-primary-800 text-caption font-semibold px-2.5 py-0.5 flex-shrink-0 mt-0.5">
               {s.myths.factLabel}
             </span>
             <p class="text-ink-700 text-base leading-relaxed">{item.fact}</p>
@@ -146,25 +147,17 @@ const relatedLinks = [
     <p>{s.stoppingHospice.p1}</p>
   </section>
 
-  <div class="not-prose mt-12 rounded-card bg-primary-500 text-white p-6 md:p-8">
+  <div class="not-prose mt-12 rounded-card bg-primary-700 text-white p-6 md:p-8">
     <h2 class="font-heading text-xl mb-2">{common.pageBottomCta.title}</h2>
     <p class="font-prose text-primary-100 mb-5 leading-relaxed">{common.pageBottomCta.subtitle}</p>
     <div class="flex flex-col sm:flex-row gap-3">
-      <a href={`tel:${CONTACT.phone.tel}`}
-        class="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5
-               rounded-btn bg-white text-primary-700 font-medium hover:bg-primary-50
-               transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2
-               focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-500">
+      <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="md">
         <Icon name="phone" class="w-4 h-4" />
         {common.pageBottomCta.call}
-      </a>
-      <a href={lp('/referral')}
-        class="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5
-               rounded-btn border border-white/40 text-white font-medium hover:bg-white/10
-               transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2
-               focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-500">
+      </Button>
+      <Button href={lp('/referral')} variant="secondary" size="md" class="border-white bg-white/5 text-white hover:bg-white/10 hover:text-white">
         {common.pageBottomCta.refer}
-      </a>
+      </Button>
     </div>
   </div>
 </LongFormLayout>

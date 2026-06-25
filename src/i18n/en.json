@@ -3,7 +3,7 @@
     "home": "Home",
     "aboutUs": "About Us",
     "hospiceServices": "Hospice Services",
-    "understandingHospice": "Understanding Hospice Care",
+    "understandingHospice": "What to Expect",
     "hospiceLaws": "Hospice Laws & Patient Rights",
     "forFamilies": "For Families & Caregivers",
     "insurance": "Insurance & Medicare",
@@ -186,7 +186,7 @@
         "home": "Home",
         "about": "About Us",
         "services": "Hospice Services",
-        "understandingHospice": "Understanding Hospice Care",
+        "understandingHospice": "What to Expect",
         "hospiceLaws": "Hospice Laws & Patient Rights",
         "insurance": "Insurance & Medicare",
         "forFamilies": "For Families & Caregivers",
@@ -245,7 +245,7 @@
     }
   },
   "understandingHospice": {
-    "pageTitle": "Understanding Hospice Care",
+    "pageTitle": "What to Expect",
     "metaDescription": "What hospice care is, who qualifies, common myths corrected, and what to expect after enrollment. A plain-language guide for patients and families in North Hollywood and the greater Los Angeles area.",
     "lastReviewed": "2026-05-01",
     "introParagraph": "Hospice is one of the most misunderstood parts of modern medicine. This page is a plain-language guide to what hospice actually is, who qualifies, and what happens after you enroll.",
@@ -641,7 +641,7 @@
       "offer": {
         "title": "What We Offer",
         "body": "Hospice care delivered by a full interdisciplinary team, twenty-four hours a day, seven days a week, anywhere a patient calls home in North Hollywood and the greater Los Angeles area. New to hospice?",
-        "linkToUnderstanding": "Start with our Understanding Hospice Care guide →"
+        "linkToUnderstanding": "Start with our What to Expect guide →"
       },
       "levels": {
         "title": "The Four Levels of Care",
@@ -937,7 +937,7 @@
         "items": {
           "whenConsider": {
             "q": "When should we consider hospice?",
-            "a": "Any time a doctor has indicated the illness is likely to progress in the next six months. Earlier referral usually means better symptom control and more time with the team — hospice is not only for the last few days. See Understanding Hospice for fuller detail."
+            "a": "Any time a doctor has indicated the illness is likely to progress in the next six months. Earlier referral usually means better symptom control and more time with the team — hospice is not only for the last few days. See What to Expect for fuller detail."
           },
           "howStart": {
             "q": "How do we start hospice care?",
@@ -978,7 +978,7 @@
           },
           "hastens": {
             "q": "Does hospice hasten death?",
-            "a": "No. Studies consistently show that hospice patients often live as long as or longer than non-hospice patients with the same diagnoses, because symptoms are well managed. See Understanding Hospice → Myths vs. Facts."
+            "a": "No. Studies consistently show that hospice patients often live as long as or longer than non-hospice patients with the same diagnoses, because symptoms are well managed. See What to Expect → Myths vs. Facts."
           }
         }
       },

@@ -91,24 +91,27 @@ const faqJsonLdItems = catOrder.flatMap(catKey =>
     const cat = d.categories[catKey];
     return (
       <section id={catAnchors[catKey]} class="scroll-mt-24">
-        <h2>{cat.title}</h2>
-        <div class="not-prose mt-4 space-y-3">
+        <h2 class="not-prose flex items-center gap-3 rounded-card border border-primary-100 bg-primary-50 px-4 py-3 text-primary-900">
+          <span class="h-2.5 w-2.5 rounded-full bg-accent-gold-500" aria-hidden="true"></span>
+          {cat.title}
+        </h2>
+        <div class="not-prose mt-5 space-y-3">
           {Object.values(cat.items).map(item => (
-            <details class="group rounded-card border border-line-soft bg-white shadow-soft overflow-hidden">
+            <details class="group rounded-card border border-primary-200 bg-primary-50 shadow-soft overflow-hidden">
               <summary
-                class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer font-heading text-ink-900
-                       hover:bg-surface-paper transition-colors duration-100
+                class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer font-body font-semibold text-primary-900
+                       hover:bg-primary-100 transition-colors duration-100
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500"
               >
                 <span class="text-base leading-snug">{item.q}</span>
                 <svg
-                  class="w-5 h-5 text-ink-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+                  class="w-5 h-5 text-primary-700 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
                   fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"
                 >
                   <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
               </summary>
-              <div class="px-5 pb-5 pt-1 border-t border-line-soft">
+              <div class="px-5 pb-5 pt-4 border-t border-primary-200 bg-white">
                 <p class="text-ink-700 text-base leading-relaxed font-prose">{item.a}</p>
               </div>
             </details>

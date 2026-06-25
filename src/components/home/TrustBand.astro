@@ -10,18 +10,18 @@ const t = useTranslations(lang);
 const items = ['medicare', 'joint', 'bilingual', 'local'] as const;
 ---
 
-<section aria-labelledby="trust-heading" class="bg-primary-900 text-white">
+<section aria-labelledby="trust-heading" class="bg-primary-50 text-ink-900">
   <div class="container-wide py-14">
     <div class="reveal grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
       <div>
-        <p class="eyebrow mb-3 text-accent-gold-200">{t('home.trust.eyebrow')}</p>
-        <h2 id="trust-heading" class="font-heading text-4xl leading-tight md:text-5xl">{t('home.trust.title')}</h2>
+        <p class="eyebrow mb-3 text-primary-700">{t('home.trust.eyebrow')}</p>
+        <h2 id="trust-heading" class="font-prose text-4xl leading-tight md:text-5xl">{t('home.trust.title')}</h2>
       </div>
       <div class="grid gap-3 sm:grid-cols-2">
         {items.map((item) => (
-          <div class="rounded-card border border-white/15 bg-white/10 p-5">
-            <p class="text-lg font-semibold leading-tight">{t(`home.trust.items.${item}.title`)}</p>
-            <p class="mt-2 text-base leading-relaxed text-primary-100">{t(`home.trust.items.${item}.body`)}</p>
+          <div class="rounded-card border border-primary-100 bg-white p-5 shadow-card">
+            <p class="text-lg font-semibold leading-tight text-primary-900">{t(`home.trust.items.${item}.title`)}</p>
+            <p class="mt-2 text-base leading-relaxed text-ink-700">{t(`home.trust.items.${item}.body`)}</p>
           </div>
         ))}
       </div>

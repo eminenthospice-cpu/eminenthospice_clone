@@ -25,19 +25,20 @@ const onThisPage = lang === 'ko' ? '이 페이지에서' : 'On this page';
 const relatedTitle = lang === 'ko' ? '관련 페이지' : 'Related pages';
 ---
 
-<nav aria-label={onThisPage} class="sticky top-24 space-y-8">
+<nav aria-label={onThisPage} class="sticky top-24 space-y-7">
   <!-- TOC -->
   <div>
-    <p class="eyebrow text-ink-400 mb-3">{onThisPage}</p>
-    <ul class="space-y-1">
+    <p class="eyebrow text-primary-700 mb-3">{onThisPage}</p>
+    <ul class="space-y-2">
       {anchors.map(({ id, label }) => (
         <li>
           <a
             href={`#${id}`}
-            class="block text-body-sm text-ink-600 hover:text-primary-600 py-2.5 leading-snug
-                   border-l-2 border-transparent pl-3 hover:border-primary-400
-                   transition-colors duration-100 focus-visible:outline-none
-                   focus-visible:ring-2 focus-visible:ring-primary-500 rounded-sm"
+            class="block rounded-btn border border-line-soft bg-white px-3.5 py-2.5
+                   text-body-sm font-medium leading-snug text-ink-700 shadow-card
+                   transition-[background-color,border-color,color,box-shadow] duration-100
+                   hover:border-primary-300 hover:bg-primary-50 hover:text-primary-800
+                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           >
             {label}
           </a>
@@ -50,13 +51,16 @@ const relatedTitle = lang === 'ko' ? '관련 페이지' : 'Related pages';
   {relatedLinks.length > 0 && (
     <div>
       <p class="eyebrow text-ink-400 mb-3">{relatedTitle}</p>
-      <ul class="space-y-1">
+      <ul class="space-y-2">
         {relatedLinks.map(({ href, label }) => (
           <li>
             <a
               href={localizedPath(href, lang)}
-              class="block text-body-sm text-ink-600 hover:text-primary-600 py-2.5 leading-snug
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-sm"
+              class="block rounded-btn border border-line-hairline bg-surface-canvas px-3.5 py-2.5
+                     text-body-sm font-medium leading-snug text-ink-600
+                     transition-[background-color,border-color,color] duration-100
+                     hover:border-primary-200 hover:bg-white hover:text-primary-800
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
             >
               {label} →
             </a>

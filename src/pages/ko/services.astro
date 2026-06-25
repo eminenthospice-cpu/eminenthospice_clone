@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
+import Button from '../../components/ui/Button.astro';
 import { useTranslations, localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 
@@ -51,14 +52,9 @@ const anchors = [
 ];
 
 const relatedLinks = [
-  { href: '/',                      label: t('common.relatedPages.links.home') },
-  { href: '/about',                 label: t('common.relatedPages.links.about') },
   { href: '/understanding-hospice', label: t('common.relatedPages.links.understandingHospice') },
   { href: '/insurance',             label: t('common.relatedPages.links.insurance') },
-  { href: '/for-families',          label: t('common.relatedPages.links.forFamilies') },
   { href: '/faq',                   label: t('common.relatedPages.links.faq') },
-  { href: '/contact',               label: t('common.relatedPages.links.contact') },
-  { href: '/referral',              label: t('common.relatedPages.links.referral') },
 ];
 ---
 
@@ -95,7 +91,7 @@ const relatedLinks = [
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Hospice core services video</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Kim Jeong Ah, Nurse Practitioner.
+          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
         </p>
       </div>
     </div>
@@ -203,26 +199,13 @@ const relatedLinks = [
       ))}
     </ol>
     <div class="flex flex-col sm:flex-row gap-3 not-prose">
-      <a
-        href={`tel:${CONTACT.phone.tel}`}
-        class="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3
-               rounded-btn bg-ink-900 text-white font-medium hover:bg-ink-800
-               transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2
-               focus-visible:ring-ink-900 focus-visible:ring-offset-2 w-full sm:w-auto"
-      >
+      <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="lg" class="w-full sm:w-auto">
         <Icon name="phone" class="w-5 h-5" />
         {t('services.sections.howToStart.callCta')}
-      </a>
-      <a
-        href={lp('/referral')}
-        class="inline-flex items-center justify-center min-h-[44px] px-6 py-3
-               rounded-btn border-2 border-primary-500 text-primary-600 font-medium
-               hover:bg-primary-50 transition-colors duration-150 focus-visible:outline-none
-               focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2
-               w-full sm:w-auto"
-      >
+      </Button>
+      <Button href={lp('/referral')} variant="secondary" size="lg" class="w-full sm:w-auto">
         {t('services.sections.howToStart.referCta')}
-      </a>
+      </Button>
     </div>
   </section>
 </LongFormLayout>

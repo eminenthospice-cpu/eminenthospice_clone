@@ -41,13 +41,13 @@ const actions = [
         class:list={[
           'group flex min-h-[112px] items-center gap-4 rounded-card border px-5 py-4 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
           action.primary
-            ? 'border-primary-700 bg-primary-700 text-white hover:bg-primary-800'
+            ? 'border-accent-gold-500 bg-accent-gold-500 text-ink-900 hover:bg-accent-gold-400'
             : 'border-line-hairline bg-white text-ink-900 hover:border-primary-200 hover:bg-primary-50',
         ]}
       >
         <span class:list={[
           'flex h-11 w-11 shrink-0 items-center justify-center rounded-full',
-          action.primary ? 'bg-white/15 text-white' : 'bg-primary-50 text-primary-700',
+          action.primary ? 'bg-white/35 text-ink-900' : 'bg-primary-50 text-primary-700',
         ]}>
           {action.icon === 'phone' && (
             <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ const actions = [
         </span>
         <span>
           <span class="block text-lg font-semibold leading-tight">{action.title}</span>
-          <span class:list(['mt-1 block text-base leading-snug', action.primary ? 'text-primary-100' : 'text-ink-600'])}>{action.body}</span>
+          <span class:list(['mt-1 block text-base leading-snug', action.primary ? 'text-ink-800' : 'text-ink-600'])}>{action.body}</span>
         </span>
       </a>
     ))}

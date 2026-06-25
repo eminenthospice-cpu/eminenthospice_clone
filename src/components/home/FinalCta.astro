@@ -15,8 +15,8 @@ const lp = (p: string) => localizedPath(p, lang);
 <section aria-labelledby="final-cta-heading" class="bg-white">
   <div class="container-wide pb-20">
     <div class="reveal rounded-card bg-primary-700 px-6 py-10 text-center text-white shadow-soft md:px-12 md:py-14">
-      <p class="eyebrow mb-3 text-primary-100">{t('home.finalCta.eyebrow')}</p>
-      <h2 id="final-cta-heading" class="mx-auto max-w-3xl font-heading text-4xl leading-tight md:text-5xl">
+      <p class="eyebrow mb-3 text-accent-gold-200">{t('home.finalCta.eyebrow')}</p>
+      <h2 id="final-cta-heading" class="mx-auto max-w-3xl font-prose text-4xl leading-tight md:text-5xl">
         {t('home.finalCta.title')}
       </h2>
       <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-primary-100">{t('home.finalCta.subtitle')}</p>
@@ -27,7 +27,7 @@ const lp = (p: string) => localizedPath(p, lang);
           </svg>
           {t('home.finalCta.call')} {CONTACT.phone.display}
         </Button>
-        <Button href={lp('/referral')} variant="secondary" size="xl" class="border-white text-white hover:bg-white/10 hover:text-white">
+        <Button href={lp('/referral')} variant="secondary" size="xl" class="border-white bg-white/5 text-white hover:bg-white/10 hover:text-white">
           {t('home.finalCta.refer')}
         </Button>
       </div>
