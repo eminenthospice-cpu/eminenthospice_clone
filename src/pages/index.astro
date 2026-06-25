@@ -4,12 +4,11 @@ import { useTranslations } from '../i18n/utils';
 import LocalBusinessJsonLd from '../components/seo/LocalBusinessJsonLd.astro';
 import OrganizationJsonLd from '../components/seo/OrganizationJsonLd.astro';
 import Hero from '../components/home/Hero.astro';
-import ByTheNumbers from '../components/home/ByTheNumbers.astro';
-import PhilosophyBand from '../components/home/PhilosophyBand.astro';
-import LevelsOfCare from '../components/home/LevelsOfCare.astro';
-import TeamCallout from '../components/home/TeamCallout.astro';
-import WhoWeServe from '../components/home/WhoWeServe.astro';
-import Testimonial from '../components/home/Testimonial.astro';
+import QuickActionBar from '../components/home/QuickActionBar.astro';
+import WhatToExpect from '../components/home/WhatToExpect.astro';
+import ServicesSnapshot from '../components/home/ServicesSnapshot.astro';
+import TrustBand from '../components/home/TrustBand.astro';
+import FamilyQuote from '../components/home/FamilyQuote.astro';
 import FinalCta from '../components/home/FinalCta.astro';
 
 const lang = 'en' as const;
@@ -26,11 +25,10 @@ const t = useTranslations(lang);
   <OrganizationJsonLd />
 
   <Hero lang={lang} />
-  <ByTheNumbers lang={lang} />
-  <PhilosophyBand lang={lang} />
-  <LevelsOfCare lang={lang} />
-  <TeamCallout lang={lang} />
-  <WhoWeServe lang={lang} />
-  <Testimonial lang={lang} />
+  <QuickActionBar lang={lang} />
+  <WhatToExpect lang={lang} />
+  <ServicesSnapshot lang={lang} />
+  <TrustBand lang={lang} />
+  <FamilyQuote lang={lang} />
   <FinalCta lang={lang} />
 </BaseLayout>
