@@ -41,9 +41,9 @@ const isHomePage = currentPath === '/';
     { 'is-scrolled': !isHomePage },
   ]}
 >
-  <div id="quiet-brand-bar" class="container-wide flex h-48 items-center justify-center transition-all duration-300">
+  <div id="quiet-brand-bar" class="container-wide flex h-[10.8rem] items-center justify-center transition-all duration-300">
     <a href={lp('/')} class="group inline-flex items-center justify-center text-center" aria-label={`${SITE.name} home`}>
-      <img src={BRAND.logo} alt="" width="544" height="194" class="h-36 w-[88vw] max-w-[34rem] shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-40 sm:w-[34rem]" loading="eager" decoding="async" />
+      <img src={BRAND.logo} alt="" width="544" height="194" class="h-[8.1rem] w-[88vw] max-w-[30.6rem] shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-36 sm:w-[30.6rem]" loading="eager" decoding="async" />
     </a>
   </div>
 
@@ -161,13 +161,13 @@ const isHomePage = currentPath === '/';
 
   @media (max-width: 420px) {
     #quiet-brand-bar {
-      height: 9rem;
+      height: 8.1rem;
     }
 
     #quiet-brand-bar img {
-      height: 7.5rem;
+      height: 6.75rem;
       width: 88vw;
-      max-width: 28rem;
+      max-width: 25.2rem;
     }
   }
 </style>

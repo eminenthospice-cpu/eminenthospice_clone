@@ -25,7 +25,7 @@ export const imageSlots = {
   homeHero: {
     src: '/images/photos/homeHero.webp',
     alt: { en: 'Doctor laughing with an older patient during a visit', ko: '진료 중 어르신 환자와 웃고 있는 의사' },
-    blurDataURL: DEFAULT_BLUR, credit: 'Photo source: eminenthospice.com', width: 1500, height: 2000,
+    blurDataURL: DEFAULT_BLUR, credit: 'Photo source: eminenthospice.com', width: 1600, height: 1000,
   },
   homePhilosophyPortrait: {
     src: '/images/photos/homePhilosophyPortrait.webp',

@@ -21,7 +21,7 @@ sources = {
 }
 
 slots = {
-    "homeHero.webp": ("doctor_patient", 1500, 2000),
+    "homeHero.webp": ("doctor_patient", 1600, 1000),
     "homePhilosophyPortrait.webp": ("hands_cane", 1200, 1500),
     "homeLevelRoutine.webp": ("elder_hands", 1000, 750),
     "homeLevelContinuous.webp": ("care_team", 1000, 750),

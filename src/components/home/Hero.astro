@@ -1,8 +1,8 @@
 ---
 import { useTranslations, localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
+import { imageSlots } from '../../data/images';
 import Button from '../ui/Button.astro';
-import EditorialFigure from '../ui/EditorialFigure.astro';
 
 export interface Props {
   lang: 'en' | 'ko';
@@ -11,62 +11,82 @@ export interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const lp = (p: string) => localizedPath(p, lang);
+const heroImage = imageSlots.homeHero;
 
 const highlights = ['availability', 'language', 'coverage'] as const;
 ---
 
 <section aria-labelledby="hero-heading" class="bg-white">
-  <div class="container-wide grid min-h-[calc(100vh-9rem)] grid-cols-1 items-center gap-10 py-10 md:py-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-    <div class="reveal max-w-3xl">
-      <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-2 text-caption font-semibold text-primary-800">
-        <span class="h-2 w-2 rounded-full bg-success" aria-hidden="true"></span>
-        {t('home.hero.eyebrow')}
-      </p>
+  <div class="relative isolate min-h-[calc(100vh-12rem)] overflow-hidden bg-ink-900 text-white">
+    <div
+      class="hero-fixed-bg absolute inset-0 -z-20"
+      style={`background-image: linear-gradient(90deg, rgb(26 36 48 / 0.85), rgb(26 36 48 / 0.58) 48%, rgb(26 36 48 / 0.2)), url('${heroImage.src}');`}
+      aria-hidden="true"
+    ></div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-ink-900/50 to-transparent"></div>
 
-      <h1 id="hero-heading" class="font-heading text-5xl leading-[1.03] text-ink-900 sm:text-6xl lg:text-7xl">
-        {t('home.hero.heading')}
-      </h1>
+    <div class="container-wide flex min-h-[calc(100vh-12rem)] items-center py-16 md:py-20">
+      <div class="reveal max-w-3xl">
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/35 bg-ink-900/38 px-4 py-2 text-caption font-bold text-white shadow-card backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-success" aria-hidden="true"></span>
+          {t('home.hero.eyebrow')}
+        </p>
 
-      <p class="mt-6 max-w-2xl text-xl leading-relaxed text-ink-700">
-        {t('home.hero.subtext')}
-      </p>
+        <h1
+          id="hero-heading"
+          class="font-heading text-5xl font-black leading-[1.03] text-white sm:text-6xl lg:text-7xl"
+          style="text-shadow: 0 2px 3px rgb(0 0 0 / 0.42), 0 12px 28px rgb(0 0 0 / 0.32);"
+        >
+          {t('home.hero.heading')}
+        </h1>
 
-      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button href={`tel:${CONTACT.phone.tel}`} variant="cta" size="xl" class="bg-primary-700 hover:bg-primary-800">
-          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75z" />
-          </svg>
-          {t('home.hero.ctaPrimary')}
-        </Button>
-        <Button href={lp('/referral')} variant="secondary" size="xl">
-          {t('home.hero.ctaSecondary')}
-        </Button>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button href={`tel:${CONTACT.phone.tel}`} variant="cta" size="xl" class="bg-primary-600 hover:bg-primary-500">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.970c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75z" />
+            </svg>
+            {t('home.hero.ctaPrimary')}
+          </Button>
+          <Button href={lp('/referral')} variant="secondary" size="xl" class="border-white/80 bg-ink-900/32 text-white backdrop-blur hover:bg-white/18">
+            {t('home.hero.ctaSecondary')}
+          </Button>
+        </div>
       </div>
-
-      <dl class="mt-9 grid gap-3 sm:grid-cols-3">
-        {highlights.map((key) => (
-          <div class="rounded-card border border-line-hairline bg-surface-canvas px-4 py-3">
-            <dt class="text-sm font-semibold uppercase text-ink-500">{t(`home.hero.highlights.${key}.label`)}</dt>
-            <dd class="mt-1 text-base font-semibold leading-snug text-ink-900">{t(`home.hero.highlights.${key}.value`)}</dd>
-          </div>
-        ))}
-      </dl>
     </div>
+  </div>
 
-    <div class="reveal relative">
-      <div class="overflow-hidden rounded-card border border-line-hairline bg-surface-canvas shadow-soft">
-        <EditorialFigure
-          slot="homeHero"
-          aspect="4/3"
-          lang={lang}
-          priority={true}
-          sizes="(min-width: 1024px) 44vw, 100vw"
-        />
+  <div class="container-wide py-9 md:py-12">
+    <div class="reveal grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.44fr)] lg:items-start">
+      <div class="max-w-3xl">
+        <p class="font-prose text-3xl leading-snug text-ink-800 md:text-4xl md:leading-tight">
+          {t('home.hero.subtext')}
+        </p>
       </div>
-      <div class="mt-4 rounded-card bg-primary-900 px-5 py-4 text-white shadow-soft">
-        <p class="text-caption font-semibold text-primary-100">{t('home.hero.captionLabel')}</p>
-        <p class="mt-1 text-lg font-semibold leading-snug">{t('home.hero.caption')}</p>
+
+      <div>
+        <div class="border-l-2 border-accent-gold-400 pl-5">
+          <p class="text-caption font-semibold text-primary-700">{t('home.hero.captionLabel')}</p>
+          <p class="mt-1 text-lg font-semibold leading-snug text-ink-900">{t('home.hero.caption')}</p>
+        </div>
+
+        <dl class="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+          {highlights.map((key) => (
+            <div class="rounded-card border border-line-hairline bg-surface-canvas px-4 py-3">
+              <dt class="text-sm font-semibold uppercase text-ink-500">{t(`home.hero.highlights.${key}.label`)}</dt>
+              <dd class="mt-1 text-base font-semibold leading-snug text-ink-900">{t(`home.hero.highlights.${key}.value`)}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-fixed-bg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
