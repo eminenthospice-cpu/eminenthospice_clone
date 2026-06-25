@@ -59,7 +59,7 @@ export function localizedPath(path: string, lang: Locale): string {
 
 /** hreflang alternate links for SEO */
 export function buildAlternates(path: string): Array<{ lang: string; href: string }> {
-  const base = 'https://eminenthospicewebsite.pages.dev'; // must match astro.config.mjs site
+  const base = 'https://eminenthospice-clone.pages.dev'; // must match astro.config.mjs site
   const p = path === '/' ? '' : path;
   return [
     { lang: 'en',       href: `${base}/en${p}` },

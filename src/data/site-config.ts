@@ -10,7 +10,7 @@ export const SITE = {
   name:     'Eminent Hospice Care',
   legalName:'Eminent Hospice Care, Inc.',
   tagline:  'Comfort. Dignity. Compassion.',
-  url:      'https://eminenthospicewebsite.pages.dev', // Cloudflare Pages URL (swap to custom domain when acquired)
+  url:      'https://eminenthospice-clone.pages.dev', // Cloudflare Pages URL (swap to custom domain when acquired)
   locale:   'en-US',
 } as const;
 
@@ -49,7 +49,7 @@ export const TURNSTILE = {
    *
    * Production uses the real widget key below. Also set the matching secret on
    * the Pages project (NOT committed):
-   *   npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name=eminenthospicewebsite
+   *   npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name=eminenthospice-clone
    * The server-side check lives in functions/api/submit.js.
    */
   siteKey: '0x4AAAAAADpPbjFtS1-557HJ',

@@ -8,7 +8,7 @@
  * acting as an open relay.
  *
  * Set the real secret with:
- *   npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name=eminenthospicewebsite
+ *   npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name=eminenthospice-clone
  */
 
 // Endpoint allowlist. Mirrors FORMS in src/data/site-config.ts (not secret).

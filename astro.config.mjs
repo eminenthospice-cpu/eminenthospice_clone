@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://eminenthospicewebsite.pages.dev', // Cloudflare Pages URL (no custom domain yet)
+  site: 'https://eminenthospice-clone.pages.dev', // Cloudflare Pages URL (no custom domain yet)
   trailingSlash: 'never',
 
   // Emit `en.html` instead of `en/index.html` so Cloudflare Pages serves
@@ -30,8 +30,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => ![
-        'https://eminenthospicewebsite.pages.dev',
-        'https://eminenthospicewebsite.pages.dev/',
+        'https://eminenthospice-clone.pages.dev',
+        'https://eminenthospice-clone.pages.dev/',
       ].includes(page),
       i18n: {
         defaultLocale: 'en',
