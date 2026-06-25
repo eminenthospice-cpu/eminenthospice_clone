@@ -3,11 +3,4 @@ name = "eminenthospice-clone"
 pages_build_output_dir = "./dist"
 compatibility_date = "2026-06-25"
 
-# Without this, Cloudflare's wrangler.toml-driven Pages builder skips the
-# build step entirely (expecting a pre-built dist/ already in the repo,
-# which doesn't exist since dist/ is gitignored) and fails with
-# "Output directory dist not found."
-[build]
-command = "npm run build"
-
 [env.production]
