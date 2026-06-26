@@ -22,8 +22,18 @@ const steps = ['call', 'review', 'visit'] as const;
 
   <div class="mt-12 grid gap-4 md:grid-cols-3">
     {steps.map((step, index) => (
-      <article class="reveal rounded-card border border-line-hairline bg-surface-canvas p-6">
-        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-700 text-base font-bold text-white">
+      <article class:list={[
+        'reveal rounded-card border p-6 shadow-card',
+        index === 0 ? 'border-primary-100 bg-primary-50' :
+        index === 1 ? 'border-accent-gold-100 bg-accent-gold-50' :
+        'border-accent-sage-100 bg-accent-sage-50',
+      ]}>
+        <span class:list={[
+          'flex h-10 w-10 items-center justify-center rounded-full text-base font-bold',
+          index === 0 ? 'bg-primary-700 text-white' :
+          index === 1 ? 'bg-accent-gold-500 text-ink-900' :
+          'bg-accent-sage-600 text-white',
+        ]}>
           {index + 1}
         </span>
         <h3 class="mt-5 text-xl font-semibold leading-tight text-ink-900">{t(`home.expect.steps.${step}.title`)}</h3>

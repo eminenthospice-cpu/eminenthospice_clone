@@ -9,7 +9,7 @@ export type Locale = 'en' | 'ko';
 
 const translations: Record<Locale, Record<string, unknown>> = { en, ko };
 
-/** Extract locale from Astro URL (e.g. /en/about → 'en', /ko/about → 'ko') */
+/** Extract locale from Astro URL (e.g. /en/about to 'en', /ko/about to 'ko') */
 export function getLangFromUrl(url: URL): Locale {
   const [, lang] = url.pathname.split('/');
   if (lang === 'ko') return 'ko';

@@ -26,15 +26,15 @@ const relatedTitle = lang === 'ko' ? '관련 페이지' : 'Related pages';
 const cleanLabel = (label: string) => label.replace(/\s+\u2014\s+/g, ': ').replace(/\u2014/g, ':');
 ---
 
-<nav aria-label={onThisPage} class="sticky top-44 space-y-7">
+<nav aria-label={onThisPage} class="sticky top-44 max-h-[calc(100vh-12rem)] space-y-5 overflow-y-auto rounded-card border border-line-soft bg-white/88 p-3 shadow-soft backdrop-blur">
   <div>
-    <p class="eyebrow text-primary-700 mb-3">{onThisPage}</p>
+    <p class="eyebrow mb-3 rounded-btn bg-primary-50 px-3 py-2 text-primary-800">{onThisPage}</p>
     <ul class="space-y-2">
       {anchors.map(({ id, label }) => (
         <li>
           <a
             href={`#${id}`}
-            class="block rounded-btn border border-line-soft bg-white px-3.5 py-2.5 text-body-sm font-medium leading-snug text-ink-700 shadow-card transition-[background-color,border-color,color,box-shadow] duration-100 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+            class="block rounded-btn border border-line-soft bg-white px-3.5 py-2.5 text-body-sm font-semibold leading-snug text-ink-700 shadow-card transition-[background-color,border-color,color,box-shadow,transform] duration-100 hover:-translate-y-0.5 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-800 hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           >
             {cleanLabel(label)}
           </a>
@@ -45,13 +45,13 @@ const cleanLabel = (label: string) => label.replace(/\s+\u2014\s+/g, ': ').repla
 
   {relatedLinks.length > 0 && (
     <div>
-      <p class="eyebrow text-ink-400 mb-3">{relatedTitle}</p>
+      <p class="eyebrow mb-3 rounded-btn bg-accent-gold-50 px-3 py-2 text-accent-gold-800">{relatedTitle}</p>
       <ul class="space-y-2">
         {relatedLinks.map(({ href, label }) => (
           <li>
             <a
               href={localizedPath(href, lang)}
-              class="block rounded-btn border border-line-hairline bg-surface-canvas px-3.5 py-2.5 text-body-sm font-medium leading-snug text-ink-600 transition-[background-color,border-color,color] duration-100 hover:border-primary-200 hover:bg-white hover:text-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              class="block rounded-btn border border-accent-gold-100 bg-surface-canvas px-3.5 py-2.5 text-body-sm font-semibold leading-snug text-ink-600 transition-[background-color,border-color,color,transform] duration-100 hover:-translate-y-0.5 hover:border-accent-gold-300 hover:bg-white hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
             >
               {cleanLabel(label)}
             </a>

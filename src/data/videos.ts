@@ -13,7 +13,7 @@ export const VIDEO_RESOURCES: VideoResource[] = [
   {
     slug: 'hospice-core-services',
     title: {
-      en: 'Hospice core services',
+      en: 'FAQ: What Services Does Hospice Provide?',
       ko: '호스피스 핵심 서비스',
     },
     description: {
@@ -69,7 +69,7 @@ export const VIDEO_RESOURCES: VideoResource[] = [
   {
     slug: 'hospice-myths',
     title: {
-      en: 'Hospice myths',
+      en: 'Most Frequently Asked Questions by Families',
       ko: '호스피스에 대한 오해',
     },
     description: {
@@ -83,7 +83,7 @@ export const VIDEO_RESOURCES: VideoResource[] = [
   {
     slug: 'end-of-life-timing',
     title: {
-      en: 'End-of-life timing',
+      en: 'FAQ: What is your estimate of the remaining time?',
       ko: '임종 시기 이해하기',
     },
     description: {

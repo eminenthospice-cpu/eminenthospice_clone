@@ -358,7 +358,7 @@
       "cops": {
         "title": "Federal Standards: Conditions of Participation",
         "body": "Every hospice that accepts Medicare must meet the federal Conditions of Participation. These cover patient rights, assessment of each patient's needs, the interdisciplinary care team, the quality of care, infection control, and how a hospice is organized and run. The standards are set and enforced by the Centers for Medicare & Medicaid Services (CMS), and hospices are surveyed periodically to confirm compliance.",
-        "cmsLinkLabel": "Read the full regulation (42 CFR Part 418) →",
+        "cmsLinkLabel": "Read the full regulation (42 CFR Part 418)",
         "cmsLinkUrl": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-418"
       },
       "patientRights": {
@@ -376,7 +376,7 @@
           "To receive care without discrimination based on race, religion, national origin, gender, sexual orientation, gender identity, age, or disability.",
           "To have your cultural background, language preferences, and personal values honored."
         ],
-        "linkLabel": "Read the official Patient Rights condition (42 CFR §418.52) →",
+        "linkLabel": "Read the official Patient Rights condition (42 CFR §418.52)",
         "linkUrl": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-418/subpart-C/section-418.52"
       },
       "advanceDirectives": {
@@ -604,7 +604,7 @@
       "team": {
         "title": "Your Care Team",
         "intro": "Every patient is supported by an interdisciplinary team - a physician, registered nurse, licensed vocational nurse, medical social worker, chaplain, hospice aide, bereavement coordinator, and trained volunteers. Each role is described in detail on our Services page.",
-        "viewServicesLink": "See how each team member supports your care →"
+        "viewServicesLink": "See how each team member supports your care"
       },
       "distinctives": {
         "title": "What Sets Us Apart",
@@ -641,7 +641,7 @@
       "offer": {
         "title": "What We Offer",
         "body": "Hospice care delivered by a full interdisciplinary team, twenty-four hours a day, seven days a week, anywhere a patient calls home in North Hollywood and the greater Los Angeles area. New to hospice?",
-        "linkToUnderstanding": "Start with our What to Expect guide →"
+        "linkToUnderstanding": "Start with our What to Expect guide"
       },
       "levels": {
         "title": "The Four Levels of Care",
@@ -941,7 +941,7 @@
           },
           "howStart": {
             "q": "How do we start hospice care?",
-            "a": "Call our 24/7 line or use the Contact form. We coordinate with the attending physician to certify eligibility, and an RN can typically visit within 48 hours. See Hospice Services → How to Start."
+            "a": "Call our 24/7 line or use the Contact form. We coordinate with the attending physician to certify eligibility, and an RN can typically visit within 48 hours. See Hospice Services: How to Start."
           },
           "howQuickly": {
             "q": "How quickly can hospice begin?",
@@ -953,7 +953,7 @@
           },
           "ifImprove": {
             "q": "What if our loved one improves and no longer needs hospice?",
-            "a": "Patients can revoke the hospice election at any time and resume curative care. They can re-elect hospice later if needed - there is no penalty. See Insurance & Medicare → Election Process."
+            "a": "Patients can revoke the hospice election at any time and resume curative care. They can re-elect hospice later if needed - there is no penalty. See Insurance & Medicare: Election Process."
           }
         }
       },
@@ -978,7 +978,7 @@
           },
           "hastens": {
             "q": "Does hospice hasten death?",
-            "a": "No. Studies consistently show that hospice patients often live as long as or longer than non-hospice patients with the same diagnoses, because symptoms are well managed. See What to Expect → Myths vs. Facts."
+            "a": "No. Studies consistently show that hospice patients often live as long as or longer than non-hospice patients with the same diagnoses, because symptoms are well managed. See What to Expect: Myths vs. Facts."
           }
         }
       },
@@ -991,15 +991,15 @@
           },
           "medicare": {
             "q": "Does Medicare cover hospice?",
-            "a": "Yes - Medicare Part A covers the full hospice benefit when the patient is certified terminally ill and elects hospice. See Insurance & Medicare → Medicare Part A."
+            "a": "Yes - Medicare Part A covers the full hospice benefit when the patient is certified terminally ill and elects hospice. See Insurance & Medicare: Medicare Part A."
           },
           "medical": {
             "q": "Does Medi-Cal cover hospice?",
-            "a": "Yes. Medi-Cal covers hospice services and, for patients in a nursing facility, pays for room and board at at least 95% of the facility rate. See Insurance & Medicare → Medi-Cal."
+            "a": "Yes. Medi-Cal covers hospice services and, for patients in a nursing facility, pays for room and board at at least 95% of the facility rate. See Insurance & Medicare: Medi-Cal."
           },
           "private": {
             "q": "What about private insurance?",
-            "a": "Most private insurers cover hospice; benefits vary. Our admissions team verifies coverage at no cost. See Insurance & Medicare → Comparison."
+            "a": "Most private insurers cover hospice; benefits vary. Our admissions team verifies coverage at no cost. See Insurance & Medicare: Comparison."
           },
           "uninsured": {
             "q": "What if we don't have insurance?",
@@ -1016,11 +1016,11 @@
           },
           "cantCareAtHome": {
             "q": "What if we cannot care for our loved one at home?",
-            "a": "Options include arranging more aide or private-caregiver hours, transferring to an assisted living or skilled nursing facility (hospice continues), or moving to a higher level of inpatient care when clinically appropriate. See Hospice Services → Levels of Care."
+            "a": "Options include arranging more aide or private-caregiver hours, transferring to an assisted living or skilled nursing facility (hospice continues), or moving to a higher level of inpatient care when clinically appropriate. See Hospice Services: Levels of Care."
           },
           "bereavement": {
             "q": "Is bereavement support included?",
-            "a": "Yes - for thirteen months after the death, at no cost. It may include phone check-ins, support-group information, and a contact around the anniversary. See For Families → Bereavement."
+            "a": "Yes - for thirteen months after the death, at no cost. It may include phone check-ins, support-group information, and a contact around the anniversary. See For Families: Bereavement."
           },
           "cultural": {
             "q": "Will cultural or religious traditions be respected?",
@@ -1028,7 +1028,7 @@
           },
           "korean": {
             "q": "Are Korean-language services available?",
-            "a": "Yes. Korean-speaking team members are available for admissions and care, and key written materials are available in Korean. See About → Care for Korean-American Families."
+            "a": "Yes. Korean-speaking team members are available for admissions and care, and key written materials are available in Korean. See About: Care for Korean-American Families."
           }
         }
       },
@@ -1037,15 +1037,15 @@
         "items": {
           "stopAnytime": {
             "q": "Can my loved one stop hospice at any time?",
-            "a": "Yes. The patient can revoke the hospice election at any time and resume curative care. They can re-elect hospice later. See Insurance & Medicare → Election Process."
+            "a": "Yes. The patient can revoke the hospice election at any time and resume curative care. They can re-elect hospice later. See Insurance & Medicare: Election Process."
           },
           "disagreeCarePlan": {
             "q": "What if I disagree with the care plan?",
-            "a": "The care plan is yours and the patient's to shape. Talk to the RN case manager; if concerns persist, ask for the hospice medical director or file a grievance. See Hospice Laws → Patient Rights."
+            "a": "The care plan is yours and the patient's to shape. Talk to the RN case manager; if concerns persist, ask for the hospice medical director or file a grievance. See Hospice Laws: Patient Rights."
           },
           "complaint": {
             "q": "How do we file a complaint?",
-            "a": "Three paths: directly with our office, with the California Department of Public Health Licensing & Certification at (800) 228-1019, or with the Medicare Beneficiary Ombudsman at 1-800-MEDICARE. Filing cannot result in retaliation. See Hospice Laws → Complaints."
+            "a": "Three paths: directly with our office, with the California Department of Public Health Licensing & Certification at (800) 228-1019, or with the Medicare Beneficiary Ombudsman at 1-800-MEDICARE. Filing cannot result in retaliation. See Hospice Laws: Complaints."
           },
           "palliative": {
             "q": "What is the difference between hospice and palliative care?",
@@ -1053,7 +1053,7 @@
           },
           "advanceDirective": {
             "q": "What is an advance directive?",
-            "a": "A written document - typically a Living Will and/or Durable Power of Attorney for Healthcare - that tells your care team what you want if you cannot speak for yourself. California uses the Advance Health Care Directive form. See Hospice Laws → Advance Directives."
+            "a": "A written document - typically a Living Will and/or Durable Power of Attorney for Healthcare - that tells your care team what you want if you cannot speak for yourself. California uses the Advance Health Care Directive form. See Hospice Laws: Advance Directives."
           }
         }
       }

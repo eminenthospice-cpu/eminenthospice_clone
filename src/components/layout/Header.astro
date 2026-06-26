@@ -114,7 +114,7 @@ const isHomePage = currentPath === '/';
               <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
             </svg>
           </button>
-          <div class="invisible absolute right-0 top-full z-50 w-72 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <div id="resources-menu-panel" class="invisible absolute right-0 top-full z-50 w-72 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
             <div class="rounded-card border border-line-soft bg-white p-2 shadow-float">
               {resourceLinks.map(({ href, label }) => (
                 <a
@@ -134,7 +134,7 @@ const isHomePage = currentPath === '/';
 
       <a
         href={lp('/referral')}
-        class="hidden min-h-11 items-center justify-center rounded-btn border-2 border-primary-500 bg-transparent px-4 text-base font-semibold text-primary-600 hover:bg-primary-50 sm:inline-flex"
+        class="hidden min-h-11 items-center justify-center rounded-btn bg-primary-700 px-4 text-base font-semibold text-white shadow-card hover:bg-primary-800 sm:inline-flex"
       >
         {t('nav.referral')}
       </a>
@@ -177,7 +177,7 @@ const isHomePage = currentPath === '/';
         <a href={`tel:${CONTACT.phone.tel}`} class="rounded-btn bg-accent-gold-500 px-4 py-3 text-center text-lg font-semibold text-ink-900">
           {lang === 'ko' ? '24시간 전화' : 'Call 24/7'} {CONTACT.phone.display}
         </a>
-        <a href={lp('/referral')} class="rounded-btn border-2 border-primary-500 px-4 py-3 text-center text-lg font-semibold text-primary-600 hover:bg-primary-50">
+        <a href={lp('/referral')} class="rounded-btn bg-primary-700 px-4 py-3 text-center text-lg font-semibold text-white shadow-card hover:bg-primary-800">
           {t('nav.referral')}
         </a>
       </div>
@@ -208,6 +208,12 @@ const isHomePage = currentPath === '/';
   #site-header.is-scrolled #main-nav {
     height: 5.75rem;
     max-height: 6.5rem;
+    overflow: visible;
+    opacity: 1;
+  }
+
+  #resources-menu.is-open #resources-menu-panel {
+    visibility: visible;
     opacity: 1;
   }
 
@@ -286,12 +292,36 @@ const isHomePage = currentPath === '/';
   const resourcesMenu = document.getElementById('resources-menu');
   const resourcesBtn = document.getElementById('resources-menu-btn');
   if (resourcesMenu && resourcesBtn) {
-    const setResourcesExpanded = (open) => resourcesBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    let resourcesPinned = false;
+    const setResourcesExpanded = (open) => {
+      resourcesBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      resourcesMenu.classList.toggle('is-open', open);
+    };
     resourcesMenu.addEventListener('mouseenter', () => setResourcesExpanded(true));
-    resourcesMenu.addEventListener('mouseleave', () => setResourcesExpanded(false));
+    resourcesMenu.addEventListener('mouseleave', () => {
+      if (!resourcesPinned) setResourcesExpanded(false);
+    });
+    resourcesBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const next = !resourcesPinned || resourcesBtn.getAttribute('aria-expanded') !== 'true';
+      resourcesPinned = next;
+      setResourcesExpanded(next);
+    });
     resourcesMenu.addEventListener('focusin', () => setResourcesExpanded(true));
     resourcesMenu.addEventListener('focusout', (event) => {
-      if (!resourcesMenu.contains(event.relatedTarget)) setResourcesExpanded(false);
+      if (!resourcesPinned && !resourcesMenu.contains(event.relatedTarget)) setResourcesExpanded(false);
+    });
+    document.addEventListener('click', (event) => {
+      if (!resourcesMenu.contains(event.target)) {
+        resourcesPinned = false;
+        setResourcesExpanded(false);
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        resourcesPinned = false;
+        setResourcesExpanded(false);
+      }
     });
   }
 </script>

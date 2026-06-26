@@ -41,6 +41,49 @@ const faqJsonLdItems = catOrder.flatMap(catKey =>
     answer: item.a,
   }))
 );
+
+const categoryStyles = {
+  gettingStarted: {
+    heading: 'border-primary-100 bg-primary-50 text-primary-900',
+    dot: 'bg-primary-500',
+    details: 'border-primary-200 bg-primary-50',
+    summary: 'text-primary-900 hover:bg-primary-100',
+    icon: 'text-primary-700',
+    panel: 'border-primary-200 bg-white',
+  },
+  aboutHospice: {
+    heading: 'border-accent-gold-100 bg-accent-gold-50 text-accent-gold-900',
+    dot: 'bg-accent-gold-500',
+    details: 'border-accent-gold-200 bg-accent-gold-50',
+    summary: 'text-accent-gold-900 hover:bg-accent-gold-100',
+    icon: 'text-accent-gold-700',
+    panel: 'border-accent-gold-200 bg-white',
+  },
+  insurance: {
+    heading: 'border-accent-sage-100 bg-accent-sage-50 text-accent-sage-900',
+    dot: 'bg-accent-sage-500',
+    details: 'border-accent-sage-200 bg-accent-sage-50',
+    summary: 'text-accent-sage-900 hover:bg-accent-sage-100',
+    icon: 'text-accent-sage-700',
+    panel: 'border-accent-sage-200 bg-white',
+  },
+  families: {
+    heading: 'border-primary-100 bg-white text-primary-900',
+    dot: 'bg-primary-500',
+    details: 'border-line-soft bg-white',
+    summary: 'text-primary-900 hover:bg-primary-50',
+    icon: 'text-primary-700',
+    panel: 'border-line-soft bg-white',
+  },
+  rights: {
+    heading: 'border-accent-gold-100 bg-white text-accent-gold-900',
+    dot: 'bg-accent-gold-500',
+    details: 'border-accent-gold-100 bg-white',
+    summary: 'text-accent-gold-900 hover:bg-accent-gold-50',
+    icon: 'text-accent-gold-700',
+    panel: 'border-accent-gold-100 bg-white',
+  },
+} as const;
 ---
 
 <LongFormLayout
@@ -89,29 +132,31 @@ const faqJsonLdItems = catOrder.flatMap(catKey =>
 
   {catOrder.map(catKey => {
     const cat = d.categories[catKey];
+    const styles = categoryStyles[catKey];
     return (
       <section id={catAnchors[catKey]} class="scroll-mt-24">
-        <h2 class="not-prose flex items-center gap-3 rounded-card border border-primary-100 bg-primary-50 px-4 py-3 text-primary-900">
-          <span class="h-2.5 w-2.5 rounded-full bg-accent-gold-500" aria-hidden="true"></span>
+        <h2 class:list={['not-prose flex items-center gap-3 rounded-card border px-4 py-3', styles.heading]}>
+          <span class:list={['h-2.5 w-2.5 rounded-full', styles.dot]} aria-hidden="true"></span>
           {cat.title}
         </h2>
         <div class="not-prose mt-5 space-y-3">
           {Object.values(cat.items).map(item => (
-            <details class="group rounded-card border border-primary-200 bg-primary-50 shadow-soft overflow-hidden">
+            <details class:list={['group rounded-card border shadow-soft overflow-hidden', styles.details]}>
               <summary
-                class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer font-body font-semibold text-primary-900
-                       hover:bg-primary-100 transition-colors duration-100
-                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500"
+                class:list={[
+                  'flex items-center justify-between gap-4 px-5 py-4 cursor-pointer font-body font-semibold transition-colors duration-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500',
+                  styles.summary,
+                ]}
               >
                 <span class="text-base leading-snug">{item.q}</span>
                 <svg
-                  class="w-5 h-5 text-primary-700 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+                  class:list={['w-5 h-5 flex-shrink-0 transition-transform duration-200 group-open:rotate-180', styles.icon]}
                   fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"
                 >
                   <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
               </summary>
-              <div class="px-5 pb-5 pt-4 border-t border-primary-200 bg-white">
+              <div class:list={['px-5 pb-5 pt-4 border-t', styles.panel]}>
                 <p class="text-ink-700 text-base leading-relaxed font-prose">{item.a}</p>
               </div>
             </details>

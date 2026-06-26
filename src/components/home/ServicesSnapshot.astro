@@ -11,6 +11,18 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const lp = (p: string) => localizedPath(p, lang);
 const services = ['nursing', 'symptoms', 'equipment', 'social', 'spiritual', 'bereavement'] as const;
+
+const cardStyles = [
+  'border-primary-100 bg-primary-50',
+  'border-accent-gold-100 bg-accent-gold-50',
+  'border-accent-sage-100 bg-accent-sage-50',
+] as const;
+
+const iconStyles = [
+  'bg-white text-primary-700',
+  'bg-white text-accent-gold-800',
+  'bg-white text-accent-sage-800',
+] as const;
 ---
 
 <SectionContainer bg="cream" ariaLabelledBy="services-snapshot-heading">
@@ -27,9 +39,9 @@ const services = ['nursing', 'symptoms', 'equipment', 'social', 'spiritual', 'be
     </div>
 
     <div class="grid gap-3 sm:grid-cols-2">
-      {services.map((service) => (
-        <article class="reveal rounded-card border border-line-hairline bg-white p-5 shadow-card">
-          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700">
+      {services.map((service, index) => (
+        <article class:list={['reveal rounded-card border p-5 shadow-card', cardStyles[index % cardStyles.length]]}>
+          <div class:list={['mb-4 flex h-10 w-10 items-center justify-center rounded-full shadow-sm', iconStyles[index % iconStyles.length]]}>
             <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
             </svg>

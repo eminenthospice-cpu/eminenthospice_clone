@@ -37,6 +37,12 @@ const ADDITIONAL = [
 ] as const;
 
 const STEPS = ['1', '2', '3'] as const;
+const pastelCardClasses = [
+  'border-primary-100 bg-primary-50',
+  'border-accent-gold-100 bg-accent-gold-50',
+  'border-accent-sage-100 bg-accent-sage-50',
+  'border-line-soft bg-white',
+] as const;
 
 const costFootnoteRaw = t('services.sections.levels.costFootnote');
 const costFootnote = costFootnoteRaw
@@ -90,7 +96,7 @@ const relatedLinks = [
         Your browser does not support the video tag.
       </video>
       <div class="px-5 py-4">
-        <p class="font-heading text-base font-semibold text-ink-900">Hospice core services video</p>
+        <p class="font-heading text-base font-semibold text-ink-900">FAQ: What Services Does Hospice Provide?</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
           Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
         </p>
@@ -103,10 +109,10 @@ const relatedLinks = [
     <h2 id="team-h">{t('services.sections.team.title')}</h2>
     <p class="mb-6">{t('services.sections.team.intro')}</p>
     <div class="space-y-5 not-prose">
-      {ROLES.map(({ key, icon }) => (
+      {ROLES.map(({ key, icon }, index) => (
         <article
           id={`role-${key}`}
-          class="bg-white rounded-card shadow-soft p-5 scroll-mt-24"
+          class:list={['rounded-card border p-5 shadow-soft scroll-mt-24', pastelCardClasses[index % pastelCardClasses.length]]}
           aria-labelledby={`role-${key}-h`}
         >
           <div class="flex gap-3 items-start mb-2">
@@ -128,8 +134,8 @@ const relatedLinks = [
     <h2 id="additional-h">{t('services.sections.additional.title')}</h2>
     <p class="mb-6">{t('services.sections.additional.intro')}</p>
     <dl class="space-y-3 not-prose">
-      {ADDITIONAL.map(({ key, icon }) => (
-        <div class="bg-white rounded-card shadow-soft p-4 flex gap-3 items-start">
+      {ADDITIONAL.map(({ key, icon }, index) => (
+        <div class:list={['rounded-card border p-4 shadow-soft flex gap-3 items-start', pastelCardClasses[index % pastelCardClasses.length]]}>
           <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary-50 text-primary-600 flex-shrink-0">
             <Icon name={icon} class="w-4 h-4" />
           </span>
@@ -151,10 +157,10 @@ const relatedLinks = [
     <h2 id="levels-h">{t('services.sections.levels.title')}</h2>
     <p class="mb-6">{t('services.sections.levels.intro')}</p>
     <div class="space-y-6 not-prose">
-      {LEVELS.map(({ key, icon }) => (
+      {LEVELS.map(({ key, icon }, index) => (
         <article
           id={`level-${key}`}
-          class="bg-white rounded-card shadow-soft p-6 scroll-mt-24"
+          class:list={['rounded-card border p-6 shadow-soft scroll-mt-24', pastelCardClasses[index % pastelCardClasses.length]]}
           aria-labelledby={`level-${key}-h`}
         >
           <div class="flex gap-3 items-start mb-3">
@@ -204,7 +210,7 @@ const relatedLinks = [
       ))}
     </ol>
     <div class="flex flex-col sm:flex-row gap-3 not-prose">
-      <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="lg" class="w-full sm:w-auto">
+      <Button href={`tel:${CONTACT.phone.tel}`} variant="secondary" size="lg" class="w-full sm:w-auto">
         <Icon name="phone" class="w-5 h-5" />
         {t('services.sections.howToStart.callCta')}
       </Button>

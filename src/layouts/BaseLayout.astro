@@ -30,7 +30,7 @@ const {
   preloadImage,
 } = Astro.props;
 
-// Normalize: /en + / → /en, /en + /about → /en/about
+// Normalize: /en + / to /en, /en + /about to /en/about
 const normalizedPath = path === '/' ? '' : path;
 const canonicalUrl = `${SITE.url}/${lang}${normalizedPath}`;
 const alternates   = buildAlternates(path);
