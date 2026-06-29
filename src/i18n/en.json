@@ -238,7 +238,7 @@
     "formPrivacyShort": {
       "contact": "We use your information only to respond to your inquiry. We do not sell your data.",
       "referralModeA": "This form does not collect patient health information. We will call you to take the referral by phone.",
-      "referralModeB": "This form transmits protected health information (PHI) encrypted in transit. Submissions are routed to our admissions team via a HIPAA-eligible vendor under a Business Associate Agreement (BAA). Retention: {days} days."
+      "referralModeB": "This form would transmit protected health information (PHI) encrypted in transit. We will not enable it until we have a signed Business Associate Agreement (BAA) in place with our form vendor."
     },
     "formSuccess": {
       "heading": "Thank you"
@@ -1140,9 +1140,9 @@
     },
     "modeB": {
       "trustBadges": {
-        "hipaa": "HIPAA-compliant intake",
+        "hipaa": "Enabled only once a signed BAA is in place",
         "tls": "Encrypted in transit (TLS 1.2+)",
-        "baa": "Business Associate Agreement with our email vendor"
+        "baa": "Business Associate Agreement required before launch"
       },
       "phoneCta": {
         "title": "Prefer to call?",
@@ -1211,7 +1211,7 @@
         "submitLabel": "Submit referral",
         "submitPendingLabel": "Sending securely…"
       },
-      "privacyNote": "We treat this submission as protected health information (PHI) under HIPAA. It is transmitted encrypted to our admissions team via a vendor with whom we have signed a Business Associate Agreement (BAA). Submissions are retained for {days} days, then deleted."
+      "privacyNote": "This submission is protected health information (PHI) under HIPAA and is transmitted encrypted to our admissions team. We will not enable this form until we have a signed Business Associate Agreement (BAA) in place with our form vendor."
     },
     "success": {
       "modeA": {
@@ -1271,7 +1271,7 @@
         },
         "referralFormModeB": {
           "title": "Referral form - full intake (when enabled)",
-          "body": "When the full Referral intake is enabled, we collect patient identifiers (legal name, date of birth, primary diagnosis, current location, preferred language), insurance type and member ID, urgency, the referring physician's name and NPI, and any notes. This information is Protected Health Information (PHI) under HIPAA and is transmitted only over encrypted channels through a vendor with whom we have a signed Business Associate Agreement (BAA)."
+          "body": "When the full Referral intake is enabled, we collect patient identifiers (legal name, date of birth, primary diagnosis, current location, preferred language), insurance type and member ID, urgency, the referring physician's name and NPI, and any notes. This information is Protected Health Information (PHI) under HIPAA. We will not enable this form until we have a signed Business Associate Agreement (BAA) in place with our form vendor and encrypted channels confirmed."
         },
         "serverLogs": {
           "title": "Server logs",
@@ -1293,15 +1293,15 @@
       },
       "howWeShare": {
         "title": "How we share your information",
-        "body": "We share your form submission only with the vendors required to deliver it to us, and only under contracts that bind them to confidentiality and (for protected health information) HIPAA. Our email delivery vendor transmits your submission to our staff. Our hosting provider routes the network traffic. We do not sell or rent your information to anyone, and we do not share it for advertising purposes."
+        "body": "We share your form submission only with the vendors required to deliver it to us. Our email delivery vendor transmits your submission to our staff under its standard terms of service; we have not yet executed a HIPAA Business Associate Agreement with this vendor, so please call us instead of using the website forms if your message would include a patient's medical information. Our hosting provider routes the network traffic. We do not sell or rent your information to anyone, and we do not share it for advertising purposes."
       },
       "retention": {
         "title": "How long we keep your information",
-        "body": "Submissions are retained at our email vendor for approximately 90 days, and in our staff mailboxes for up to 90 days, after which they are deleted. Server logs follow standard operational retention. If you ask us to delete your information sooner, we will do so unless we are required by law or by your hospice care plan to retain it."
+        "body": "We are confirming the exact retention period with our form vendor and will update this section once that is finalized. Submissions are also kept in our staff mailboxes until they are no longer needed to respond to you, then deleted. Server logs follow standard operational retention. If you ask us to delete your information sooner, we will do so unless we are required by law or by your hospice care plan to retain it."
       },
       "security": {
         "title": "How we protect your information",
-        "body": "All form submissions are transmitted over TLS 1.2 or higher. Our HIPAA-eligible email vendor encrypts submissions at rest. We restrict access to your information on a need-to-know basis. We do not store form submissions in any application database, and we never log the contents of a submission - only request metadata."
+        "body": "All form submissions are transmitted over TLS 1.2 or higher. We restrict access to your information on a need-to-know basis. We do not store form submissions in any application database, and we never log the contents of a submission - only request metadata. We have not yet executed a HIPAA Business Associate Agreement with our form vendor; until we do, please call us instead of submitting a patient's medical information through this website."
       },
       "rights": {
         "title": "Your rights",
@@ -1334,18 +1334,150 @@
   },
   "hipaaNotice": {
     "pageTitle": "HIPAA Notice of Privacy Practices",
-    "metaDescription": "Our Notice of Privacy Practices under the Health Insurance Portability and Accountability Act (HIPAA).",
-    "introParagraph": "This page is the home of our HIPAA Notice of Privacy Practices. The full Notice is being finalized; in the meantime, please call us to request a current copy.",
-    "lastReviewed": "2026-05-25",
+    "metaDescription": "Eminent Hospice Care's Notice of Privacy Practices under the Health Insurance Portability and Accountability Act (HIPAA): how we use and share protected health information, and your rights regarding that information.",
+    "introParagraph": "THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED, AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.",
+    "lastReviewed": "2026-06-29",
     "sections": {
       "overview": {
         "title": "About this Notice",
-        "body": "A HIPAA Notice of Privacy Practices is a document that all health care providers are required by federal law to make available to patients. It describes how the provider may use and disclose protected health information (PHI), explains the patient's rights under HIPAA, and tells the patient how to file a complaint if those rights are violated."
+        "body": "Eminent Hospice Care, Inc. (\"Eminent Hospice,\" \"we,\" \"us,\" or \"our\") is required by law to maintain the privacy of your protected health information (\"PHI\"), to provide you with this Notice of our legal duties and privacy practices regarding PHI, and to follow the terms of the Notice currently in effect. PHI is information about you, including demographic information, that may identify you and that relates to your past, present, or future physical or mental health condition and related health care services."
+      },
+      "uses": {
+        "title": "How We May Use and Share Your Health Information",
+        "intro": "We use and share your PHI for many different reasons. For some of these uses or disclosures we need your prior written authorization; for others, we do not. Below are the categories of uses and disclosures permitted or required by law.",
+        "items": [
+          {
+            "title": "Treatment",
+            "body": "We may use and share your PHI to provide, coordinate, or manage your hospice care, including with physicians, nurses, hospice aides, social workers, chaplains, bereavement counselors, volunteers, pharmacies, durable medical equipment suppliers, and other members of your interdisciplinary care team."
+          },
+          {
+            "title": "Payment",
+            "body": "We may use and share your PHI to bill and collect payment for your care from you, your insurance company, Medicare, Medicaid, or another third-party payer, including to determine eligibility, coverage, and medical necessity."
+          },
+          {
+            "title": "Health Care Operations",
+            "body": "We may use and share your PHI to support our business activities, such as quality assessment and improvement, staff training, accreditation and licensing, internal audits, and general administrative and planning activities."
+          },
+          {
+            "title": "Family, Friends, and Caregivers Involved in Your Care",
+            "body": "We may share PHI relevant to your care with a family member, friend, or other person you identify, or with persons assisting in your care, unless you object. Hospice care, by its nature, often involves close coordination with your family and caregivers."
+          },
+          {
+            "title": "Required by Law",
+            "body": "We will disclose PHI when required to do so by federal, state, or local law, including in response to a valid court order, subpoena, or other legal process."
+          },
+          {
+            "title": "Public Health and Safety Activities",
+            "body": "We may share PHI to prevent or control disease, injury, or disability; to report births and deaths; to report abuse, neglect, or domestic violence; and to report reactions to medications or problems with medical products as required by the FDA."
+          },
+          {
+            "title": "Health Oversight Activities",
+            "body": "We may disclose PHI to health oversight agencies for activities authorized by law, such as audits, investigations, inspections, and licensure actions, which are necessary for the government to monitor the health care system, government programs, and compliance with civil rights laws."
+          },
+          {
+            "title": "Coroners, Medical Examiners, and Funeral Directors",
+            "body": "We may share PHI with a coroner, medical examiner, or funeral director as necessary to carry out their duties, including identifying a deceased person, determining cause of death, and consistent with applicable law to permit funeral directors to carry out their duties."
+          },
+          {
+            "title": "Organ and Tissue Donation",
+            "body": "If you are an organ donor, we may share PHI with organizations that handle organ procurement or transplantation, or with an organ donation bank, as necessary to facilitate donation and transplantation."
+          },
+          {
+            "title": "Research",
+            "body": "Under certain circumstances, and only with appropriate privacy safeguards or institutional review board approval, we may use or share PHI for research purposes."
+          },
+          {
+            "title": "To Avert a Serious Threat to Health or Safety",
+            "body": "We may share PHI to prevent or lessen a serious and imminent threat to your health or safety, or the health or safety of the public or another person, consistent with applicable law."
+          },
+          {
+            "title": "Workers' Compensation",
+            "body": "We may release PHI for workers' compensation or similar programs that provide benefits for work-related injuries or illness, to the extent authorized by and necessary to comply with such laws."
+          },
+          {
+            "title": "Law Enforcement",
+            "body": "We may share PHI with a law enforcement official for purposes such as identifying or locating a suspect, fugitive, material witness, or missing person; in response to a court order, warrant, or similar legal process; or to report a crime, its location, victims, or the identity of a perpetrator, in the circumstances permitted by law."
+          },
+          {
+            "title": "Military, National Security, and Government Functions",
+            "body": "If you are a member of the armed forces, we may release PHI as required by military command authorities, or as otherwise required for national security or intelligence activities authorized by law."
+          },
+          {
+            "title": "Inmates",
+            "body": "If you are an inmate of a correctional institution or under the custody of a law enforcement official, we may share PHI with the institution or official as necessary for your health and safety and that of other individuals."
+          }
+        ]
+      },
+      "authorizationRequired": {
+        "title": "Uses and Disclosures That Require Your Written Authorization",
+        "body": "Other than as described above, we will not use or share your PHI without your written authorization. Examples include most uses and disclosures of psychotherapy notes (where applicable), uses and disclosures for marketing purposes, and disclosures that constitute a sale of PHI. If you provide us with an authorization, you may revoke it in writing at any time, except to the extent we have already acted in reliance on it."
+      },
+      "rights": {
+        "title": "Your Rights Regarding Your Health Information",
+        "intro": "You have the following rights with respect to your PHI. To exercise any of these rights, please contact us using the information at the end of this Notice; we may ask you to submit your request in writing.",
+        "items": [
+          {
+            "title": "Right to Inspect and Copy",
+            "body": "You have the right to inspect and obtain a copy of PHI that we maintain about you in a \"designated record set,\" with limited exceptions. We may charge a reasonable, cost-based fee for copies."
+          },
+          {
+            "title": "Right to Request Amendment",
+            "body": "You have the right to request that we amend PHI about you that you believe is incorrect or incomplete. We may deny your request under certain circumstances, in which case we will tell you why in writing."
+          },
+          {
+            "title": "Right to an Accounting of Disclosures",
+            "body": "You have the right to request a list of certain disclosures we have made of your PHI in the six years prior to your request, other than disclosures for treatment, payment, health care operations, and certain other excluded categories."
+          },
+          {
+            "title": "Right to Request Restrictions",
+            "body": "You have the right to request that we restrict how we use or share your PHI for treatment, payment, or health care operations. We are not required to agree to the restriction, except where you have paid out of pocket in full for a service and ask that we not share information about that service with your health plan, in which case we generally must agree."
+          },
+          {
+            "title": "Right to Request Confidential Communications",
+            "body": "You have the right to request that we communicate with you about your health information in a certain way or at a certain location, for example only at home or only by mail. We will accommodate reasonable requests."
+          },
+          {
+            "title": "Right to a Paper Copy of This Notice",
+            "body": "You have the right to a paper copy of this Notice at any time, even if you have agreed to receive it electronically."
+          },
+          {
+            "title": "Right to Choose Someone to Act on Your Behalf",
+            "body": "If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your PHI. We will confirm that this person has authority and can act on your behalf before taking action."
+          },
+          {
+            "title": "Right to Be Notified of a Breach",
+            "body": "You have the right to be notified if a breach occurs that may have compromised the privacy or security of your PHI, in accordance with applicable law."
+          }
+        ]
+      },
+      "responsibilities": {
+        "title": "Our Responsibilities",
+        "body": "We are required by law to maintain the privacy and security of your PHI, to notify you promptly if a breach occurs that may have compromised the privacy or security of your information, to follow the duties and privacy practices described in this Notice, and to give you a copy of this Notice. We will not use or share your information other than as described here unless you tell us, in writing, that we can. If you tell us we can, you may change your mind at any time by notifying us in writing."
+      },
+      "complaints": {
+        "title": "Complaints",
+        "body": "If you believe your privacy rights have been violated, you may file a complaint with us using the contact information below, or with the U.S. Department of Health and Human Services, Office for Civil Rights. We will not retaliate against you for filing a complaint.",
+        "hhsBody": "To file a complaint with the federal government, visit www.hhs.gov/ocr/privacy/hipaa/complaints or call 1-800-368-1019."
+      },
+      "changes": {
+        "title": "Changes to This Notice",
+        "body": "We reserve the right to change this Notice and to make the revised Notice effective for PHI we already have about you as well as any information we receive in the future. The current Notice will be available upon request, posted on this page, and available at our office."
+      },
+      "effectiveDate": {
+        "title": "Effective Date",
+        "body": "This Notice is effective as of June 29, 2026."
       },
       "interim": {
         "title": "Notice in finalization",
         "body": "We are finalizing our Notice of Privacy Practices. While we complete that document, please call us at {phone} to request a current copy of our Notice. We will provide it by mail, email, or in person, whichever you prefer. This page will be updated with the full text once the Notice is published.",
         "callToObtain": "Call {phone} to request a copy"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "body": "If you have questions about this Notice, would like to exercise any of your rights, or wish to file a complaint, please contact our Privacy Officer:",
+        "email": "eminenthospice@gmail.com",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone"
       }
     }
   },

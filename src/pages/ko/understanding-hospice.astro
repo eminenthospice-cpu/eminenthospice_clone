@@ -151,11 +151,11 @@ const relatedLinks = [
     <h2 class="font-heading text-xl mb-1 text-ink-900">{common.pageBottomCta.title}</h2>
     <p class="font-prose text-ink-700 mb-4 leading-relaxed">{common.pageBottomCta.subtitle}</p>
     <div class="flex flex-col sm:flex-row gap-3">
-      <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="md">
+      <Button href={`tel:${CONTACT.phone.tel}`} variant="gold" size="md" class="!text-ink-900">
         <Icon name="phone" class="w-4 h-4" />
         {common.pageBottomCta.call}
       </Button>
-      <Button href={lp('/referral')} variant="primary" size="md">
+      <Button href={lp('/referral')} variant="primary" size="md" class="!text-ink-900">
         {common.pageBottomCta.refer}
       </Button>
     </div>

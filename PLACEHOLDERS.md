@@ -75,17 +75,51 @@ or the `<script type="application/ld+json">` block on the About page.
 
 ---
 
-## 5. HIPAA Notice of Privacy Practices
+## 5. HIPAA Notice of Privacy Practices — RESOLVED (2026-06-29)
 
-The page at `/en/hipaa-notice` (and `/ko/hipaa-notice`) renders an interim
-"document in preparation" block. When the client provides the final Notice text:
+The page at `/en/hipaa-notice` (and `/ko/hipaa-notice`) now renders a full
+standard-form Notice of Privacy Practices (uses & disclosures, authorization,
+patient rights, responsibilities, complaints, changes, effective date,
+contact), bilingual EN/KO. `noIndex` removed so the page is indexable.
 
-1. Replace `hipaaNotice.sections.interim.*` in `en.json` and `ko.json` with
-   the canonical Notice sections:
-   `uses`, `disclosures`, `patientRights`, `dutiesOfTheCoveredEntity`,
-   `changesToNotice`, `complaints`, `contact`
-2. Update the anchors array in `src/pages/en/hipaa-notice.astro` (and `ko/`).
-3. Remove the `noIndex={true}` prop if the client wants the Notice indexed.
+This is a standard-form NPP modeled on the HHS model notice and adapted for
+hospice care — **it has not been reviewed by the client's healthcare
+attorney/compliance officer.** Recommended before launch:
+
+1. Have legal counsel review `hipaaNotice.sections.*` in `en.json`/`ko.json`
+   against the org's actual practices (e.g. confirm the org's Privacy
+   Officer name/title for the contact section, confirm breach notification
+   procedures match what's stated).
+2. Confirm the effective date (`hipaaNotice.sections.effectiveDate`) matches
+   when the Notice is actually posted/distributed.
+3. Confirm this matches whatever signed NPP acknowledgment patients sign on
+   intake (the website notice and the intake paperwork should be identical).
+
+---
+
+## 5b. Formspree BAA — not yet executed (open, blocks PHI claims)
+
+The site's privacy/HIPAA copy previously asserted a signed Business Associate
+Agreement (BAA) and HIPAA-eligible/encrypted-at-rest status with our form
+vendor (Formspree). Nothing in this repo or its docs shows that BAA was ever
+obtained — `README.md`/`PLACEHOLDERS.md` §1 only describe creating a free
+Formspree account. Formspree's free/standard plans do not include a BAA;
+HHS requires one whenever a vendor creates/receives/maintains/transmits PHI,
+and the live Contact form's free-text message field can already carry PHI.
+
+Copy in `en.json`/`ko.json` (`formPrivacyShort.referralModeB`,
+`referral.modeB.*`, `privacy.sections.howWeShare/retention/security`) has
+been softened to stop asserting an unconfirmed BAA/encrypted-at-rest/specific
+retention period, and now tells users to call instead of submitting medical
+information through the website until a BAA is signed.
+
+**Before re-enabling any HIPAA/BAA claim or launching the full PHI referral
+intake ("Mode B"):**
+1. Contact Formspree (or another vendor) and execute a signed BAA.
+2. Confirm encryption-at-rest and actual data-retention period directly from
+   that vendor's BAA/security documentation — do not guess a number.
+3. Only then restore specific BAA/retention/encryption-at-rest language to
+   the copy above.
 
 ---
 

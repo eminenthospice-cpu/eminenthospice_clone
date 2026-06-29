@@ -205,11 +205,11 @@ const relatedLinks = [
       ))}
     </ol>
     <div class="flex flex-col sm:flex-row gap-3 not-prose">
-      <Button href={`tel:${CONTACT.phone.tel}`} variant="secondary" size="lg" class="w-full sm:w-auto">
+      <Button href={`tel:${CONTACT.phone.tel}`} variant="secondary" size="lg" class="w-full sm:w-auto !text-white">
         <Icon name="phone" class="w-5 h-5" />
         {t('services.sections.howToStart.callCta')}
       </Button>
-      <Button href={lp('/referral')} variant="secondary" size="lg" class="w-full sm:w-auto">
+      <Button href={lp('/referral')} variant="secondary" size="lg" class="w-full sm:w-auto !text-white">
         {t('services.sections.howToStart.referCta')}
       </Button>
     </div>

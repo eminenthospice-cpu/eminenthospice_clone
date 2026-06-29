@@ -12,12 +12,15 @@ const d = koData.hipaaNotice;
 const s = d.sections;
 const common = koData.common;
 
-const callToObtain = s.interim.callToObtain.replace('{phone}', CONTACT.phone.display);
-const interimBody = s.interim.body.replace('{phone}', CONTACT.phone.display);
-
 const anchors = [
-  { id: 'about',   label: '본 고지에 대하여' },
-  { id: 'interim', label: '고지서 준비 중' },
+  { id: 'about',           label: '본 고지에 대하여' },
+  { id: 'uses',            label: '정보 사용 및 공유 방법' },
+  { id: 'authorization',   label: '동의가 필요한 사용' },
+  { id: 'rights',          label: '귀하의 권리' },
+  { id: 'responsibilities',label: '당사의 책임' },
+  { id: 'complaints',      label: '민원 제기' },
+  { id: 'changes',         label: '고지 변경' },
+  { id: 'contact',         label: '문의하기' },
 ];
 const relatedLinks = [
   { href: '/privacy',      label: common.relatedPages.links.privacy },
@@ -34,7 +37,7 @@ const relatedLinks = [
   eyebrow="HIPAA"
   introParagraph={d.introParagraph}
   lastReviewed={d.lastReviewed}
-  noIndex={true}
+  noIndex={false}
 >
   <PageSidebar slot="sidebar" {anchors} {relatedLinks} {lang} />
 
@@ -43,29 +46,70 @@ const relatedLinks = [
     <p>{s.overview.body}</p>
   </section>
 
-  <section id="interim" class="scroll-mt-24">
-    <h2>{s.interim.title}</h2>
-    <p>{interimBody}</p>
+  <section id="uses" class="scroll-mt-24">
+    <h2>{s.uses.title}</h2>
+    <p>{s.uses.intro}</p>
+    <div class="not-prose mt-4 space-y-4">
+      {s.uses.items.map(item => (
+        <div class="rounded-card border border-line-soft bg-white p-5 shadow-soft">
+          <h3 class="font-heading text-base text-ink-900 mb-1">{item.title}</h3>
+          <p class="text-base text-ink-600 leading-relaxed">{item.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
-    <div class="not-prose mt-6 rounded-card border border-line-soft bg-surface-paper p-6 shadow-soft">
-      <div class="flex items-start gap-4">
-        <div class="rounded-full bg-primary-100 p-3 flex-shrink-0">
-          <Icon name="phone" class="w-6 h-6 text-primary-700" />
+  <section id="authorization" class="scroll-mt-24">
+    <h2>{s.authorizationRequired.title}</h2>
+    <p>{s.authorizationRequired.body}</p>
+  </section>
+
+  <section id="rights" class="scroll-mt-24">
+    <h2>{s.rights.title}</h2>
+    <p>{s.rights.intro}</p>
+    <div class="not-prose mt-4 space-y-4">
+      {s.rights.items.map(item => (
+        <div class="rounded-card border border-line-soft bg-white p-5 shadow-soft">
+          <h3 class="font-heading text-base text-ink-900 mb-1">{item.title}</h3>
+          <p class="text-base text-ink-600 leading-relaxed">{item.body}</p>
         </div>
-        <div>
-          <p class="font-heading text-lg text-ink-900 mb-2">{callToObtain}</p>
-          <a
-            href={`tel:${CONTACT.phone.tel}`}
-            class="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5
-                   rounded-btn bg-primary-500 text-white font-medium hover:bg-primary-600
-                   transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2
-                   focus-visible:ring-primary-500 focus-visible:ring-offset-2"
-          >
-            <Icon name="phone" class="w-4 h-4" />
-            {CONTACT.phone.display}
-          </a>
-        </div>
-      </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="responsibilities" class="scroll-mt-24">
+    <h2>{s.responsibilities.title}</h2>
+    <p>{s.responsibilities.body}</p>
+  </section>
+
+  <section id="complaints" class="scroll-mt-24">
+    <h2>{s.complaints.title}</h2>
+    <p>{s.complaints.body}</p>
+    <p>{s.complaints.hhsBody}</p>
+  </section>
+
+  <section id="changes" class="scroll-mt-24">
+    <h2>{s.changes.title}</h2>
+    <p>{s.changes.body}</p>
+    <p class="text-sm text-ink-500 mt-2">{s.effectiveDate.body}</p>
+  </section>
+
+  <section id="contact" class="scroll-mt-24">
+    <h2>{s.contact.title}</h2>
+    <p>{s.contact.body}</p>
+    <div class="not-prose mt-4 space-y-3">
+      <a href={`mailto:${s.contact.email}`}
+        class="flex items-center gap-3 text-ink-700 hover:text-primary-600 transition-colors duration-100
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-sm">
+        <Icon name="mail" class="w-5 h-5 text-primary-600 flex-shrink-0" />
+        <span class="text-base">{s.contact.emailLabel}: {s.contact.email}</span>
+      </a>
+      <a href={`tel:${CONTACT.phone.tel}`}
+        class="flex items-center gap-3 text-ink-700 hover:text-primary-600 transition-colors duration-100
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-sm">
+        <Icon name="phone" class="w-5 h-5 text-primary-600 flex-shrink-0" />
+        <span class="text-base">{s.contact.phoneLabel}: {CONTACT.phone.display}</span>
+      </a>
     </div>
   </section>
 </LongFormLayout>
