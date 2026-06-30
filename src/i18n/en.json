@@ -22,7 +22,7 @@
   },
   "footer": {
     "flourish": "A Tradition of Compassion.",
-    "tagline": "Providing compassionate, expert hospice care to patients and families in North Hollywood, greater Los Angeles, and Orange County.",
+    "tagline": "Providing compassionate, expert hospice care to patients and families in Greater Los Angeles and Orange County.",
     "footerNav": "Footer navigation",
     "quickLinksHeading": "Quick Links",
     "home": "Home",
@@ -48,12 +48,12 @@
     }
   },
   "home": {
-    "pageTitle": "Hospice Care at Home in Los Angeles and Orange County",
-    "metaDescription": "Eminent Hospice Care provides comfort-focused hospice care at home across North Hollywood, greater Los Angeles, and Orange County. Available 24/7 in English and Korean.",
+    "pageTitle": "Hospice Care at Home in Greater Los Angeles and Orange County",
+    "metaDescription": "Eminent Hospice Care provides comfort-focused hospice care at home across Greater Los Angeles and Orange County. Available 24/7 in English and Korean.",
     "hero": {
-      "eyebrow": "Los Angeles and Orange County",
+      "eyebrow": "Greater Los Angeles and Orange County",
       "heading": "Hospice care, available 24/7 in English and Korean.",
-      "subtext": "When comfort matters most, our team helps patients and families in Los Angeles and Orange County understand hospice, start care quickly, and stay supported at home.",
+      "subtext": "When comfort matters most, our team helps patients and families in Greater Los Angeles and Orange County understand hospice, start care quickly, and stay supported at home.",
       "ctaPrimary": "Call 24/7",
       "ctaSecondary": "Make a Referral",
       "captionLabel": "What families can expect",
@@ -156,8 +156,8 @@
           "body": "Clear communication for Korean-American families and referral partners."
         },
         "local": {
-          "title": "Los Angeles and Orange County service area",
-          "body": "Serving Greater Los Angeles and Orange County, including North Hollywood, the San Fernando Valley, and nearby communities."
+          "title": "Greater Los Angeles and Orange County service area",
+          "body": "Serving patients and families throughout Greater Los Angeles and Orange County."
         }
       }
     },
@@ -246,7 +246,7 @@
   },
   "understandingHospice": {
     "pageTitle": "What to Expect",
-    "metaDescription": "What hospice care is, who qualifies, common myths corrected, and what to expect after enrollment. A plain-language guide for patients and families in North Hollywood and the greater Los Angeles area.",
+    "metaDescription": "What hospice care is, who qualifies, common myths corrected, and what to expect after enrollment. A plain-language guide for patients and families in Greater Los Angeles and Orange County.",
     "lastReviewed": "2026-05-01",
     "introParagraph": "Hospice is one of the most misunderstood parts of modern medicine. This page is a plain-language guide to what hospice actually is, who qualifies, and what happens after you enroll.",
     "sections": {
@@ -478,7 +478,7 @@
       },
       "comparison": {
         "title": "Medicare vs. Medi-Cal vs. Private Insurance",
-        "intro": "A side-by-side look at what each pays for. For most patients in North Hollywood and the greater Los Angeles area, Medicare or Medi-Cal will be the primary coverage.",
+        "intro": "A side-by-side look at what each pays for. For most patients in Greater Los Angeles and Orange County, Medicare or Medi-Cal will be the primary coverage.",
         "tableCaption": "Hospice coverage comparison across the three most common payers.",
         "headers": {
           "service": "What's covered",
@@ -541,8 +541,8 @@
   },
   "about": {
     "pageTitle": "About Eminent Hospice Care",
-    "metaDescription": "Eminent Hospice Care delivers compassionate, culturally aware end-of-life care across North Hollywood, the greater Los Angeles area, and Orange County. Learn our mission, values, interdisciplinary team, and bilingual EN/KO commitment to Korean-American families.",
-    "introParagraph": "Eminent Hospice Care is a Medicare-certified hospice serving North Hollywood, the greater Los Angeles area, and Orange County with a particular commitment to bilingual care for Korean-American families. We exist for one reason: to walk alongside patients and the people who love them through life's final chapter.",
+    "metaDescription": "Eminent Hospice Care delivers compassionate, culturally aware end-of-life care across Greater Los Angeles and Orange County. Learn our mission, values, interdisciplinary team, and bilingual EN/KO commitment to Korean-American families.",
+    "introParagraph": "Eminent Hospice Care is a Medicare-certified hospice serving Greater Los Angeles and Orange County with a particular commitment to bilingual care for Korean-American families. We exist for one reason: to walk alongside patients and the people who love them through life's final chapter.",
     "sections": {
       "mission": {
         "title": "Our Mission",
@@ -572,18 +572,17 @@
       },
       "story": {
         "title": "A Brief Story",
-        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness - with a particular commitment to the Korean-American community of greater Los Angeles and Orange County, whose families have long needed care delivered in their own language."
+        "body": "Founded in 2018, Eminent Hospice Care provides an individualized program of physical, emotional, spiritual, and psychosocial care for people in the last phases of a life-limiting illness, with an emphasis on control of pain and other symptoms. Under the leadership of current owner Hanna Cha, our team works to alleviate as much pain, worry, and inconvenience as possible for patients and families facing serious illness - with a particular commitment to the Korean-American community of Greater Los Angeles and Orange County, whose families have long needed care delivered in their own language."
       },
       "serviceArea": {
         "title": "Service Area",
-        "body": "We serve North Hollywood, the greater Los Angeles area, and Orange County, with patients and families across the region. Our team coordinates visits, on-call coverage, and medication delivery anywhere within our service area.",
+        "body": "We serve patients and families throughout Greater Los Angeles and Orange County. Our team coordinates visits, on-call coverage, and medication delivery anywhere within our service area.",
         "regionsHeading": "Where we deliver care",
         "regions": {
           "southBay": "South Bay",
           "sanFernandoValley": "San Fernando Valley",
           "sanGabrielValley": "San Gabriel Valley",
           "greaterLA": "Greater Los Angeles",
-          "northHollywood": "North Hollywood",
           "orangeCounty": "Orange County"
         },
         "hoursNote": "Available 24 hours a day, 7 days a week - a registered nurse answers our on-call line at every hour."
@@ -631,16 +630,16 @@
       "addressCountry": "US"
     },
     "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "areaServed": "North Hollywood, the greater Los Angeles area, and Orange County, CA"
+    "areaServed": "Greater Los Angeles and Orange County, CA"
   },
   "services": {
     "pageTitle": "Hospice Services",
-    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery - throughout North Hollywood, greater Los Angeles, and Orange County, in English and Korean.",
+    "metaDescription": "Hospice care at home and in short-term inpatient settings, an eight-discipline interdisciplinary team, 24/7 on-call nursing, and medication + equipment delivery - throughout Greater Los Angeles and Orange County, in English and Korean.",
     "introParagraph": "Hospice is a comprehensive benefit, not a single service. This page walks through the care levels we deliver, every discipline on our team, and the supporting services that make care work day-to-day at home.",
     "sections": {
       "offer": {
         "title": "What We Offer",
-        "body": "Hospice care delivered by a full interdisciplinary team, twenty-four hours a day, seven days a week, anywhere a patient calls home in North Hollywood and the greater Los Angeles area. New to hospice?",
+        "body": "Hospice care delivered by a full interdisciplinary team, twenty-four hours a day, seven days a week, anywhere a patient calls home in Greater Los Angeles and Orange County. New to hospice?",
         "linkToUnderstanding": "Start with our What to Expect guide"
       },
       "levels": {
@@ -1226,7 +1225,7 @@
   },
   "meta": {
     "siteName": "Eminent Hospice Care Inc.",
-    "ogDescription": "Compassionate, culturally competent hospice care serving North Hollywood, the greater Los Angeles area, and Orange County, including the Korean-American community. Available 24/7 in English and Korean.",
+    "ogDescription": "Compassionate, culturally competent hospice care serving Greater Los Angeles and Orange County, including the Korean-American community. Available 24/7 in English and Korean.",
     "ogImageAlt": "Eminent Hospice Care - compassionate hospice care in Los Angeles",
     "titleTemplate": "%s | Eminent Hospice Care Inc."
   },
