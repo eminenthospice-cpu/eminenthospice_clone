@@ -16,6 +16,31 @@ pnpm-debug.log*
 astro-preview.log
 astro-photo-preview.log
 astro-photo-preview.err.log
+.codex-dev-server*.log
+
+# local transcription and media-processing caches
+.codex_audio_pkgs/
+.whisper_models/
+audio_pkgs/
+audit/local_python_packages/
+audit/source_videos/
+audit/web-video-encode/
+audit/*-error.log
+audit/*.log
+audit/*_cache.json
+audit/youtube_auto_captions/
+caption_audit_frames/
+caption_final_verify_frames/
+caption_position_preview_frames/
+deliverables/
+
+# generated media-review artifacts
+caption_*.jpg
+eminent_nebulizer_english*
+transcribe_audio_16k.wav
+transcribe_model_segments.txt
+transcribe_raw.txt
+transcribe_segments.json
 
 
 # environment variables

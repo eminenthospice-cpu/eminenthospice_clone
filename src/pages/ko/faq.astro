@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import FaqPageJsonLd from '../../components/seo/FaqPageJsonLd.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { localizedPath } from '../../i18n/utils';
 import { VIDEO_RESOURCES } from '../../data/videos';
 import koData from '../../i18n/ko.json';
@@ -107,17 +108,7 @@ const categoryStyles = {
     <div class="not-prose mt-5 grid gap-5">
       {VIDEO_RESOURCES.map(video => (
         <article class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)]">
-          <video
-            class="block w-full aspect-video bg-ink-950"
-            controls
-            preload="metadata"
-            playsinline
-            aria-label={video.title.ko}
-          >
-            <source src={video.videoSrc} type="video/mp4" />
-            <track kind="subtitles" src={video.captionSrc} srclang="en" label="English" />
-            Your browser does not support the video tag.
-          </video>
+          <VideoEmbed videoId={video.youtubeId} title={video.title.ko} />
           <div class="flex flex-col justify-center px-5 py-4">
             <h3 class="font-heading text-lg font-semibold leading-snug text-ink-900">{video.title.ko}</h3>
             <p class="mt-2 text-base leading-relaxed text-ink-600">{video.description.ko}</p>

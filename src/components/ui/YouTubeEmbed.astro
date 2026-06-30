@@ -1,0 +1,25 @@
+---
+export interface Props {
+  videoId: string;
+  title: string;
+}
+
+const { videoId, title } = Astro.props;
+const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+---
+
+<div class="relative aspect-video w-full overflow-hidden bg-ink-950">
+  <iframe
+    class="absolute inset-0 h-full w-full border-0"
+    src={embedUrl}
+    title={title}
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <noscript>
+    <a href={watchUrl} rel="noopener noreferrer">Watch this video on YouTube</a>
+  </noscript>
+</div>

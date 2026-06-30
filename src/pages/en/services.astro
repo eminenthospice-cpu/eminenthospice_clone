@@ -3,6 +3,7 @@ import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
 import Button from '../../components/ui/Button.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { useTranslations, localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 
@@ -84,21 +85,11 @@ const relatedLinks = [
       </a>
     </p>
     <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean hospice core services education video with English subtitles"
-      >
-        <source src="/videos/hospice-core-services-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/hospice-core-services-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="K0bgtz2gV40" title="Korean video: What services does hospice provide?" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">FAQ: What Services Does Hospice Provide?</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          Korean-language video from Eminent Hospice with reviewed English captions included.
         </p>
       </div>
     </div>

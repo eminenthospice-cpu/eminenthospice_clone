@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { useTranslations, localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 
@@ -120,41 +121,32 @@ const relatedLinks = [
     <div class="grid gap-6 sm:grid-cols-2 not-prose">
       {[
         {
-          src: '/videos/oxygen-concentrator-korean.mp4',
+          videoId: 'Vq5rIpelzhk',
           title: 'Using the home oxygen concentrator',
           desc: 'How to operate the home oxygen concentrator provided by hospice, with safety tips for everyday use.',
           aria: 'Korean instructional video on using the home oxygen concentrator',
         },
         {
-          src: '/videos/nebulizer-korean.mp4',
+          videoId: 'edmwae3Iglk',
           title: 'Using a nebulizer',
           desc: 'How to set up and use a nebulizer to deliver breathing medication at home.',
           aria: 'Korean instructional video on using a nebulizer',
         },
         {
-          src: '/videos/suction-machine-korean.mp4',
+          videoId: '9g98EDnOAUI',
           title: 'Using a suction machine',
           desc: 'How to safely use a suction machine to clear secretions and keep your loved one comfortable.',
           aria: 'Korean instructional video on using a suction machine',
         },
         {
-          src: '/videos/emergency-medications-korean.mp4',
+          videoId: 'Rv1Cbnb4QDA',
           title: 'Comfort & emergency medications',
           desc: 'An overview of the comfort and emergency medications hospice provides, and when to use them.',
           aria: 'Korean instructional video introducing comfort and emergency medications used in hospice',
         },
       ].map((v) => (
         <div class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-          <video
-            class="block w-full aspect-video bg-ink-950"
-            controls
-            preload="metadata"
-            playsinline
-            aria-label={v.aria}
-          >
-            <source src={v.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <VideoEmbed videoId={v.videoId} title={v.aria} />
           <div class="px-5 py-4">
             <p class="font-heading text-base font-semibold text-ink-900">{v.title}</p>
             <p class="mt-1 text-base leading-relaxed text-ink-600 font-prose">{v.desc}</p>
@@ -194,21 +186,11 @@ const relatedLinks = [
       ))}
     </div>
     <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean end-of-life timing education video with English subtitles"
-      >
-        <source src="/videos/end-of-life-timing-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/end-of-life-timing-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="3mgBE6CaI4I" title="Korean video: Estimating time near the end of life" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">FAQ: What is your estimate of the remaining time?</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          Korean-language video from Eminent Hospice with reviewed English captions included.
         </p>
       </div>
     </div>
@@ -280,21 +262,11 @@ const relatedLinks = [
     <h2 id="bereavement-h">{t('forFamilies.sections.bereavement.title')}</h2>
     <p class="mb-4">{t('forFamilies.sections.bereavement.body')}</p>
     <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean what to do after a hospice patient dies education video with English subtitles"
-      >
-        <source src="/videos/after-death-hospice-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/after-death-hospice-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="XeGjlf7fILA" title="Korean video: What to do after a hospice patient dies" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Understanding the Hospice Post-Death Process</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          Korean-language video from Eminent Hospice with reviewed English captions included.
         </p>
       </div>
     </div>

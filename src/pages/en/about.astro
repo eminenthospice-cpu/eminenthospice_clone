@@ -3,6 +3,7 @@ import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import OrganizationJsonLd from '../../components/seo/OrganizationJsonLd.astro';
 import Icon from '../../components/ui/Icon.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { useTranslations, localizedPath } from '../../i18n/utils';
 
 const lang = 'en' as const;
@@ -154,59 +155,39 @@ const relatedLinks = [
     <h2 id="team-h">{t('about.sections.team.title')}</h2>
     <p class="mb-5">{t('about.sections.team.intro')}</p>
     <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean hospice team interview with English subtitles"
-      >
-        <source src="/videos/hospice-team-interview-younghee-kim-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/hospice-team-interview-younghee-kim-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="qWl3XdJ4rck" title="Korean video: A hospice aide explains hospice" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Hospice team interview</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean interview with English subtitles, featuring Younghee Kim sharing her hospice care experience.
+          A hospice aide shares a Korean-language perspective on supporting patients and families.
         </p>
       </div>
     </div>
     <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean hospice nurse interview with English subtitles"
-      >
-        <source src="/videos/hospice-nurse-interview-janice-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/hospice-nurse-interview-janice-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="jsPCywsMe5Y" title="Korean video: A nurse explains hospice" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Hospice nurse interview</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean interview with English subtitles, featuring Janice sharing what hospice nurses do and memorable patient care moments.
+          A nurse shares a Korean-language perspective on hospice care.
         </p>
       </div>
     </div>
     <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean hospice spiritual care and chaplain interview with English subtitles"
-      >
-        <source src="/videos/hospice-social-work-bereavement-interview-peter-park-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/hospice-social-work-bereavement-interview-peter-park-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="2Ci1inVJrrc" title="Korean video: A chaplain explains hospice" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Hospice spiritual care / chaplain interview</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean interview with English subtitles, featuring Peter Park explaining spiritual counseling, chaplain care, and hospice support.
+          A chaplain discusses spiritual care and hospice support in Korean.
+        </p>
+      </div>
+    </div>
+    <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
+      <VideoEmbed videoId="xnI28GlZwZI" title="Korean video: A nurse answers questions about hospice in the United States" />
+      <div class="px-5 py-4">
+        <p class="font-heading text-base font-semibold text-ink-900">Questions about hospice in the United States</p>
+        <p class="mt-1 text-base leading-relaxed text-ink-600">
+          A nurse answers common questions about the American hospice system in Korean, with
+          reviewed English captions included in the video.
         </p>
       </div>
     </div>

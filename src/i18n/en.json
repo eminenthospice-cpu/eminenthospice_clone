@@ -1279,7 +1279,7 @@
         },
         "cookies": {
           "title": "Cookies and tracking",
-          "body": "We do not use cookies on this website. We do not embed third-party analytics, advertising, or social-media tracking pixels. Cloudflare Turnstile, used to prevent bot submissions, runs without cookies in its invisible mode."
+          "body": "We do not use third-party analytics, advertising, or social-media tracking pixels. Educational videos are hosted directly on this website. Cloudflare Turnstile is used to prevent bot submissions."
         }
       },
       "howWeUse": {

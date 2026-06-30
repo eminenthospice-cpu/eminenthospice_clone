@@ -1,0 +1,28 @@
+---
+import { VIDEO_RESOURCES } from '../../data/videos';
+
+export interface Props {
+  videoId: string;
+  title: string;
+}
+
+const { videoId, title } = Astro.props;
+const video = VIDEO_RESOURCES.find((item) => item.youtubeId === videoId);
+
+if (!video) {
+  throw new Error(`Unknown local video ID: ${videoId}`);
+}
+---
+
+<div class="relative aspect-video w-full overflow-hidden bg-ink-950">
+  <video
+    class="absolute inset-0 h-full w-full bg-ink-950 object-contain"
+    src={video.videoPath}
+    title={title}
+    controls
+    preload="metadata"
+    playsinline
+  >
+    <a href={video.videoPath}>Open the captioned video</a>
+  </video>
+</div>

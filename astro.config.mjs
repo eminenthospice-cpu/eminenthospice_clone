@@ -43,7 +43,7 @@ export default defineConfig({
         "img-src 'self' data: https:",
         "media-src 'self'",
         "connect-src 'self' https://challenges.cloudflare.com",
-        "frame-src https://challenges.cloudflare.com",
+        "frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com",
       ],
     },
   },

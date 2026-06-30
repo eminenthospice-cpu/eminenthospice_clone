@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 import enData from '../../i18n/en.json';
@@ -97,40 +98,20 @@ const relatedLinks = [
       <p class="text-base text-ink-700">{s.advanceDirectives.polst.paperColorNote}</p>
     </div>
     <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean POLST education video with English subtitles"
-      >
-        <source src="/videos/polst-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/polst-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="42r5f9uf-0U" title="Korean video: Understanding POLST" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">POLST education video</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          Korean-language video from Eminent Hospice with reviewed English captions included.
         </p>
       </div>
     </div>
     <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean after death outside hospice and POLST education video with English subtitles"
-      >
-        <source src="/videos/after-death-non-hospice-polst-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/after-death-non-hospice-polst-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="SNGsCjicC8E" title="Korean video: What to do after a death outside hospice" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">When death occurs outside hospice</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          Korean-language video from Eminent Hospice with reviewed English captions included.
         </p>
       </div>
     </div>

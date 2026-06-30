@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import Icon from '../../components/ui/Icon.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { useTranslations, localizedPath } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 
@@ -116,41 +117,32 @@ const relatedLinks = [
     <div class="grid gap-6 sm:grid-cols-2 not-prose">
       {[
         {
-          src: '/videos/oxygen-concentrator-korean.mp4',
+          videoId: 'Vq5rIpelzhk',
           title: '산소호흡기(산소발생기) 사용법',
           desc: '호스피스에서 제공하는 가정용 산소호흡기의 사용 방법과 안전 수칙을 소개합니다.',
           aria: '호스피스 산소호흡기 사용법 안내 동영상',
         },
         {
-          src: '/videos/nebulizer-korean.mp4',
+          videoId: 'edmwae3Iglk',
           title: '네뷸라이저(Nebulizer) 사용법',
           desc: '가정에서 호흡 치료 약물을 투여하는 네뷸라이저의 설치와 사용 방법을 안내합니다.',
           aria: '네뷸라이저 사용법 안내 동영상',
         },
         {
-          src: '/videos/suction-machine-korean.mp4',
+          videoId: '9g98EDnOAUI',
           title: '흡입기(Suction) 사용법',
           desc: '분비물을 제거하고 환자를 편안하게 돕는 흡입기의 안전한 사용법을 안내합니다.',
           aria: '흡입기(석션) 사용법 안내 동영상',
         },
         {
-          src: '/videos/emergency-medications-korean.mp4',
+          videoId: 'Rv1Cbnb4QDA',
           title: '응급·증상 완화 약물 소개',
           desc: '호스피스에서 제공하는 응급(증상 완화) 약물의 종류와 사용 시점을 소개합니다.',
           aria: '호스피스 응급약 소개 동영상',
         },
       ].map((v) => (
         <div class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-          <video
-            class="block w-full aspect-video bg-ink-950"
-            controls
-            preload="metadata"
-            playsinline
-            aria-label={v.aria}
-          >
-            <source src={v.src} type="video/mp4" />
-            브라우저가 동영상 재생을 지원하지 않습니다.
-          </video>
+          <VideoEmbed videoId={v.videoId} title={v.aria} />
           <div class="px-5 py-4">
             <p class="font-heading text-base font-semibold text-ink-900">{v.title}</p>
             <p class="mt-1 text-base leading-relaxed text-ink-600 font-prose">{v.desc}</p>
@@ -188,21 +180,11 @@ const relatedLinks = [
       ))}
     </div>
     <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean end-of-life timing education video with English subtitles"
-      >
-        <source src="/videos/end-of-life-timing-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/end-of-life-timing-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="3mgBE6CaI4I" title="임종 시기 이해하기" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">FAQ: What is your estimate of the remaining time?</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          에미넌트 호스피스의 한국어 영상이며, 검토된 영어 자막이 영상에 포함되어 있습니다.
         </p>
       </div>
     </div>
@@ -267,21 +249,11 @@ const relatedLinks = [
     <h2 id="bereavement-h">{t('forFamilies.sections.bereavement.title')}</h2>
     <p class="mb-4">{t('forFamilies.sections.bereavement.body')}</p>
     <div class="not-prose mb-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
-      <video
-        class="block w-full aspect-video bg-ink-950"
-        controls
-        preload="metadata"
-        playsinline
-        aria-label="Korean what to do after a hospice patient dies education video with English subtitles"
-      >
-        <source src="/videos/after-death-hospice-korean-english-subtitles.mp4" type="video/mp4" />
-        <track kind="subtitles" src="/captions/after-death-hospice-korean-english-subtitles.en.vtt" srclang="en" label="English" />
-        Your browser does not support the video tag.
-      </video>
+      <VideoEmbed videoId="XeGjlf7fILA" title="호스피스 환자의 임종 후 절차" />
       <div class="px-5 py-4">
         <p class="font-heading text-base font-semibold text-ink-900">Understanding the Hospice Post-Death Process</p>
         <p class="mt-1 text-base leading-relaxed text-ink-600">
-          Korean narration with English subtitles, presented by Jeong Ah Kim, NP.
+          에미넌트 호스피스의 한국어 영상이며, 검토된 영어 자막이 영상에 포함되어 있습니다.
         </p>
       </div>
     </div>

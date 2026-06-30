@@ -2,6 +2,7 @@
 import LongFormLayout from '../../layouts/LongFormLayout.astro';
 import PageSidebar from '../../components/layout/PageSidebar.astro';
 import FaqPageJsonLd from '../../components/seo/FaqPageJsonLd.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { localizedPath } from '../../i18n/utils';
 import { VIDEO_RESOURCES } from '../../data/videos';
 import enData from '../../i18n/en.json';
@@ -102,22 +103,13 @@ const categoryStyles = {
   <section id="video-library" class="scroll-mt-24">
     <h2>Video Library</h2>
     <p>
-      All videos from across the site are gathered here for families who prefer to watch and listen.
+      All Korean-language videos from across the site are gathered here with reviewed English
+      captions included directly in each video.
     </p>
     <div class="not-prose mt-5 grid gap-5">
       {VIDEO_RESOURCES.map(video => (
         <article class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)]">
-          <video
-            class="block w-full aspect-video bg-ink-950"
-            controls
-            preload="metadata"
-            playsinline
-            aria-label={video.title.en}
-          >
-            <source src={video.videoSrc} type="video/mp4" />
-            <track kind="subtitles" src={video.captionSrc} srclang="en" label="English" />
-            Your browser does not support the video tag.
-          </video>
+          <VideoEmbed videoId={video.youtubeId} title={video.title.en} />
           <div class="flex flex-col justify-center px-5 py-4">
             <h3 class="font-heading text-lg font-semibold leading-snug text-ink-900">{video.title.en}</h3>
             <p class="mt-2 text-base leading-relaxed text-ink-600">{video.description.en}</p>
