@@ -52,6 +52,20 @@ const relatedLinks = [
     <h2>{s.whatIsHospice.title}</h2>
     <p>{s.whatIsHospice.p1}</p>
     <p>{s.whatIsHospice.p2}</p>
+    <div class="not-prose mt-6 overflow-hidden rounded-card border border-line-soft bg-white shadow-soft">
+      <VideoEmbed
+        videoId="hospice-care-korea-vs-us-en"
+        title="Hospice Care: Korea vs. the United States"
+      />
+      <div class="px-5 py-4">
+        <p class="font-heading text-base font-semibold text-ink-900">
+          Hospice Care: Korea vs. the United States
+        </p>
+        <p class="mt-1 text-base leading-relaxed text-ink-600">
+          An English-language comparison of hospice care in Korea and the United States.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="who-qualifies" class="scroll-mt-24">
@@ -146,7 +160,7 @@ const relatedLinks = [
         <Icon name="phone" class="w-4 h-4" />
         {common.pageBottomCta.call}
       </Button>
-      <Button href={lp('/referral')} variant="primary" size="md" class="!text-ink-900">
+      <Button href={lp('/referral')} variant="primary" size="md" class="!text-white">
         {common.pageBottomCta.refer}
       </Button>
     </div>

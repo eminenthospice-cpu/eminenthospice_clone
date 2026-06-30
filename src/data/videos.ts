@@ -164,6 +164,48 @@ export const VIDEO_RESOURCES: VideoResource[] = [
     },
     sourcePath: '/about',
   },
+  {
+    slug: 'hospice-care-korea-vs-us-en',
+    youtubeId: 'hospice-care-korea-vs-us-en',
+    videoPath: '/videos/hospice-care-korea-vs-us-en.mp4',
+    title: {
+      en: 'Hospice Care: Korea vs. the United States',
+      ko: '호스피스 케어: 한국과 미국 비교',
+    },
+    description: {
+      en: 'An English-language comparison of hospice care in Korea and the United States.',
+      ko: '한국과 미국의 호스피스 케어를 비교하는 영어 영상입니다.',
+    },
+    sourcePath: '/understanding-hospice',
+  },
+  {
+    slug: 'hospice-care-korea-vs-us-ko',
+    youtubeId: 'hospice-care-korea-vs-us-ko',
+    videoPath: '/videos/hospice-care-korea-vs-us-ko.mp4',
+    title: {
+      en: 'Hospice Care: Korea vs. the United States',
+      ko: '호스피스 케어: 한국과 미국 비교',
+    },
+    description: {
+      en: 'A Korean-language comparison of hospice care in Korea and the United States.',
+      ko: '한국과 미국의 호스피스 케어를 비교하는 한국어 영상입니다.',
+    },
+    sourcePath: '/understanding-hospice',
+  },
+  {
+    slug: 'holistic-care-in-hospice-ko',
+    youtubeId: 'holistic-care-in-hospice-ko',
+    videoPath: '/videos/holistic-care-in-hospice-ko.mp4',
+    title: {
+      en: 'Holistic Care in Hospice',
+      ko: '호스피스의 전인적 돌봄',
+    },
+    description: {
+      en: 'A Korean-language explanation of whole-person care in hospice.',
+      ko: '환자의 신체적, 정서적, 사회적, 영적 필요를 함께 돌보는 호스피스의 전인적 돌봄을 설명합니다.',
+    },
+    sourcePath: '/services',
+  },
 ];
 
 export const getVideo = (slug: string) =>
