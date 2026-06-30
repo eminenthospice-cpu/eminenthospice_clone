@@ -69,7 +69,7 @@ export const VIDEO_RESOURCES: VideoResource[] = [
     slug: 'end-of-life-timing',
     youtubeId: '3mgBE6CaI4I',
     videoPath: '/videos/end-of-life-timing.mp4',
-    title: { en: 'FAQ: Estimating Time Near the End of Life', ko: 'FAQ: 임종 시기 이해하기' },
+    title: { en: 'FAQ: How Long Might My Loved One Have?', ko: 'FAQ: 임종 시기 이해하기' },
     description: {
       en: 'Korean-language guidance for families wondering when the end of life may be approaching.',
       ko: '임종이 가까워지는 시기에 대해 가족에게 안내하는 한국어 영상입니다.',
@@ -113,10 +113,10 @@ export const VIDEO_RESOURCES: VideoResource[] = [
     slug: 'hospice-aide-perspective',
     youtubeId: 'qWl3XdJ4rck',
     videoPath: '/videos/hospice-aide-perspective.mp4',
-    title: { en: 'A Hospice Aide Explains Hospice', ko: '호스피스 도우미가 이야기하는 호스피스' },
+    title: { en: 'A Hospice Volunteer Explains Hospice', ko: '호스피스 자원봉사자가 이야기하는 호스피스' },
     description: {
-      en: 'A Korean-language staff perspective on supporting hospice patients and families.',
-      ko: '호스피스 도우미가 환자와 가족을 지원하는 경험을 이야기합니다.',
+      en: 'A Korean-language volunteer perspective on supporting hospice patients and families.',
+      ko: '호스피스 자원봉사자가 환자와 가족을 지원하는 경험을 이야기합니다.',
     },
     sourcePath: '/about',
   },
