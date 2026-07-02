@@ -161,11 +161,21 @@
         }
       }
     },
-    "quote": {
+    "testimonials": {
       "eyebrow": "Family experience",
-      "heading": "A family review",
-      "text": "The nurses and staff were kind, professional, and excellent communicators. They treated my father and our family with warmth, dignity, and respect.",
-      "source": "Daughter of patient, Google Review"
+      "heading": "What families tell us",
+      "items": [
+        {
+          "quote": "Your kindness, patience, and dignity in treating her made an incredibly difficult time more bearable for our family. You not only cared for her physical comfort, but also supported her emotionally and spiritually, always treating her with respect and gentleness.",
+          "name": "Danny Won",
+          "relation": "Son of a patient"
+        },
+        {
+          "quote": "We are grateful to the Eminent Hospice Care family for being with our beloved father during his final days. Thank you for all your hard work.",
+          "name": "Karen Nguyen",
+          "relation": "Daughter of a patient"
+        }
+      ]
     },
     "finalCta": {
       "eyebrow": "Ready when you are",

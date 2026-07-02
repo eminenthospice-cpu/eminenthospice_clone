@@ -1,6 +1,8 @@
 ---
 import { useTranslations } from '../../i18n/utils';
 import SectionContainer from '../ui/SectionContainer.astro';
+import en from '../../i18n/en.json';
+import ko from '../../i18n/ko.json';
 
 export interface Props {
   lang: 'en' | 'ko';
@@ -8,15 +10,35 @@ export interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+interface TestimonialItem {
+  quote: string;
+  name: string;
+  relation: string;
+}
+
+const data = lang === 'ko' ? ko : en;
+const testimonials = data.home.testimonials.items as TestimonialItem[];
 ---
 
 <SectionContainer bg="white" ariaLabelledBy="quote-heading">
-  <div class="reveal mx-auto max-w-4xl rounded-card border border-line-hairline bg-surface-canvas p-7 md:p-10">
-    <p class="eyebrow mb-4 text-primary-700">{t('home.quote.eyebrow')}</p>
-    <h2 id="quote-heading" class="sr-only">{t('home.quote.heading')}</h2>
-    <blockquote class="font-heading text-3xl leading-tight text-ink-900 md:text-4xl">
-      “{t('home.quote.text')}”
-    </blockquote>
-    <p class="mt-6 text-base font-semibold text-ink-700">{t('home.quote.source')}</p>
+  <div class="reveal mx-auto max-w-5xl">
+    <p class="eyebrow mb-4 text-primary-700">{t('home.testimonials.eyebrow')}</p>
+    <h2 id="quote-heading" class="font-heading text-3xl text-ink-900 md:text-4xl mb-8">
+      {t('home.testimonials.heading')}
+    </h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      {testimonials.map((item) => (
+        <figure class="rounded-card border border-line-hairline bg-surface-canvas p-7 md:p-8">
+          <blockquote class="font-prose text-lg leading-relaxed text-ink-900">
+            “{item.quote}”
+          </blockquote>
+          <figcaption class="mt-5 text-base font-semibold text-ink-700">
+            {item.name}
+            <span class="font-normal text-ink-500"> — {item.relation}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
   </div>
 </SectionContainer>
