@@ -168,12 +168,20 @@
         {
           "quote": "Your kindness, patience, and dignity in treating her made an incredibly difficult time more bearable for our family. You not only cared for her physical comfort, but also supported her emotionally and spiritually, always treating her with respect and gentleness.",
           "name": "Danny W.",
-          "relation": "Son of a patient"
+          "relation": "Son of a patient",
+          "rating": 5
         },
         {
           "quote": "We are grateful to the Eminent Hospice Care family for being with our beloved father during his final days. Thank you for all your hard work.",
           "name": "Karen N.",
-          "relation": "Daughter of a patient"
+          "relation": "Daughter of a patient",
+          "rating": 5
+        },
+        {
+          "quote": "They connected personally with our mother and cared for her with real warmth, not just as a patient - as family.",
+          "name": "Chan N.",
+          "relation": "Family of a patient",
+          "rating": 5
         }
       ]
     },
