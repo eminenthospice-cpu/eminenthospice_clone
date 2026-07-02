@@ -52,3 +52,4 @@ transcribe_segments.json
 
 # jetbrains setting folder
 .idea/
+.dev.vars
