@@ -5,16 +5,10 @@
 
 /* ── Fonts ──────────────────────────────────────────────── */
 @import '@fontsource-variable/fraunces/index.css';
-@import '@fontsource/newsreader/400.css';
-@import '@fontsource/newsreader/400-italic.css';
-@import '@fontsource/newsreader/500.css';
-@import '@fontsource/newsreader/600.css';
 @import '@fontsource-variable/inter/index.css';
 @import '@fontsource/noto-sans-kr/400.css';
 @import '@fontsource/noto-sans-kr/500.css';
 @import '@fontsource/noto-sans-kr/700.css';
-@import '@fontsource/noto-serif-kr/400.css';
-@import '@fontsource/noto-serif-kr/500.css';
 
 /* ── Tailwind base ───────────────────────────────────────── */
 @import 'tailwindcss';
@@ -107,7 +101,9 @@
 
   /* Typography - font families */
   --font-heading: 'Fraunces Variable', 'Georgia', serif;
-  --font-prose:   'Newsreader', 'Georgia', serif;
+  /* Prose intentionally matches body: one unified text font site-wide
+     (client request 2026-07: homepage vs subpage body fonts must not differ). */
+  --font-prose:   'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
   --font-body:    'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
   --font-mono:    ui-monospace, 'SFMono-Regular', monospace;
 
