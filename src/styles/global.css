@@ -4,7 +4,6 @@
    ─────────────────────────────────────────────────────── */
 
 /* ── Fonts ──────────────────────────────────────────────── */
-@import '@fontsource-variable/fraunces/index.css';
 @import '@fontsource-variable/inter/index.css';
 @import '@fontsource/noto-sans-kr/400.css';
 @import '@fontsource/noto-sans-kr/500.css';
@@ -100,12 +99,11 @@
   --color-error:   #B94040;
 
   /* Typography - font families */
-  --font-heading: 'Fraunces Variable', 'Georgia', serif;
-  /* Prose intentionally matches body: one unified text font site-wide
-     (client request 2026-07: homepage vs subpage body fonts must not differ). */
+  /* One unified font family for every text element site-wide. */
+  --font-heading: 'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
   --font-prose:   'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
   --font-body:    'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
-  --font-mono:    ui-monospace, 'SFMono-Regular', monospace;
+  --font-mono:    'Inter Variable', 'Noto Sans KR', system-ui, sans-serif;
 
   /* Typography - senior-readable scale.
      18px floor for most supporting copy; 17px is the absolute minimum,
@@ -150,6 +148,7 @@
 /* ── Base styles ──────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: var(--font-body);
 }
 
 html {
@@ -168,6 +167,13 @@ body {
   color: var(--color-ink-900);
   font-size: 1.1875rem;
   line-height: 1.7;
+}
+
+/* Client requirement: no alternate display, serif, or browser-default fonts. */
+html,
+body,
+body * {
+  font-family: var(--font-body) !important;
 }
 
 /* Korean: keep whole syllables together */

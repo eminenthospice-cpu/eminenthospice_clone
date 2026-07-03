@@ -11,6 +11,20 @@ export interface VideoResource {
 
 export const VIDEO_RESOURCES: VideoResource[] = [
   {
+    slug: 'hospice-consent-packet',
+    youtubeId: 'hospice-consent-packet',
+    videoPath: '/videos/hospice-consent-packet.mp4',
+    title: {
+      en: 'Hospice Consent Packet',
+      ko: '호스피스 동의서 안내',
+    },
+    description: {
+      en: 'A step-by-step guide to the hospice consent packet and enrollment paperwork.',
+      ko: '호스피스 동의서와 등록 서류를 단계별로 안내하는 영상입니다.',
+    },
+    sourcePath: '/referral',
+  },
+  {
     slug: 'polst',
     youtubeId: '42r5f9uf-0U',
     videoPath: '/videos/polst.mp4',

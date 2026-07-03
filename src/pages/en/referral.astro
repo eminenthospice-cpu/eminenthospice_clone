@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ReferralCallbackForm from '../../components/forms/ReferralCallbackForm.astro';
 import Icon from '../../components/ui/Icon.astro';
+import VideoEmbed from '../../components/ui/VideoEmbed.astro';
 import { useTranslations } from '../../i18n/utils';
 import { CONTACT } from '../../data/site-config';
 
@@ -63,6 +64,21 @@ const introParagraph = t('referral.introParagraph').replace('{phone}', CONTACT.p
             {t('referral.modeA.whyPhone.title')}
           </h3>
           <p class="font-prose text-ink-600 leading-relaxed">{t('referral.modeA.whyPhone.body')}</p>
+        </section>
+
+        <section
+          aria-labelledby="consent-packet-h"
+          class="reveal [--reveal-delay:115ms] overflow-hidden rounded-card border border-line-soft bg-white shadow-soft"
+        >
+          <VideoEmbed videoId="hospice-consent-packet" title="Hospice Consent Packet" />
+          <div class="px-5 py-4 md:px-6">
+            <h2 id="consent-packet-h" class="font-heading text-xl text-ink-900">
+              Hospice Consent Packet
+            </h2>
+            <p class="mt-1 font-prose text-ink-600 leading-relaxed">
+              A step-by-step guide to the hospice consent packet and enrollment paperwork.
+            </p>
+          </div>
         </section>
 
         <!-- Callback form -->

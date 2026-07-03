@@ -20,150 +20,89 @@ interface TestimonialItem {
 
 const data = lang === 'ko' ? ko : en;
 const testimonials = data.home.testimonials.items as TestimonialItem[];
-const prevLabel = lang === 'ko' ? '이전 후기' : 'Previous review';
-const nextLabel = lang === 'ko' ? '다음 후기' : 'Next review';
-const goToLabel = lang === 'ko' ? '후기' : 'Review';
 ---
 
 <SectionContainer bg="white" ariaLabelledBy="quote-heading">
-  <div class="reveal mx-auto max-w-3xl">
+  <div class="reveal mx-auto max-w-6xl">
     <p class="eyebrow mb-4 text-primary-700 text-center">{t('home.testimonials.eyebrow')}</p>
     <h2 id="quote-heading" class="font-heading text-3xl text-ink-900 md:text-4xl mb-10 text-center">
       {t('home.testimonials.heading')}
     </h2>
 
-    <div class="testimonial-carousel" data-autoplay-ms="6000">
-      <div class="testimonial-track rounded-card border border-line-hairline bg-surface-canvas">
-        {testimonials.map((item, i) => (
-          <figure class="testimonial-slide p-8 md:p-12" class:list={{ 'is-active': i === 0 }} aria-hidden={i === 0 ? 'false' : 'true'}>
-            {item.rating && (
-              <div class="mb-4 flex gap-1 text-accent-gold-500" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, starIndex) => (
-                  <svg viewBox="0 0 20 20" class="h-5 w-5" fill={starIndex < item.rating! ? 'currentColor' : 'none'} stroke="currentColor" stroke-width="1.25">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.72.99-5.8-4.21-4.1 5.82-.85L10 1.5z" />
-                  </svg>
-                ))}
-              </div>
-            )}
-            <blockquote class="font-prose text-xl leading-relaxed text-ink-900 md:text-2xl">
-              &ldquo;{item.quote}&rdquo;
-            </blockquote>
-            <figcaption class="mt-6 text-base font-semibold text-ink-700">
-              {item.name}
-              <span class="font-normal text-ink-500"> — {item.relation}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-
-      {testimonials.length > 1 && (
-        <div class="mt-6 flex items-center justify-center gap-5">
-          <button type="button" class="testimonial-prev flex h-10 w-10 items-center justify-center rounded-full border border-line-soft text-ink-500 transition-colors hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500" aria-label={prevLabel}>
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6" /></svg>
-          </button>
-          <div class="testimonial-dots flex items-center gap-2" role="tablist" aria-label={t('home.testimonials.heading')}>
-            {testimonials.map((_, i) => (
-              <button
-                type="button"
-                class="testimonial-dot h-2.5 w-2.5 rounded-full bg-line-soft transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-                class:list={{ 'is-active': i === 0 }}
-                data-index={i}
-                role="tab"
-                aria-selected={i === 0 ? 'true' : 'false'}
-                aria-label={`${goToLabel} ${i + 1}`}
-              ></button>
+    <div class="testimonial-carousel">
+      <div class="testimonial-track">
+        {[0, 1].map((copyIndex) => (
+          <div class="testimonial-set" aria-hidden={copyIndex === 1 ? 'true' : undefined}>
+            {testimonials.map((item) => (
+              <figure class="testimonial-slide rounded-card border border-line-hairline bg-surface-canvas p-8 md:p-10">
+                {item.rating && (
+                  <div class="mb-4 flex gap-1 text-accent-gold-500" aria-hidden="true">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <svg viewBox="0 0 20 20" class="h-5 w-5" fill={starIndex < item.rating! ? 'currentColor' : 'none'} stroke="currentColor" stroke-width="1.25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.72.99-5.8-4.21-4.1 5.82-.85L10 1.5z" />
+                      </svg>
+                    ))}
+                  </div>
+                )}
+                <blockquote class="font-prose text-xl leading-relaxed text-ink-900 md:text-2xl">
+                  &ldquo;{item.quote}&rdquo;
+                </blockquote>
+                <figcaption class="mt-6 text-base font-semibold text-ink-700">
+                  {item.name}
+                  <span class="font-normal text-ink-500"> — {item.relation}</span>
+                </figcaption>
+              </figure>
             ))}
           </div>
-          <button type="button" class="testimonial-next flex h-10 w-10 items-center justify-center rounded-full border border-line-soft text-ink-500 transition-colors hover:border-primary-500 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500" aria-label={nextLabel}>
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" /></svg>
-          </button>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   </div>
 </SectionContainer>
 
 <style>
+  .testimonial-carousel {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  }
   .testimonial-track {
-    display: grid;
+    display: flex;
+    width: max-content;
+    gap: 1.5rem;
+    animation: testimonial-loop 45s linear infinite;
+  }
+  .testimonial-set {
+    display: flex;
+    gap: 1.5rem;
   }
   .testimonial-slide {
-    grid-column: 1;
-    grid-row: 1;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 500ms ease;
+    flex: 0 0 min(82vw, 34rem);
   }
-  .testimonial-slide.is-active {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    z-index: 1;
+
+  @keyframes testimonial-loop {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 0.75rem));
+    }
   }
-  .testimonial-dot.is-active {
-    background-color: var(--color-primary-500);
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-track {
+      animation: none;
+      display: block;
+      width: auto;
+    }
+    .testimonial-set {
+      display: grid;
+      gap: 1rem;
+    }
+    .testimonial-set[aria-hidden='true'] {
+      display: none;
+    }
+    .testimonial-slide {
+      width: auto;
+    }
   }
 </style>
-
-<script>
-  document.querySelectorAll<HTMLElement>('.testimonial-carousel').forEach((root) => {
-    const slides = Array.from(root.querySelectorAll<HTMLElement>('.testimonial-slide'));
-    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>('.testimonial-dot'));
-    const prevBtn = root.querySelector<HTMLButtonElement>('.testimonial-prev');
-    const nextBtn = root.querySelector<HTMLButtonElement>('.testimonial-next');
-    if (slides.length <= 1) return;
-
-    const intervalMs = Number(root.dataset.autoplayMs) || 6000;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    let index = 0;
-    let timer: number | null = null;
-
-    function show(next: number) {
-      index = (next + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
-        const active = i === index;
-        slide.classList.toggle('is-active', active);
-        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
-      });
-      dots.forEach((dot, i) => {
-        const active = i === index;
-        dot.classList.toggle('is-active', active);
-        dot.setAttribute('aria-selected', active ? 'true' : 'false');
-      });
-    }
-
-    function next() { show(index + 1); }
-    function prev() { show(index - 1); }
-
-    function start() {
-      if (prefersReducedMotion || timer !== null) return;
-      timer = window.setInterval(next, intervalMs);
-    }
-    function stop() {
-      if (timer !== null) { window.clearInterval(timer); timer = null; }
-    }
-
-    nextBtn?.addEventListener('click', () => { next(); stop(); start(); });
-    prevBtn?.addEventListener('click', () => { prev(); stop(); start(); });
-    dots.forEach((dot) => {
-      dot.addEventListener('click', () => { show(Number(dot.dataset.index)); stop(); start(); });
-    });
-
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-    root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', start);
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) stop(); else start();
-    });
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => { entry.isIntersecting ? start() : stop(); });
-    }, { threshold: 0.25 });
-    io.observe(root);
-
-    start();
-  });
-</script>
