@@ -11,6 +11,16 @@ const lang = 'ko' as const;
 const lp = (p: string) => localizedPath(p, lang);
 const d = koData.faq;
 const common = koData.common;
+const faqVideos = [...VIDEO_RESOURCES].sort((a, b) => {
+  const featuredOrder = ['polst', 'hospice-consent-packet'];
+  const aIndex = featuredOrder.indexOf(a.slug);
+  const bIndex = featuredOrder.indexOf(b.slug);
+  if (aIndex !== -1 || bIndex !== -1) {
+    return (aIndex === -1 ? featuredOrder.length : aIndex)
+      - (bIndex === -1 ? featuredOrder.length : bIndex);
+  }
+  return 0;
+});
 
 const catOrder = ['gettingStarted', 'aboutHospice', 'insurance', 'families', 'rights'] as const;
 const catAnchors: Record<string, string> = {
@@ -106,7 +116,7 @@ const categoryStyles = {
       사이트 곳곳에 있는 동영상을 한곳에 모았습니다. 설명을 읽고 필요한 영상을 바로 확인하실 수 있습니다.
     </p>
     <div class="not-prose mt-5 grid gap-5">
-      {VIDEO_RESOURCES.map(video => (
+      {faqVideos.map(video => (
         <article class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)]">
           <VideoEmbed videoId={video.youtubeId} title={video.title.ko} />
           <div class="flex flex-col justify-center px-5 py-4">

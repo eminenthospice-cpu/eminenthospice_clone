@@ -11,6 +11,16 @@ const lang = 'en' as const;
 const lp = (p: string) => localizedPath(p, lang);
 const d = enData.faq;
 const common = enData.common;
+const faqVideos = [...VIDEO_RESOURCES].sort((a, b) => {
+  const featuredOrder = ['polst', 'hospice-consent-packet'];
+  const aIndex = featuredOrder.indexOf(a.slug);
+  const bIndex = featuredOrder.indexOf(b.slug);
+  if (aIndex !== -1 || bIndex !== -1) {
+    return (aIndex === -1 ? featuredOrder.length : aIndex)
+      - (bIndex === -1 ? featuredOrder.length : bIndex);
+  }
+  return 0;
+});
 
 const catOrder = ['gettingStarted', 'aboutHospice', 'insurance', 'families', 'rights'] as const;
 const catAnchors: Record<string, string> = {
@@ -107,7 +117,7 @@ const categoryStyles = {
       captions included directly in each video.
     </p>
     <div class="not-prose mt-5 grid gap-5">
-      {VIDEO_RESOURCES.map(video => (
+      {faqVideos.map(video => (
         <article class="overflow-hidden rounded-card border border-line-soft bg-white shadow-soft md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)]">
           <VideoEmbed videoId={video.youtubeId} title={video.title.en} />
           <div class="flex flex-col justify-center px-5 py-4">
