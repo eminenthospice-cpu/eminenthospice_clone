@@ -4,6 +4,7 @@
  */
 import en from './en.json';
 import ko from './ko.json';
+import { SITE } from '../data/site-config';
 
 export type Locale = 'en' | 'ko';
 
@@ -59,7 +60,7 @@ export function localizedPath(path: string, lang: Locale): string {
 
 /** hreflang alternate links for SEO */
 export function buildAlternates(path: string): Array<{ lang: string; href: string }> {
-  const base = 'https://eminenthospice-clone.pages.dev'; // must match astro.config.mjs site
+  const base = SITE.url; // single source of truth; must match astro.config.mjs `site`
   const p = path === '/' ? '' : path;
   return [
     { lang: 'en',       href: `${base}/en${p}` },

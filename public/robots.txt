@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eminenthospice-clone.pages.dev/sitemap-index.xml
+Sitemap: https://eminenthospice.com/sitemap-index.xml

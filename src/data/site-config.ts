@@ -10,7 +10,7 @@ export const SITE = {
   name:     'Eminent Hospice Care',
   legalName:'Eminent Hospice Care, Inc.',
   tagline:  'Comfort. Dignity. Compassion.',
-  url:      'https://eminenthospice-clone.pages.dev', // Cloudflare Pages URL (swap to custom domain when acquired)
+  url:      'https://eminenthospice.com', // Production custom domain (must match `site` in astro.config.mjs)
   locale:   'en-US',
 } as const;
 
